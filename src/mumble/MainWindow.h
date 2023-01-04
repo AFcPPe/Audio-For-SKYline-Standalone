@@ -73,7 +73,7 @@ private:
 	Q_OBJECT
 	Q_DISABLE_COPY(MainWindow)
 public:
-	Simulator *sim;
+	SimulatorSimConnect *sim;
 	UserModel *pmModel;
 	QSystemTrayIcon *qstiIcon;
 	QMenu *qmUser;
@@ -355,6 +355,7 @@ public slots:
 	void toggleSearchDialogVisibility();
 	/// Enables or disables the recording feature
 	void enableRecording(bool recordingAllowed);
+	void on_Simconnect_Updated();
 signals:
 	/// Signal emitted when the server and the client have finished
 	/// synchronizing (after a new connection).

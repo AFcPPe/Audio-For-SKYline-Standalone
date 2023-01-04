@@ -11,7 +11,8 @@ void CALLBACK MyDispatchProc1(SIMCONNECT_RECV *pData, DWORD cbData, void *pConte
 				case REQUEST_OWN_AIRCRAFT:
 					DataOwnAircraft *pS = (DataOwnAircraft *) &pObjData->dwData;
 					pThis->own                    = pS;
-					qDebug() << pS->latitude << pS->longitude << pS->altitude;
+					emit pThis->RaiseSimdataUpdated();
+					//qDebug()<<"\n======================\n" << pS->com1ActiveMHz << pS->com2ActiveMHz << pS->comReceiveAll << "\n======================\n";
 					break;
 			}
 			break;
@@ -27,12 +28,12 @@ void CALLBACK MyDispatchProc1(SIMCONNECT_RECV *pData, DWORD cbData, void *pConte
 	}
 }
 
-Simulator::Simulator() {
+SimulatorSimConnect::SimulatorSimConnect() {
 	own = new DataOwnAircraft();
 	pThis = this;
 }
 
-bool Simulator::initSimEvents() {
+bool SimulatorSimConnect::initSimEvents() {
 	HRESULT hr;
 	if (SUCCEEDED(SimConnect_Open(&hSimConnect, "SkylineVoice", NULL, 0, NULL, 0))) {
 		// DATA
@@ -44,7 +45,7 @@ bool Simulator::initSimEvents() {
 		timer = new QTimer();
 		timer->setInterval(10);
 		timer->start();
-		connect(timer, &QTimer::timeout, this, &Simulator::onPosTimerElipsed);
+		connect(timer, &QTimer::timeout, this, &SimulatorSimConnect::onPosTimerElipsed);
 		return true;
 	} else {
 		qDebug() << "\nFailed to Connect!!!!\n";
@@ -53,20 +54,20 @@ bool Simulator::initSimEvents() {
 	return false;
 }
 
-void Simulator::onPosTimerElipsed() {
+void SimulatorSimConnect::onPosTimerElipsed() {
 	callProc();
-	qDebug() << own->com1ActiveMHz << own->com2ActiveMHz << own->comReceiveAll << "\n";
+	
 }
 
-void Simulator::closeSimconnect() {
+void SimulatorSimConnect::closeSimconnect() {
 	SimConnect_Close(hSimConnect);
 }
 
-void Simulator::callProc() {
+void SimulatorSimConnect::callProc() {
 	SimConnect_CallDispatch(hSimConnect, MyDispatchProc1, NULL);
 }
 
-bool Simulator::initOwnAircraft(const HANDLE hSimConnect) {
+bool SimulatorSimConnect::initOwnAircraft(const HANDLE hSimConnect) {
 	HRESULT hr = S_OK;
 	hr += SimConnect_AddToDataDefinition(hSimConnect, DEFINITION_OWN_AIRCRAFT, "PLANE LATITUDE", "Degrees");
 	hr += SimConnect_AddToDataDefinition(hSimConnect, DEFINITION_OWN_AIRCRAFT, "PLANE LONGITUDE", "Degrees");

@@ -804,7 +804,7 @@ int main(int argc, char **argv) {
 		qApp->postEvent(Global::get().mw, oue);
 #endif
 	} else {
-		Global::get().mw->on_qaServerConnect_triggered(true);
+		//Global::get().mw->on_qaServerConnect_triggered(true);
 	}
 
 	if (!Global::get().bQuit)

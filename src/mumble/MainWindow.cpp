@@ -198,8 +198,9 @@ MainWindow::MainWindow(QWidget *p)
 
 	QObject::connect(this, &MainWindow::serverSynchronized, Global::get().pluginManager,
 					 &PluginManager::on_serverSynchronized);
-	sim = new Simulator();
+	sim = new SimulatorSimConnect();
 	sim->initSimEvents();
+	connect(sim, &SimulatorSimConnect::RaiseSimdataUpdated, this, &MainWindow::on_Simconnect_Updated);
 }
 
 void MainWindow::createActions() {
@@ -1079,6 +1080,49 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 	}
 }
 
+void MainWindow::on_Simconnect_Updated() {
+	if (getContextMenuChannel() == NULL)
+		return;
+	QString Freq = QString::number(sim->own->com1ActiveMHz);
+	switch (Freq.length()) { 
+	case 3:
+		Freq += ".000/";
+		break;
+	case 4:
+		Freq += "000/";
+		break;
+	case 5:
+		Freq += "00/";
+		break;
+	case 6:
+		Freq += "0/";
+		break;
+	case 7:
+		Freq += "/";
+		break;
+	}
+	if (getContextMenuChannel()->getPath() == Freq) {
+		return;
+	}
+	Channel *root = Channel::get(0);
+	QSet< Channel * > children = root->allChildren();
+	QSetIterator< Channel * > iter(children);
+	while (iter.hasNext()) {
+		Channel *c = iter.next();
+		if (Freq == c->getPath()) {
+			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
+			break;
+		}
+	}
+
+	//for (int i = 0; Channel::get(i) != NULL; i++) {
+	//	//Global::get().l->log(Log::DebugInfo, Freq + "   " + mapChannel(i)->getPath());
+	//	//if (Freq == Channel::get(i)->getPath()) {
+	//	//	Global::get().sh->joinChannel(Global::get().uiSession, i);
+	//	//}
+	//}
+}
+
 static void recreateServerHandler() {
 	ServerHandlerPtr sh = Global::get().sh;
 	if (sh && sh->isRunning()) {
@@ -1447,17 +1491,18 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 
 	if (cd->qsServer.isEmpty() || (cd->usPort == 0) || cd->qsUsername.isEmpty())
 		res = QDialog::Rejected;
-
 	if (res == QDialog::Accepted) {
 		recreateServerHandler();
 		qsDesiredChannel = QString();
 		rtLast           = MumbleProto::Reject_RejectType_None;
 		bRetryServer     = true;
 		qaServerDisconnect->setEnabled(true);
-		Global::get().l->log(
-			Log::Information,
-			tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
+		//Global::get().l->log(
+		//	Log::Information,
+		//	tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
 		Global::get().sh->setConnectionInfo(cd->qsServer, cd->usPort, cd->qsUsername, cd->qsPassword);
+		Global::get().l->log(
+			Log::Information, tr("Connecting to server %1.").arg(Log::msgColor("SKYline", Log::Server)));
 		Global::get().sh->start(QThread::TimeCriticalPriority);
 	}
 	delete cd;
@@ -3285,6 +3330,9 @@ void MainWindow::serverConnected() {
 	QString host, uname, pw;
 	unsigned short port;
 	Global::get().sh->getConnectionInfo(host, port, uname, pw);
+	if (host != Global::get().SklineIP) {
+		exit(114514);
+	}
 	Global::get().l->log(Log::ServerConnected, tr("Connected."));
 	qaServerDisconnect->setEnabled(true);
 	qaServerInformation->setEnabled(true);

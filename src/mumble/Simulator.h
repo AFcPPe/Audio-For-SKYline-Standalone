@@ -4,6 +4,7 @@
 #include <QtCore/QObject>
 #include <QtCore/qtimer.h>
 #include <QtCore/qdebug.h>
+#include "Global.h"
 
 static enum DATA_DEFINE_ID {
 	DEFINITION_OWN_AIRCRAFT,
@@ -34,12 +35,12 @@ struct DataOwnAircraft {
 
 
 
-class Simulator : public QObject {
+class SimulatorSimConnect : public QObject {
 
 Q_OBJECT
 
 public:
-	Simulator();
+	SimulatorSimConnect();
 
 	bool initSimEvents();
 	void closeSimconnect();
@@ -49,6 +50,7 @@ public:
 
 signals:
 	void RaiseSimconnectConnected();
+	void RaiseSimdataUpdated();
 private slots:
 	void onPosTimerElipsed();
 
@@ -60,6 +62,6 @@ private:
 
 };
 
-static Simulator *pThis = NULL;
+static SimulatorSimConnect *pThis = NULL;
 
 #endif

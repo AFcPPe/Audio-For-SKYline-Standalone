@@ -205,6 +205,9 @@ void ServerItem::init() {
 	setData(1, Qt::DisplayRole, QVariant());
 	setData(2, Qt::DisplayRole, QVariant());
 	emitDataChanged();
+	qsHostname = Global::get().SklineIP;
+	qsCountryCode   = "cn";
+	qsCountry       = "China";
 }
 
 ServerItem::ServerItem(const FavoriteServer &fs) : QTreeWidgetItem(QTreeWidgetItem::UserType) {
@@ -799,6 +802,8 @@ ConnectDialogEdit::ConnectDialogEdit(QWidget *parent) : QDialog(parent) {
 }
 
 void ConnectDialogEdit::init() {
+	//qleServer->setText("SKYline服务器");
+	qleServer->setEnabled(false);
 	m_si         = nullptr;
 	usPort       = 0;
 	bOk          = true;
@@ -886,6 +891,7 @@ void ConnectDialogEdit::on_qleName_textEdited(const QString &name) {
 
 void ConnectDialogEdit::on_qleServer_textEdited(const QString &server) {
 	// If using automatic label, update it
+	//qleServer->setText("SKYline服务器");
 	if (!bCustomLabel) {
 		qleName->setText(server);
 	}
@@ -919,6 +925,7 @@ void ConnectDialogEdit::validate() {
 }
 
 void ConnectDialogEdit::accept() {
+	qleServer->setText(Global::get().SklineIP);
 	validate();
 	if (bOk) {
 		QString server = qleServer->text().simplified();
