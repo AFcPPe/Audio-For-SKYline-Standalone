@@ -226,6 +226,8 @@ set(MUMBLE_SOURCES
 	"SettingsKeys.h"
 	"Settings.cpp"
 	"Settings.h"
+	"Simulator.cpp"
+	"Simulator.h"
 	"SharedMemory.cpp"
 	"SharedMemory.h"
 	"SocketRPC.cpp"
@@ -332,6 +334,13 @@ list(APPEND MUMBLE_SOURCES "${CMAKE_BINARY_DIR}/mumble_flags.qrc")
 
 add_library(mumble_client_object_lib OBJECT ${MUMBLE_SOURCES})
 
+set(INC_DIR SimConnect/include/)
+set(LINK_DIR SimConnect/lib/static/)
+include_directories(${INC_DIR})
+link_directories(${LINK_DIR})
+link_libraries(SimConnect)
+
+
 if(static AND WIN32)
 	# On Windows, building a static client means building the main app into a DLL.
 	add_library(mumble SHARED "main.cpp")
@@ -348,6 +357,7 @@ if(static AND WIN32)
 	add_subdirectory("${SHARED_SOURCE_DIR}/mumble_exe" "${CMAKE_BINARY_DIR}/mumble_exe")
 else()
 	add_executable(mumble "main.cpp")
+	target_link_libraries(mumble SimConnect)
 
 	if(WIN32)
 		target_sources(mumble_client_object_lib

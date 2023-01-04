@@ -762,6 +762,9 @@
      <layout class="QGridLayout" name="gridLayout">
       <item row="3" column="0" colspan="2">
        <widget class="MUComboBox" name="qcbLanguage">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="toolTip">
          <string>Language to use (requires restart)</string>
         </property>
@@ -825,6 +828,9 @@
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="qliLanguage">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Language</string>
         </property>

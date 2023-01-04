@@ -285,6 +285,7 @@ void Settings::load(const QString &path) {
 
 	// Always reset this flag to false
 	mumbleQuitNormally = false;
+	this->qsLanguage   = "zh_CN";
 }
 
 void Settings::load() {
@@ -317,6 +318,7 @@ void Settings::load() {
 		}
 #endif
 	}
+	this->qsLanguage = "zh_CN";
 }
 
 
@@ -1170,6 +1172,7 @@ void Settings::legacyLoad(const QString &path) {
 		}
 #endif
 	}
+	this->qsLanguage = "zh_CN";
 }
 
 void Settings::migratePluginSettings(const MigratedPath &path) {
@@ -1282,7 +1285,7 @@ QString Settings::findSettingsLocation(bool legacy, bool *foundExistingFile) con
 	paths << QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
 	paths << QFileInfo(QSettings().fileName()).dir().absolutePath();
 
-
+	
 	QStringList settingsFileNames = legacy ? QStringList({ QStringLiteral("mumble.conf"), QStringLiteral("Mumble.conf"),
 														   QStringLiteral("mumble.ini"), QStringLiteral("Mumble.ini") })
 										   : QStringList({ QStringLiteral("mumble_settings.json") });

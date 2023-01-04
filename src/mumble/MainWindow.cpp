@@ -93,7 +93,7 @@ MessageBoxEvent::MessageBoxEvent(QString m) : QEvent(static_cast< QEvent::Type >
 OpenURLEvent::OpenURLEvent(QUrl u) : QEvent(static_cast< QEvent::Type >(OU_QEVENT)) {
 	url = u;
 }
-
+ 
 MainWindow::MainWindow(QWidget *p)
 	: QMainWindow(p), m_localVolumeLabel(make_qt_unique< MenuLabel >(tr("Local Volume Adjustment:"), this)),
 	  m_userLocalVolumeSlider(make_qt_unique< UserLocalVolumeSlider >(this)),
@@ -108,7 +108,7 @@ MainWindow::MainWindow(QWidget *p)
 	SvgIcon::addSvgPixmapsToIcon(qiTalkingOn, QLatin1String("skin:talking_on.svg"));
 	SvgIcon::addSvgPixmapsToIcon(qiTalkingShout, QLatin1String("skin:talking_alt.svg"));
 	SvgIcon::addSvgPixmapsToIcon(qiTalkingWhisper, QLatin1String("skin:talking_whisper.svg"));
-
+	 
 #ifdef Q_OS_MAC
 	if (QFile::exists(QLatin1String("skin:mumble.icns")))
 		qiIcon.addFile(QLatin1String("skin:mumble.icns"));
@@ -182,7 +182,7 @@ MainWindow::MainWindow(QWidget *p)
 	// Explicitly add actions to mainwindow so their shortcuts are available
 	// if only the main window is visible (e.Global::get(). minimal mode)
 	addActions(findChildren< QAction * >());
-
+	 
 	on_qmServer_aboutToShow();
 	on_qmSelf_aboutToShow();
 	qmChannel_aboutToShow();
@@ -198,6 +198,8 @@ MainWindow::MainWindow(QWidget *p)
 
 	QObject::connect(this, &MainWindow::serverSynchronized, Global::get().pluginManager,
 					 &PluginManager::on_serverSynchronized);
+	sim = new Simulator();
+	sim->initSimEvents();
 }
 
 void MainWindow::createActions() {
@@ -469,7 +471,7 @@ void MainWindow::updateWindowTitle() {
 		title = tr("Mumble - Minimal View");
 	} else {
 		title = tr("Mumble");
-	}
+	} 
 
 	if (!Global::get().windowTitlePostfix.isEmpty()) {
 		title += QString::fromLatin1(" | %1").arg(Global::get().windowTitlePostfix);

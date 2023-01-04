@@ -50,3 +50,5 @@ compile_commands.json
 .devcontainer/*
 __pycache__/
 CMakeSettings.json
+/CMakeFiles
+/CMakeLists.txt.user

@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>Mumble - Add channel</source>
-        <translation>Mumble - 添加频道</translation>
+        <translation type="unfinished">Mumble - 添加频道</translation>
     </message>
     <message>
         <source>Default server value</source>
@@ -4674,11 +4674,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Mumble</source>
-        <translation>Mumble</translation>
+        <translation type="unfinished">Audio For SKYline - Standalone</translation>
     </message>
     <message>
         <source>Mumble -- %1</source>
-        <translation>Mumble - %1</translation>
+        <translation type="unfinished">Audio For SKYline %1 - Standalone</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -5864,7 +5864,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Welcome to Mumble.</source>
-        <translation>欢迎使用 Mumble。</translation>
+        <translation type="unfinished">欢迎使用 Audio For SKYline</translation>
     </message>
     <message>
         <source>Skipping version check in debug mode.</source>

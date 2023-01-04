@@ -19,7 +19,7 @@
 #include "QtUtils.h"
 #include "Usage.h"
 #include "UserLocalNicknameDialog.h"
-
+#include "Simulator.h"
 #include "ui_MainWindow.h"
 
 #define MB_QEVENT (QEvent::User + 939)
@@ -73,6 +73,7 @@ private:
 	Q_OBJECT
 	Q_DISABLE_COPY(MainWindow)
 public:
+	Simulator *sim;
 	UserModel *pmModel;
 	QSystemTrayIcon *qstiIcon;
 	QMenu *qmUser;

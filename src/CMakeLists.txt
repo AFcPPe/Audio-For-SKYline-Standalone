@@ -10,7 +10,7 @@ option(benchmarks "Build benchmarks" OFF)
 
 option(qssldiffiehellmanparameters "Build support for custom Diffie-Hellman parameters." ON)
 
-option(zeroconf "Build support for zeroconf (mDNS/DNS-SD)." ON)
+option(zeroconf "Build support for zeroconf (mDNS/DNS-SD)." OFF)
 
 option(dbus "Build support for DBus." ON)
 

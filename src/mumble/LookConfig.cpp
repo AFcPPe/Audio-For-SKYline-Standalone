@@ -225,14 +225,16 @@ void LookConfig::load(const Settings &r) {
 
 void LookConfig::save() const {
 	const QString oldLanguage = s.qsLanguage;
-	if (qcbLanguage->currentIndex() == 0)
-		s.qsLanguage = QString();
-	else
-		s.qsLanguage = qcbLanguage->itemData(qcbLanguage->currentIndex()).toString();
-
+	//s.qsLanguage              = QString();
+	//if (qcbLanguage->currentIndex() == 0)
+	//	s.qsLanguage = QString();
+	//else
+	//	s.qsLanguage = qcbLanguage->itemData(qcbLanguage->currentIndex()).toString();
+	s.qsLanguage = "zh_CN";
 	if (s.qsLanguage != oldLanguage) {
 		s.requireRestartToApply = true;
 	}
+	
 
 	// Save Layout radioboxes state
 	if (qrbLClassic->isChecked()) {
