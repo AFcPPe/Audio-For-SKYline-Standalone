@@ -56,6 +56,7 @@ bool SimulatorSimConnect::initSimEvents() {
 
 void SimulatorSimConnect::onPosTimerElipsed() {
 	callProc();
+	packetcount++;
 	
 }
 
