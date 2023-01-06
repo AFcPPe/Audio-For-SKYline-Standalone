@@ -286,7 +286,7 @@ Add a new group.</source>
     </message>
     <message>
         <source>Excluded members</source>
-        <translation>أعضاء مستثنون&#xa0;</translation>
+        <translation>أعضاء مستثنون </translation>
     </message>
     <message>
         <source>This makes the entry apply to sub-channels of this channel.</source>
@@ -3061,6 +3061,14 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>IPv6 address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

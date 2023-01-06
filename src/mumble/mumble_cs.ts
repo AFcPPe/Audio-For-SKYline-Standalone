@@ -3101,6 +3101,14 @@ Jste si jisti, že chcete certifikát nahradit?
         <source>IPv6 address</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

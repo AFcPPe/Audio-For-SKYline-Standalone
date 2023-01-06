@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Failed: Invalid channel</source>
-        <translation>Error&#x202f;: canal invalid</translation>
+        <translation>Error : canal invalid</translation>
     </message>
     <message>
         <source>Mumble - Edit %1</source>
@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>ID: %1</source>
-        <translation>ID&#x202f;: %1</translation>
+        <translation>ID : %1</translation>
     </message>
     <message>
         <source>This grants the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
@@ -3060,6 +3060,14 @@ Are you sure you wish to replace your certificate?
         <source>IPv6 address</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
@@ -3233,7 +3241,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>HTTP error %1: &quot;%2&quot;</source>
-        <translation>Error HTTP %1&#xa0;: «&#x202f;%2&#x202f;»</translation>
+        <translation>Error HTTP %1 : « %2 »</translation>
     </message>
     <message>
         <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
@@ -5487,11 +5495,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Welcome message: %1</source>
-        <translation>Messatge de benvenguda&#x202f;: %1</translation>
+        <translation>Messatge de benvenguda : %1</translation>
     </message>
     <message>
         <source>Mumble: %1</source>
-        <translation>Mumble&#x202f;: %1</translation>
+        <translation>Mumble : %1</translation>
     </message>
     <message>
         <source>You were denied %1 privileges in %2.</source>
@@ -6171,7 +6179,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>%1: %2</source>
-        <translation>%1&#x202f;: %2</translation>
+        <translation>%1 : %2</translation>
     </message>
     <message>
         <source>(%1) %2</source>
@@ -7968,7 +7976,7 @@ You can register them again.</source>
     </message>
     <message>
         <source>&lt;b&gt;Encryption:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Chiframent&#xa0;:&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Chiframent :&lt;/b&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Avg. latency:&lt;/b&gt;</source>
@@ -8426,7 +8434,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>%1 kbit/s</source>
-        <translation>%1&#x202f;kbit/s</translation>
+        <translation>%1 kbit/s</translation>
     </message>
     <message>
         <source>Bandwidth</source>
@@ -8749,7 +8757,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>DNS: %1</source>
-        <translation>DNS&#x202f;: %1</translation>
+        <translation>DNS : %1</translation>
     </message>
     <message>
         <source>Issued by:</source>

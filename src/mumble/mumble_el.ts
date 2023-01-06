@@ -1228,7 +1228,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;This enables one of the loopback test modes.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;None&lt;/i&gt; - Loopback disabled&lt;br /&gt;&lt;i&gt;Local&lt;/i&gt; - Emulate a local server.&lt;br /&gt;&lt;i&gt;Server&lt;/i&gt; - Request loopback from server.&lt;br /&gt;Please note than when loopback is enabled, no other users will hear your voice. This setting is not saved on application exit.</source>
-        <translation>&lt;b&gt;Αυτό δίνει τη δυνατότητα μιας από τις λειτουργίες δοκιμής επανάληψης.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Καμία&lt;/i&gt; - Απενεργοποίηση επανάληψης&#xa0;&lt;br /&gt;&lt;i&gt;Τοπικά&lt;/i&gt; - Μίμηση ενός τοπικού διακομιστή.&lt;br /&gt;&lt;i&gt;Διακομιστής&lt;/i&gt; - Αίτημα επανάληψης από το διακομιστή&lt;br /&gt;Όταν η λειτουργία επανάληψης είναι ενεργοποιημένη, οι άλλοι χρήστες δεν θα ακούσουν την φωνή σας. Αυτή η ρύθμιση δεν αποθηκεύεται μετά την έξοδο της εφαρμογής.</translation>
+        <translation>&lt;b&gt;Αυτό δίνει τη δυνατότητα μιας από τις λειτουργίες δοκιμής επανάληψης.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Καμία&lt;/i&gt; - Απενεργοποίηση επανάληψης &lt;br /&gt;&lt;i&gt;Τοπικά&lt;/i&gt; - Μίμηση ενός τοπικού διακομιστή.&lt;br /&gt;&lt;i&gt;Διακομιστής&lt;/i&gt; - Αίτημα επανάληψης από το διακομιστή&lt;br /&gt;Όταν η λειτουργία επανάληψης είναι ενεργοποιημένη, οι άλλοι χρήστες δεν θα ακούσουν την φωνή σας. Αυτή η ρύθμιση δεν αποθηκεύεται μετά την έξοδο της εφαρμογής.</translation>
     </message>
     <message>
         <source>Volume</source>
@@ -3098,6 +3098,14 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>IPv6 address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

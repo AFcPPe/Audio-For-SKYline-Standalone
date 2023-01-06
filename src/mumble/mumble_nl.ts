@@ -3100,6 +3100,14 @@ Weet je zeker dat je je certificaat wil vervangen?
         <source>IPv6 address</source>
         <translation>IPv6-adres</translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

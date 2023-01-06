@@ -3100,6 +3100,14 @@ Sei sicuro di voler sostituire il tuo certificato?
         <source>IPv6 address</source>
         <translation>Indirizzo IPv6</translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

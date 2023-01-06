@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Failed: Invalid channel</source>
-        <translation>Échec&#xa0;: Salon invalide</translation>
+        <translation>Échec : Salon invalide</translation>
     </message>
     <message>
         <source>Mumble - Edit %1</source>
@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>ID: %1</source>
-        <translation>ID&#xa0;: %1</translation>
+        <translation>ID : %1</translation>
     </message>
     <message>
         <source>This grants the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
@@ -169,7 +169,7 @@ Cette valeur vous permet de définir comment Mumble arrange les salons dans l&ap
     </message>
     <message>
         <source>Inherit ACL of parent?</source>
-        <translation>Hériter la LCA du parent&#xa0;?</translation>
+        <translation>Hériter la LCA du parent ?</translation>
     </message>
     <message>
         <source>This sets whether or not the ACL up the chain of parent channels are applied to this object. Only those entries that are marked in the parent as &quot;Apply to sub-channels&quot; will be inherited.</source>
@@ -378,7 +378,7 @@ Contient la liste des membres hérités par le salon actuel. Décochez &lt;i&gt;
     </message>
     <message>
         <source>This controls which group of users this entry applies to.&lt;br /&gt;Note that the group is evaluated in the context of the channel the entry is used in. For example, the default ACL on the Root channel gives &lt;i&gt;Write&lt;/i&gt; permission to the &lt;i&gt;admin&lt;/i&gt; group. This entry, if inherited by a channel, will give a user write privileges if he belongs to the &lt;i&gt;admin&lt;/i&gt; group in that channel, even if he doesn&apos;t belong to the &lt;i&gt;admin&lt;/i&gt; group in the channel where the ACL originated.&lt;br /&gt;If a group name starts with &apos;!&apos;, its membership is negated, and if it starts with &apos;~&apos;, it is evaluated in the channel the ACL was defined in, rather than the channel the ACL is active in.&lt;br /&gt;If a group name starts with &apos;#&apos;, it is interpreted as an access token. Users must have entered whatever follows the &apos;#&apos; in their list of access tokens to match. This can be used for very simple password access to channels for non-authenticated users.&lt;br /&gt;If a group name starts with &apos;$&apos;, it will only match users whose certificate hash matches what follows the &apos;$&apos;.&lt;br /&gt;A few special predefined groups are:&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Everyone will match.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - All authenticated users will match.&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - User currently in a sub-channel minimum &lt;i&gt;a&lt;/i&gt; common parents, and between &lt;i&gt;b&lt;/i&gt; and &lt;i&gt;c&lt;/i&gt; channels down the chain. See the website for more extensive documentation on this one.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Users currently in the channel will match (convenience for &apos;&lt;i&gt;sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Users outside the channel will match (convenience for &apos;&lt;i&gt;!sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;Note that an entry applies to either a user or a group, not both.</source>
-        <translation>Contrôle à quel groupe d&apos;utilisateurs cette entrée s&apos;applique.&lt;br /&gt;Notez que les groupes sont évalués dans le contexte du salon dans lequel l&apos;entrée est utilisée. Par exemple, la LCA du salon racine par défaut donne la permission d&apos;&lt;i&gt;écriture&lt;/i&gt; au groupe &lt;i&gt;admin&lt;/i&gt;. Cette entrée, si héritée par un salon, donnera à l&apos;utilisateur le privilège d&apos;écriture s&apos;il appartient au groupe &lt;i&gt;admin&lt;/i&gt; du salon, même s&apos;il n&apos;appartient pas au groupe &lt;i&gt;admin&lt;/i&gt; dans le salon de la LCA originelle.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;!&apos;, son appartenance est négative, et s&apos;il commence par un &apos;~&apos;, il est évalué dans le salon dans lequel la LCA a été définie, plutôt que dans le salon dans lequel la LCA est active.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;#&apos;, son contenu sera interprété comme un jeton d&apos;accès. Les utilisateurs doivent saisir ce qui suit le &apos;#&apos; dans leur liste de jetons d&apos;accès pour être valide. Cette méthode peut être utilisée pour un accès simple par mots de passe pour les utilisateurs non authentifiés.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;$&apos;, seulement les utilisateurs dont le hachage du certificat, qui doit suivre le &apos;$&apos;, seront valides.&lt;br /&gt;Quelques groupes prédéfinis sont&#xa0;:&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Tout le monde est concerné.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - Tous les utilisateurs authentifiés&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - Utilisateurs actuellement dans un sous-salon avec au moins &lt;i&gt;a&lt;/i&gt; parents communs, entre les salons &lt;i&gt;b&lt;/i&gt; et &lt;i&gt;c&lt;/i&gt;. Voir le site web pour une explication plus complète.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Utilisateurs dans le salon (raccourci pour &lt;i&gt;sub,0,0,0&lt;/i&gt;)&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Utilisateurs en dehors du salon (raccourci pour &lt;i&gt;!sub,0,0,0&lt;/i&gt;).&lt;br /&gt;Notez que ces entrées s&apos;appliquent soit à un utilisateur, soit à un groupe, mais pas aux deux.</translation>
+        <translation>Contrôle à quel groupe d&apos;utilisateurs cette entrée s&apos;applique.&lt;br /&gt;Notez que les groupes sont évalués dans le contexte du salon dans lequel l&apos;entrée est utilisée. Par exemple, la LCA du salon racine par défaut donne la permission d&apos;&lt;i&gt;écriture&lt;/i&gt; au groupe &lt;i&gt;admin&lt;/i&gt;. Cette entrée, si héritée par un salon, donnera à l&apos;utilisateur le privilège d&apos;écriture s&apos;il appartient au groupe &lt;i&gt;admin&lt;/i&gt; du salon, même s&apos;il n&apos;appartient pas au groupe &lt;i&gt;admin&lt;/i&gt; dans le salon de la LCA originelle.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;!&apos;, son appartenance est négative, et s&apos;il commence par un &apos;~&apos;, il est évalué dans le salon dans lequel la LCA a été définie, plutôt que dans le salon dans lequel la LCA est active.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;#&apos;, son contenu sera interprété comme un jeton d&apos;accès. Les utilisateurs doivent saisir ce qui suit le &apos;#&apos; dans leur liste de jetons d&apos;accès pour être valide. Cette méthode peut être utilisée pour un accès simple par mots de passe pour les utilisateurs non authentifiés.&lt;br /&gt;Si le nom d&apos;un groupe commence par &apos;$&apos;, seulement les utilisateurs dont le hachage du certificat, qui doit suivre le &apos;$&apos;, seront valides.&lt;br /&gt;Quelques groupes prédéfinis sont :&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Tout le monde est concerné.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - Tous les utilisateurs authentifiés&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - Utilisateurs actuellement dans un sous-salon avec au moins &lt;i&gt;a&lt;/i&gt; parents communs, entre les salons &lt;i&gt;b&lt;/i&gt; et &lt;i&gt;c&lt;/i&gt;. Voir le site web pour une explication plus complète.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Utilisateurs dans le salon (raccourci pour &lt;i&gt;sub,0,0,0&lt;/i&gt;)&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Utilisateurs en dehors du salon (raccourci pour &lt;i&gt;!sub,0,0,0&lt;/i&gt;).&lt;br /&gt;Notez que ces entrées s&apos;appliquent soit à un utilisateur, soit à un groupe, mais pas aux deux.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Password&lt;/b&gt;&lt;br /&gt;This field allows you to easily set and change the password of a channel. It uses Mumble&apos;s access tokens feature in the background. Use ACLs and groups if you need more fine grained and powerful access control.</source>
@@ -455,7 +455,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>Opening chosen ALSA Input failed: %1</source>
-        <translation>L&apos;ouverture du périphérique d&apos;entrée ALSA choisi a échoué&#xa0;: %1</translation>
+        <translation>L&apos;ouverture du périphérique d&apos;entrée ALSA choisi a échoué : %1</translation>
     </message>
 </context>
 <context>
@@ -466,7 +466,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>Opening chosen ALSA Output failed: %1</source>
-        <translation>L&apos;ouverture du périphérique de sortie ALSA choisi a échoué&#xa0;: %1</translation>
+        <translation>L&apos;ouverture du périphérique de sortie ALSA choisi a échoué : %1</translation>
     </message>
 </context>
 <context>
@@ -493,7 +493,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>ASIO Initialization failed: %1</source>
-        <translation>L&apos;initialisation d&apos;ASIO a échoué&#xa0;: %1</translation>
+        <translation>L&apos;initialisation d&apos;ASIO a échoué : %1</translation>
     </message>
     <message>
         <source>Failed to instantiate ASIO driver</source>
@@ -1265,7 +1265,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>How much should sound volume increase for sources that are really close?</source>
-        <translation>À quel niveau le volume doit-il être augmenté pour les sources qui sont vraiment très proches&#xa0;?</translation>
+        <translation>À quel niveau le volume doit-il être augmenté pour les sources qui sont vraiment très proches ?</translation>
     </message>
     <message>
         <source>Checking this indicates that you don&apos;t have speakers connected, just headphones. This is important, as speakers are usually in front of you, while headphones are directly to your left/right.</source>
@@ -1293,7 +1293,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>What should the volume be at the maximum distance?</source>
-        <translation>Quel doit être le volume à la distance maximale&#xa0;?</translation>
+        <translation>Quel doit être le volume à la distance maximale ?</translation>
     </message>
     <message>
         <source>Loopback Test</source>
@@ -1560,7 +1560,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     <message>
         <source>&gt;1000 ms</source>
         <oldsource>&gt;1000ms</oldsource>
-        <translation>&gt;1000&#xa0;ms</translation>
+        <translation>&gt;1000 ms</translation>
     </message>
     <message>
         <source>Audio Statistics</source>
@@ -1693,7 +1693,7 @@ Cette valeur vous permet de définir un nombre maximum d&apos;utilisateurs autor
     </message>
     <message>
         <source>This shows the weights of the echo canceller, with time increasing downwards and frequency increasing to the right.&lt;br /&gt;Ideally, this should be black, indicating no echo exists at all. More commonly, you&apos;ll have one or more horizontal stripes of bluish color representing time delayed echo. You should be able to see the weights updated in real time.&lt;br /&gt;Please note that as long as you have nothing to echo off, you won&apos;t see much useful data here. Play some music and things should stabilize. &lt;br /&gt;You can choose to view the real or imaginary parts of the frequency-domain weights, or alternately the computed modulus and phase. The most useful of these will likely be modulus, which is the amplitude of the echo, and shows you how much of the outgoing signal is being removed at that time step. The other viewing modes are mostly useful to people who want to tune the echo cancellation algorithms.&lt;br /&gt;Please note: If the entire image fluctuates massively while in modulus mode, the echo canceller fails to find any correlation whatsoever between the two input sources (speakers and microphone). Either you have a very long delay on the echo, or one of the input sources is configured wrong.</source>
-        <translation>Montre le poids de la suppression de l&apos;écho, avec le temps en ordonnée et la fréquence en abscisse.&lt;br /&gt;Idéalement, celui-ci devrait être noir, indiquant qu&apos;aucun écho n&apos;existe. Plus communément, vous aurez une ou plusieurs bandes bleutées représentant le temps de retard de l&apos;écho. Vous devriez être capable de visualiser les poids mis à jour en temps réel.&lt;br /&gt;Notez que tant que vous n&apos;avez aucun signal où enlever l&apos;écho, vous ne verrez pas beaucoup de données utiles ici. Écoutez de la musique et les choses devraient se stabiliser.&lt;br /&gt;Vous pouvez choisir de voir la partie réelle ou imaginaire dans le domaine fréquentiel, ou alternativement le module et la phase des poids. Le plus utile de ces outils serait probablement le module, qui est l&apos;amplitude de l&apos;écho, qui montre la quantité de signal sortant supprimée à chaque instant. Les autres modes de visualisation sont principalement utiles pour les gens qui veulent régler les algorithmes d&apos;annulation de l&apos;écho.&lt;br /&gt;Remarque&#xa0;: si l&apos;image entière fluctue massivement en mode module, cela signifie que l&apos;algorithme de suppression de l&apos;écho n&apos;a pas réussi à trouver une corrélation entre les deux sources d&apos;entrée (haut-parleurs et microphone). Soit vous avez un retard très long sur l&apos;écho, soit une des sources d&apos;entrée est mal configurée.</translation>
+        <translation>Montre le poids de la suppression de l&apos;écho, avec le temps en ordonnée et la fréquence en abscisse.&lt;br /&gt;Idéalement, celui-ci devrait être noir, indiquant qu&apos;aucun écho n&apos;existe. Plus communément, vous aurez une ou plusieurs bandes bleutées représentant le temps de retard de l&apos;écho. Vous devriez être capable de visualiser les poids mis à jour en temps réel.&lt;br /&gt;Notez que tant que vous n&apos;avez aucun signal où enlever l&apos;écho, vous ne verrez pas beaucoup de données utiles ici. Écoutez de la musique et les choses devraient se stabiliser.&lt;br /&gt;Vous pouvez choisir de voir la partie réelle ou imaginaire dans le domaine fréquentiel, ou alternativement le module et la phase des poids. Le plus utile de ces outils serait probablement le module, qui est l&apos;amplitude de l&apos;écho, qui montre la quantité de signal sortant supprimée à chaque instant. Les autres modes de visualisation sont principalement utiles pour les gens qui veulent régler les algorithmes d&apos;annulation de l&apos;écho.&lt;br /&gt;Remarque : si l&apos;image entière fluctue massivement en mode module, cela signifie que l&apos;algorithme de suppression de l&apos;écho n&apos;a pas réussi à trouver une corrélation entre les deux sources d&apos;entrée (haut-parleurs et microphone). Soit vous avez un retard très long sur l&apos;écho, soit une des sources d&apos;entrée est mal configurée.</translation>
     </message>
     <message>
         <source>This is the audio bitrate of the last compressed frame (20 ms), and as such will jump up and down as the VBR adjusts the quality. The peak bitrate can be adjusted in the Settings dialog.</source>
@@ -1930,7 +1930,7 @@ Mumble est développé de façon continue, et l&apos;équipe de développement v
     </message>
     <message>
         <source>Push To Talk:</source>
-        <translation>Appuyez pour parler&#xa0;:</translation>
+        <translation>Appuyez pour parler :</translation>
     </message>
     <message>
         <source>Quality &amp; Notifications</source>
@@ -2163,7 +2163,7 @@ Parlez fort, comme lorsque vous êtes irrité ou excité. Diminuez le volume dan
     </message>
     <message>
         <source>Who are you looking for?</source>
-        <translation>Qui recherchez-vous&#xa0;?</translation>
+        <translation>Qui recherchez-vous ?</translation>
     </message>
     <message>
         <source>No nickname</source>
@@ -2340,7 +2340,7 @@ Parlez fort, comme lorsque vous êtes irrité ou excité. Diminuez le volume dan
     </message>
     <message>
         <source>&lt;b&gt;Certificate Expiry:&lt;/b&gt; Your certificate is about to expire. You need to renew it, or you will no longer be able to connect to servers you are registered on.</source>
-        <translation>&lt;b&gt;Expiration du certificat&#xa0;:&lt;/b&gt; Votre certificat va bientôt expirer. Vous devez le renouveler ou vous ne pourrez plus vous connecter aux serveurs sur lesquels vous êtes enregistré.</translation>
+        <translation>&lt;b&gt;Expiration du certificat :&lt;/b&gt; Votre certificat va bientôt expirer. Vous devez le renouveler ou vous ne pourrez plus vous connecter aux serveurs sur lesquels vous êtes enregistré.</translation>
     </message>
     <message>
         <source>Current certificate</source>
@@ -2500,7 +2500,7 @@ Parlez fort, comme lorsque vous êtes irrité ou excité. Diminuez le volume dan
     </message>
     <message>
         <source>Replace existing certificate with new certificate?</source>
-        <translation>Remplacer le certificat existant par le nouveau&#xa0;?</translation>
+        <translation>Remplacer le certificat existant par le nouveau ?</translation>
     </message>
     <message>
         <source>&lt;p&gt;You already have a certificate stored in Mumble, and you are about to replace it.&lt;/p&gt;
@@ -2518,7 +2518,7 @@ Are you sure you wish to replace your certificate?
 &lt;p&gt;Si ce n&apos;est pas le cas, vous ne pourrez plus être reconnu par les serveurs auprès desquels vous vous êtes précédemment authentifiés. Si vous ne vous êtes enregistré sur aucun serveur, vous n&apos;avez pas de soucis à vous faire.
 &lt;/p&gt;
 &lt;p&gt;
-Êtes-vous sûr(e) de vouloir remplacer votre certificat&#xa0;?
+Êtes-vous sûr(e) de vouloir remplacer votre certificat ?
 &lt;/p&gt;
 </translation>
     </message>
@@ -3038,7 +3038,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Pour mesurer la latence (ping) des serveurs publiques et déterminer le nombre d&apos;utilisateurs actifs, votre adresse IP doit être transmise à chacun.&lt;/p&gt;&lt;p&gt;Voulez-vous consentir à l&apos;envoi de votre adresse IP&#xa0;? Si vous répondez non, la liste de serveurs public sera désactivée. Cependant, vous pourrez la réactivée à tout moment dans les paramètres réseau.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Pour mesurer la latence (ping) des serveurs publiques et déterminer le nombre d&apos;utilisateurs actifs, votre adresse IP doit être transmise à chacun.&lt;/p&gt;&lt;p&gt;Voulez-vous consentir à l&apos;envoi de votre adresse IP ? Si vous répondez non, la liste de serveurs public sera désactivée. Cependant, vous pourrez la réactivée à tout moment dans les paramètres réseau.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>C&amp;onnect</source>
@@ -3099,6 +3099,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>IPv6 address</source>
         <translation>Adresse IPv6</translation>
+    </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3169,16 +3177,16 @@ Nom d&apos;utilisateur envoyé au serveur. Notez que le serveur peut imposer des
 Do you want to fill the dialog with the connection data of this server?
 Host: %1 Port: %2</source>
         <translation>Vous êtes actuellement connecté à un serveur.
-Souhaitez-vous renseigner les informations de connexion pour ce server&#xa0;?
-Hôte&#xa0;: %1 Port&#xa0;: %2</translation>
+Souhaitez-vous renseigner les informations de connexion pour ce server ?
+Hôte : %1 Port : %2</translation>
     </message>
     <message>
         <source>You have an URL in your clipboard.
 Do you want to fill the dialog with this data?
 Host: %1 Port: %2</source>
         <translation>Vous avez une URL dans votre presse-papier.
-Souhaitez-vous remplir la fenêtre à partir de cette URL&#xa0;?
-Hôte&#xa0;: %1 Port&#xa0;: %2</translation>
+Souhaitez-vous remplir la fenêtre à partir de cette URL ?
+Hôte : %1 Port : %2</translation>
     </message>
     <message>
         <source>Password</source>
@@ -3241,7 +3249,7 @@ Nom du serveur. C&apos;est le nom du serveur tel qu&apos;il apparaîtra dans vos
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;We&apos;re terribly sorry, but it seems Mumble has crashed. Do you want to send a crash report to the Mumble developers?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The crash report contains a partial copy of Mumble&apos;s memory at the time it crashed, and will help the developers fix the problem.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Nous sommes vraiment navrés, mais il semblerait que Mumble ait cessé de fonctionner. Voulez-vous envoyer un rapport de l&apos;incident aux développeurs de Mumble&#xa0;?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ce rapport contient une copie partielle de la mémoire de Mumble au moment de son arrêt, et aidera les développeurs à résoudre le problème.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;&lt;b&gt;Nous sommes vraiment navrés, mais il semblerait que Mumble ait cessé de fonctionner. Voulez-vous envoyer un rapport de l&apos;incident aux développeurs de Mumble ?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ce rapport contient une copie partielle de la mémoire de Mumble au moment de son arrêt, et aidera les développeurs à résoudre le problème.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Email address (optional)</source>
@@ -3282,7 +3290,7 @@ Nom du serveur. C&apos;est le nom du serveur tel qu&apos;il apparaîtra dans vos
     </message>
     <message>
         <source>HTTP error %1: &quot;%2&quot;</source>
-        <translation>Erreur HTTP %1&#xa0;: &quot;%2&quot;</translation>
+        <translation>Erreur HTTP %1 : &quot;%2&quot;</translation>
     </message>
     <message>
         <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
@@ -3298,7 +3306,7 @@ Nom du serveur. C&apos;est le nom du serveur tel qu&apos;il apparaîtra dans vos
     </message>
     <message>
         <source>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</source>
-        <translation>Le fichier de base de données &apos;%1&apos; défini dans le fichier de configuration n&apos;existe pas. Voulez-vous en créer un nouveau à cet emplacement&#xa0;?</translation>
+        <translation>Le fichier de base de données &apos;%1&apos; défini dans le fichier de configuration n&apos;existe pas. Voulez-vous en créer un nouveau à cet emplacement ?</translation>
     </message>
     <message>
         <source>Mumble failed to initialize a database in any of the possible locations.</source>
@@ -3415,7 +3423,7 @@ Nom du serveur. C&apos;est le nom du serveur tel qu&apos;il apparaîtra dans vos
 Without this option enabled, using Mumble&apos;s global shortcuts in privileged applications will not work. This can seem inconsistent: for example, if the Push-to-Talk button is pressed in a non-privileged program, but released in a privileged application, Mumble will not observe that it has been released and you will continue to talk until you press the Push-to-Talk button again.</source>
         <translation>&lt;b&gt;Activer les raccourcis dans les applications en mode privilégié&lt;/b&gt;.&lt;br /&gt;Également appelé &quot;UIAccess &quot;. Cela permet à Mumble de recevoir des événements de raccourci globaux des programmes exécutés à des niveaux de privilèges élevés, tels qu&apos;une Invite de Commandes d&apos;Administration ou d&apos;anciens jeux qui s&apos;exécutent avec des privilèges administrateur.
 &lt;br /&gt;&lt;br /&gt;
-Sans cette option, l&apos;utilisation des raccourcis globaux de Mumble dans les applications en mode privilégié ne fonctionnera pas. Cela peut sembler inconsistant&#xa0;: par exemple, si le bouton Push-to-Talk est pressé dans un programme non privilégié, mais relaché dans une application privilégiée, Mumble n&apos;observera pas qu&apos;il a été relaché et vous continuerez à parler jusqu&apos;à ce que vous appuyiez sur le bouton Push-to-Talk à nouveau.</translation>
+Sans cette option, l&apos;utilisation des raccourcis globaux de Mumble dans les applications en mode privilégié ne fonctionnera pas. Cela peut sembler inconsistant : par exemple, si le bouton Push-to-Talk est pressé dans un programme non privilégié, mais relaché dans une application privilégiée, Mumble n&apos;observera pas qu&apos;il a été relaché et vous continuerez à parler jusqu&apos;à ce que vous appuyiez sur le bouton Push-to-Talk à nouveau.</translation>
     </message>
     <message>
         <source>Enable shortcuts in privileged applications</source>
@@ -3559,7 +3567,7 @@ Sans cette option, l&apos;utilisation des raccourcis globaux de Mumble dans les 
     </message>
     <message>
         <source>Shout/Whisper to:</source>
-        <translation>Crier / Murmurer à&#xa0;:</translation>
+        <translation>Crier / Murmurer à :</translation>
     </message>
     <message>
         <source>Current selection</source>
@@ -3567,7 +3575,7 @@ Sans cette option, l&apos;utilisation des raccourcis globaux de Mumble dans les 
     </message>
     <message>
         <source>When shouting to channel:</source>
-        <translation>Lorsque vous criez sur le salon&#xa0;:</translation>
+        <translation>Lorsque vous criez sur le salon :</translation>
     </message>
     <message>
         <source>Shout to linked channels</source>
@@ -4380,7 +4388,7 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>This sets the behavior of user drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the user without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the user.</source>
-        <translation>Définit le comportement en cas de déplacement d&apos;un utilisateur&#xa0;; peut être utilisé pour prévenir un déplacement accidentel. &lt;i&gt;Déplacer&lt;/i&gt; déplace l&apos;utilisateur sans rien demander. &lt;i&gt;Ne rien faire&lt;/i&gt; n&apos;effectue aucune opération et affiche un message d&apos;erreur. &lt;i&gt;Demander&lt;/i&gt; affiche une fenêtre de confirmation pour confirmer le déplacement de l&apos;utilisateur.</translation>
+        <translation>Définit le comportement en cas de déplacement d&apos;un utilisateur ; peut être utilisé pour prévenir un déplacement accidentel. &lt;i&gt;Déplacer&lt;/i&gt; déplace l&apos;utilisateur sans rien demander. &lt;i&gt;Ne rien faire&lt;/i&gt; n&apos;effectue aucune opération et affiche un message d&apos;erreur. &lt;i&gt;Demander&lt;/i&gt; affiche une fenêtre de confirmation pour confirmer le déplacement de l&apos;utilisateur.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable Developer menu&lt;/b&gt;&lt;br /&gt;This enables the &quot;Developer&quot;-menu in Mumble. This menu is used for developer-specific features, such as the Developer Console.</source>
@@ -4783,7 +4791,7 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Vous êtes sur le point de vous enregistrer sur ce serveur. Cette action ne peut pas être annulée, et votre identifiant ne pourra plus être modifié une fois cette étape effectuée. Vous serez pour toujours connu comme &apos;%1&apos; sur ce serveur&lt;/p&gt;&lt;p&gt;Êtes-vous sûr de vouloir vous enregistrer&#xa0;?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Vous êtes sur le point de vous enregistrer sur ce serveur. Cette action ne peut pas être annulée, et votre identifiant ne pourra plus être modifié une fois cette étape effectuée. Vous serez pour toujours connu comme &apos;%1&apos; sur ce serveur&lt;/p&gt;&lt;p&gt;Êtes-vous sûr de vouloir vous enregistrer ?&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Register user %1</source>
@@ -4791,7 +4799,7 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>&lt;p&gt;You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.&lt;/p&gt;&lt;p&gt;From this point on, %1 will be authenticated with the certificate currently in use.&lt;/p&gt;&lt;p&gt;Are you sure you want to register %1?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Vous êtes sur le point d&apos;enregistrer %1 sur le serveur. Cette action est irréversible, le nom d&apos;utilisateur ne pourra pas être modifié, et %1 aura accès au serveur même si vous changez le mot de passe du serveur.&lt;/p&gt;&lt;p&gt;À partir de ce point, %1 sera authentifié avec le certificat actuellement utilisé.&lt;/p&gt;&lt;p&gt;Êtes-vous sûr de vouloir l&apos;enregistrer %1&#xa0;?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Vous êtes sur le point d&apos;enregistrer %1 sur le serveur. Cette action est irréversible, le nom d&apos;utilisateur ne pourra pas être modifié, et %1 aura accès au serveur même si vous changez le mot de passe du serveur.&lt;/p&gt;&lt;p&gt;À partir de ce point, %1 sera authentifié avec le certificat actuellement utilisé.&lt;/p&gt;&lt;p&gt;Êtes-vous sûr de vouloir l&apos;enregistrer %1 ?&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Kicking user %1</source>
@@ -4815,7 +4823,7 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>&lt;li&gt;Expected certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation>&lt;li&gt;Un hash de certificat était attendu (SHA-1)&#xa0;:	%1&lt;/li&gt;</translation>
+        <translation>&lt;li&gt;Un hash de certificat était attendu (SHA-1) :	%1&lt;/li&gt;</translation>
     </message>
     <message>
         <source>Server presented a certificate which failed verification.</source>
@@ -4979,15 +4987,15 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>Are you sure you want to reset the comment of user %1?</source>
-        <translation>Êtes-vous sûr de vouloir réinitialiser le commentaire de l&apos;utilisateur %1&#xa0;?</translation>
+        <translation>Êtes-vous sûr de vouloir réinitialiser le commentaire de l&apos;utilisateur %1 ?</translation>
     </message>
     <message>
         <source>Are you sure you want to reset the avatar of user %1?</source>
-        <translation>Êtes-vous sûr de vouloir réinitialiser l&apos;avatar de l&apos;utilisateur %1&#xa0;?</translation>
+        <translation>Êtes-vous sûr de vouloir réinitialiser l&apos;avatar de l&apos;utilisateur %1 ?</translation>
     </message>
     <message>
         <source>Are you sure you want to delete %1 and all its sub-channels?</source>
-        <translation>Êtes-vous sûr de vouloir supprimer %1 ainsi que tous ses sous-salons&#xa0;?</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer %1 ainsi que tous ses sous-salons ?</translation>
     </message>
     <message>
         <source>Sending message to channel %1</source>
@@ -5028,11 +5036,11 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>Restart Mumble?</source>
-        <translation>Redémarrer Mumble&#xa0;?</translation>
+        <translation>Redémarrer Mumble ?</translation>
     </message>
     <message>
         <source>Some settings will only apply after a restart of Mumble. Restart Mumble now?</source>
-        <translation>Certaines options ne seront appliquées qu&apos;après un redémarrage de Mumble. Redémarrer Mumble maintenant&#xa0;?</translation>
+        <translation>Certaines options ne seront appliquées qu&apos;après un redémarrage de Mumble. Redémarrer Mumble maintenant ?</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -5044,7 +5052,7 @@ Le paramètre ne s&apos;applique qu&apos;aux nouveaux messages, ceux déjà affi
     </message>
     <message>
         <source>&lt;li&gt;Server certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation>&lt;li&gt;Hash du certificat du serveur (SHA-1)&#xa0;:	%1&lt;/li&gt;</translation>
+        <translation>&lt;li&gt;Hash du certificat du serveur (SHA-1) :	%1&lt;/li&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;WARNING:&lt;/b&gt; The server presented a certificate that was different from the stored one.</source>
@@ -5370,15 +5378,15 @@ veuillez réessayer. Sinon annulez et vérifiez votre certificat et nom d&apos;u
     </message>
     <message>
         <source>&amp;What&apos;s This?</source>
-        <translation>&amp;Qu&apos;est-ce que c&apos;est&#xa0;?</translation>
+        <translation>&amp;Qu&apos;est-ce que c&apos;est ?</translation>
     </message>
     <message>
         <source>Enter What&apos;s This? mode</source>
-        <translation>Entrer dans le mode «&#xa0;Qu&apos;est-ce que c&apos;est&#xa0;?&#xa0;»</translation>
+        <translation>Entrer dans le mode « Qu&apos;est-ce que c&apos;est ? »</translation>
     </message>
     <message>
         <source>Click this to enter &quot;What&apos;s This?&quot; mode. Your cursor will turn into a question mark. Click on any button, menu choice or area to show a description of what it is.</source>
-        <translation>Cliquez sur ce bouton pour entre dans le mode «&#xa0;Qu&apos;est-ce que c&apos;est&#xa0;?&#xa0;». Votre curseur se changera en point d&apos;interrogation. Cliquez alors sur n&apos;importe quel bouton, choix de menu ou zone pour voir apparaître une description de son utilité.</translation>
+        <translation>Cliquez sur ce bouton pour entre dans le mode « Qu&apos;est-ce que c&apos;est ? ». Votre curseur se changera en point d&apos;interrogation. Cliquez alors sur n&apos;importe quel bouton, choix de menu ou zone pour voir apparaître une description de son utilité.</translation>
     </message>
     <message>
         <source>Information about Mumble</source>
@@ -6135,11 +6143,11 @@ pour filtrage depuis le menu du salon.</translation>
     </message>
     <message>
         <source>Server sync protocol violation. No user profile received.</source>
-        <translation>Violation du protocol de synchronisation du serveur&#xa0;: le serveur n&apos;a pas renvoié de profil utilisateur.</translation>
+        <translation>Violation du protocol de synchronisation du serveur : le serveur n&apos;a pas renvoié de profil utilisateur.</translation>
     </message>
     <message>
         <source>Protocol violation. Server sent remove for occupied channel.</source>
-        <translation>Violation de protocol&#xa0;: Le serveur a envoyé une demande de suppression d&apos;un salon occupé.</translation>
+        <translation>Violation de protocol : Le serveur a envoyé une demande de suppression d&apos;un salon occupé.</translation>
     </message>
     <message>
         <source>Listen to channel</source>
@@ -6449,17 +6457,17 @@ Valid options are:
                 Otherwise the locale will be permanently saved to
                 Mumble&apos;s settings.
 </source>
-        <translation>Utilisation&#xa0;: mumble [options] [&lt;url&gt; | &lt;liste_de_plugins&gt;]
+        <translation>Utilisation : mumble [options] [&lt;url&gt; | &lt;liste_de_plugins&gt;]
 
 &lt;url&gt; spécifie un URL auquel se connecter au démarrage au lieu d&apos;afficher
-la fenêtre de connexion et a la forme suivante&#xa0;:
+la fenêtre de connexion et a la forme suivante :
 mumble://[&lt;nomutilisateur&gt;[:&lt;motdepasse&gt;]@]&lt;hôte&gt;[:&lt;port&gt;][/&lt;salon&gt;[/&lt;soussalon&gt;...]][?version=&lt;x.y.z&gt;]
 
 &lt;liste_de_plugins&gt; consiste en une liste de plugins qui doivent être installés
 Le paramètre d&apos;interrogation de version doit être réglé afin d&apos;invoquer
 la version correcte du client. Actuellement, la valeur par défaut est 1.2.0.
 
-Les options valides sont&#xa0;:
+Les options valides sont :
   -h, --help   Afficher ce texte d&apos;aide et quitter
   -V, --version Afficher les informations de version et quitter
   -m, --multiple
@@ -7473,23 +7481,23 @@ Pour mettre à jour l&apos;overlay, cliquez sur le bouton ci-dessous.</translati
     </message>
     <message>
         <source>You are about to install the plugin listed below. Do you wish to proceed?</source>
-        <translation>Vous êtes sur le point d&apos;installer le plugin ci-dessous. Voulez-vous continuer&#xa0;?</translation>
+        <translation>Vous êtes sur le point d&apos;installer le plugin ci-dessous. Voulez-vous continuer ?</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom&#xa0;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nom :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version&#xa0;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author(s):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Auteur(s)&#xa0;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Auteur(s) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description&#xa0;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&amp;No</source>
@@ -7591,7 +7599,7 @@ Pour mettre à jour l&apos;overlay, cliquez sur le bouton ci-dessous.</translati
     </message>
     <message>
         <source>Do you want to update the selected plugins?</source>
-        <translation>Voulez-vous mettre à jour les plugins sélectionnés&#xa0;?</translation>
+        <translation>Voulez-vous mettre à jour les plugins sélectionnés ?</translation>
     </message>
     <message>
         <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (%3)</source>
@@ -8420,7 +8428,7 @@ Un jeton d&apos;accès est une chaîne de caractères qui peut être utilisée c
     </message>
     <message>
         <source>Who are you looking for?</source>
-        <translation>Qui cherchez-vous&#xa0;?</translation>
+        <translation>Qui cherchez-vous ?</translation>
     </message>
     <message>
         <source>Days</source>
@@ -8775,11 +8783,11 @@ Un jeton d&apos;accès est une chaîne de caractères qui peut être utilisée c
     </message>
     <message>
         <source>Are you sure you want to drag this user?</source>
-        <translation>Êtes-vous sûr de vouloir déplacer cet utilisateur&#xa0;?</translation>
+        <translation>Êtes-vous sûr de vouloir déplacer cet utilisateur ?</translation>
     </message>
     <message>
         <source>Are you sure you want to drag this channel?</source>
-        <translation>Êtes-vous sûr de vouloir déplacer ce salon&#xa0;?</translation>
+        <translation>Êtes-vous sûr de vouloir déplacer ce salon ?</translation>
     </message>
     <message>
         <source>Cannot perform this movement automatically, please reset the numeric sorting indicators or adjust it manually.</source>
@@ -8814,7 +8822,7 @@ Un jeton d&apos;accès est une chaîne de caractères qui peut être utilisée c
     </message>
     <message>
         <source>A new version of Mumble has been detected and automatically downloaded. It is recommended that you either upgrade to this version, or downgrade to the latest stable release. Do you want to launch the installer now?</source>
-        <translation>Une nouvelle version de Mumble a été détectée et automatiquement téléchargée. Il est recommandé de mettre à niveau vers cette version ou de revenir à la dernière version stable. Voulez-vous lancer l&apos;installateur maintenant&#xa0;?</translation>
+        <translation>Une nouvelle version de Mumble a été détectée et automatiquement téléchargée. Il est recommandé de mettre à niveau vers cette version ou de revenir à la dernière version stable. Voulez-vous lancer l&apos;installateur maintenant ?</translation>
     </message>
     <message>
         <source>Failed to launch snapshot installer.</source>
@@ -9032,7 +9040,7 @@ Un jeton d&apos;accès est une chaîne de caractères qui peut être utilisée c
     </message>
     <message>
         <source>Closing the recorder without stopping it will discard unwritten audio. Do you really want to close the recorder?</source>
-        <translation>Fermer l&apos;enregistreur sans l&apos;arrêter peut corrompre le fichier audio. Voulez-vous vraiment fermer l&apos;enregistreur&#xa0;?</translation>
+        <translation>Fermer l&apos;enregistreur sans l&apos;arrêter peut corrompre le fichier audio. Voulez-vous vraiment fermer l&apos;enregistreur ?</translation>
     </message>
     <message>
         <source>Unable to start recording. Not connected to a server.</source>

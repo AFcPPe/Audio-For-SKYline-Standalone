@@ -3099,6 +3099,14 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
         <source>IPv6 address</source>
         <translation>IPv6 adresi</translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

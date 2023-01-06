@@ -3114,6 +3114,14 @@ Er du sikker på at du vil erstatte ditt sertifikat?
         <source>IPv6 address</source>
         <translation>IPv6-adresse</translation>
     </message>
+    <message>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
