@@ -958,965 +958,132 @@ void ConnectDialogEdit::on_qcbShowPassword_toggled(bool checked) {
 
 ConnectDialog::ConnectDialog(QWidget *p, bool autoconnect) : QDialog(p), bAutoConnect(autoconnect) {
 	setupUi(this);
-	qtwServers->setAccessibleName(tr("Server list"));
-#ifdef Q_OS_MAC
-	setWindowModality(Qt::WindowModal);
-#endif
-	bPublicInit = false;
-
-	siAutoConnect = nullptr;
-
-	bAllowPing       = Global::get().s.ptProxyType == Settings::NoProxy;
-	bAllowHostLookup = Global::get().s.ptProxyType == Settings::NoProxy;
-	bAllowZeroconf   = Global::get().s.ptProxyType == Settings::NoProxy;
-	bAllowFilters    = Global::get().s.ptProxyType == Settings::NoProxy;
-
-	if (tPublicServers.elapsed() >= 60 * 24 * 1000000ULL) {
-		qlPublicServers.clear();
-	}
-
-	qdbbButtonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-	qdbbButtonBox->button(QDialogButtonBox::Ok)->setText(tr("C&onnect"));
-
-	QPushButton *qpbAdd = new QPushButton(tr("&Add New..."), this);
-	qpbAdd->setDefault(false);
-	qpbAdd->setAutoDefault(false);
-	connect(qpbAdd, SIGNAL(clicked()), qaFavoriteAddNew, SIGNAL(triggered()));
-	qdbbButtonBox->addButton(qpbAdd, QDialogButtonBox::ActionRole);
-
-
-	qpbEdit = new QPushButton(tr("&Edit..."), this);
-	qpbEdit->setEnabled(false);
-	qpbEdit->setDefault(false);
-	qpbEdit->setAutoDefault(false);
-	connect(qpbEdit, SIGNAL(clicked()), qaFavoriteEdit, SIGNAL(triggered()));
-	qdbbButtonBox->addButton(qpbEdit, QDialogButtonBox::ActionRole);
-
-	qpbAdd->setHidden(Global::get().s.disableConnectDialogEditing);
-	qpbEdit->setHidden(Global::get().s.disableConnectDialogEditing);
-
-	qtwServers->setItemDelegate(new ServerViewDelegate());
-
-	if (!Global::get().s.bDisablePublicList) {
-		const QIcon qiFlag = ServerItem::loadIcon(QLatin1String("skin:categories/applications-internet.svg"));
-		// Add continents and 'Unknown' to the location combobox
-		qcbSearchLocation->addItem(qiFlag, tr("All"), QLatin1String("all"));
-		qcbSearchLocation->addItem(qiFlag, tr("Africa"), QLatin1String("af"));
-		qcbSearchLocation->addItem(qiFlag, tr("Asia"), QLatin1String("as"));
-		qcbSearchLocation->addItem(qiFlag, tr("Europe"), QLatin1String("eu"));
-		qcbSearchLocation->addItem(qiFlag, tr("North America"), QLatin1String("na"));
-		qcbSearchLocation->addItem(qiFlag, tr("Oceania"), QLatin1String("oc"));
-		qcbSearchLocation->addItem(qiFlag, tr("South America"), QLatin1String("sa"));
-		qcbSearchLocation->addItem(qiFlag, tr("Unknown"), QLatin1String(""));
-		addCountriesToSearchLocation();
-	}
-	qgbSearch->setVisible(false);
-
-	// Hide ping and user count if we are not allowed to ping.
-	if (!bAllowPing) {
-		qtwServers->setColumnCount(1);
-	}
-
-	qtwServers->sortItems(1, Qt::AscendingOrder);
-
-	qtwServers->header()->setSectionResizeMode(0, QHeaderView::Stretch);
-	if (qtwServers->columnCount() >= 2) {
-		qtwServers->header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-	}
-	if (qtwServers->columnCount() >= 3) {
-		qtwServers->header()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
-	}
-
-	connect(qtwServers->header(), SIGNAL(sortIndicatorChanged(int, Qt::SortOrder)), this,
-			SLOT(OnSortChanged(int, Qt::SortOrder)));
-
-	if (bAllowFilters) {
-		switch (Global::get().s.ssFilter) {
-			case Settings::ShowPopulated:
-				qcbFilter->setCurrentText(tr("Show Populated"));
-				break;
-			case Settings::ShowAll:
-				qcbFilter->setCurrentText(tr("Show All"));
-				break;
-			default:
-				qcbFilter->setCurrentText(tr("Show Reachable"));
-				break;
-		}
-	} else {
-		qcbFilter->setEnabled(false);
-	}
-
-	qmPopup = new QMenu(this);
-
-	QList< QTreeWidgetItem * > ql;
-	QList< FavoriteServer > favorites = Global::get().db->getFavorites();
-
-	foreach (const FavoriteServer &fs, favorites) {
-		ServerItem *si = new ServerItem(fs);
-		qlItems << si;
-		startDns(si);
-		qtwServers->siFavorite->addServerItem(si);
-	}
-#ifdef USE_ZEROCONF
-	if (bAllowZeroconf && Global::get().zeroconf && Global::get().zeroconf->isOk()) {
-		connect(Global::get().zeroconf, &Zeroconf::recordsChanged, this, &ConnectDialog::onUpdateLanList);
-		connect(Global::get().zeroconf, &Zeroconf::recordResolved, this, &ConnectDialog::onResolved);
-		connect(Global::get().zeroconf, &Zeroconf::resolveError, this, &ConnectDialog::onLanResolveError);
-		onUpdateLanList(Global::get().zeroconf->currentRecords());
-
-		Global::get().zeroconf->startBrowser(QLatin1String("_mumble._tcp"));
-	}
-#endif
-	qtPingTick = new QTimer(this);
-	connect(qtPingTick, SIGNAL(timeout()), this, SLOT(timeTick()));
-
-	qusSocket4 = new QUdpSocket(this);
-	qusSocket6 = new QUdpSocket(this);
-	bIPv4      = qusSocket4->bind(QHostAddress(QHostAddress::Any), 0);
-	bIPv6      = qusSocket6->bind(QHostAddress(QHostAddress::AnyIPv6), 0);
-	connect(qusSocket4, SIGNAL(readyRead()), this, SLOT(udpReply()));
-	connect(qusSocket6, SIGNAL(readyRead()), this, SLOT(udpReply()));
-
-	if (qtwServers->siFavorite->isHidden() && (!qtwServers->siLAN || qtwServers->siLAN->isHidden())
-		&& qtwServers->siPublic) {
-		qtwServers->siPublic->setExpanded(true);
-	}
-
-	iPingIndex = -1;
-	qtPingTick->start(50);
-
-	new QShortcut(QKeySequence(QKeySequence::Copy), this, SLOT(on_qaFavoriteCopy_triggered()));
-	new QShortcut(QKeySequence(QKeySequence::Paste), this, SLOT(on_qaFavoritePaste_triggered()));
-
-	qtwServers->setCurrentItem(nullptr);
-	bLastFound = false;
-
-	qmPingCache = Global::get().db->getPingCache();
-
-	if (!Global::get().s.qbaConnectDialogGeometry.isEmpty())
-		restoreGeometry(Global::get().s.qbaConnectDialogGeometry);
-	if (!Global::get().s.qbaConnectDialogHeader.isEmpty())
-		qtwServers->header()->restoreState(Global::get().s.qbaConnectDialogHeader);
+	qlbUsername->setText(tr("Username:"));
+	qlbPassword->setText(tr("Password:"));
+	
+	
 }
 
 ConnectDialog::~ConnectDialog() {
-#ifdef USE_ZEROCONF
-	if (bAllowZeroconf && Global::get().zeroconf && Global::get().zeroconf->isOk()) {
-		Global::get().zeroconf->stopBrowser();
-		Global::get().zeroconf->cleanupResolvers();
-	}
-#endif
-	ServerItem::qmIcons.clear();
-
-	QList< FavoriteServer > ql;
-	qmPingCache.clear();
-
-	foreach (ServerItem *si, qlItems) {
-		if (si->uiPing)
-			qmPingCache.insert(UnresolvedServerAddress(si->qsHostname, si->usPort), si->uiPing);
-
-		if (si->itType != ServerItem::FavoriteType)
-			continue;
-		ql << si->toFavoriteServer();
-	}
-	Global::get().db->setFavorites(ql);
-	Global::get().db->setPingCache(qmPingCache);
-
-	Global::get().s.qbaConnectDialogHeader   = qtwServers->header()->saveState();
-	Global::get().s.qbaConnectDialogGeometry = saveGeometry();
 }
 
 void ConnectDialog::accept() {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->currentItem());
-	if (!si || (bAllowHostLookup && si->qlAddresses.isEmpty()) || si->qsHostname.isEmpty()) {
-		qWarning() << "Invalid server";
-		return;
-	}
-
-	qsPassword = si->qsPassword;
-	qsServer   = si->qsHostname;
-	usPort     = si->usPort;
-
-	if (si->qsUsername.isEmpty()) {
-		bool ok;
-		QString defUserName = QInputDialog::getText(this, tr("Connecting to %1").arg(si->qsName), tr("Enter username"),
-													QLineEdit::Normal, Global::get().s.qsUsername, &ok)
-								  .trimmed();
-		if (!ok)
-			return;
-		Global::get().s.qsUsername = si->qsUsername = defUserName;
-	}
-
-	qsUsername = si->qsUsername;
-
-	Global::get().s.qsLastServer = si->qsName;
-
-	QDialog::accept();
+	
 }
 
 void ConnectDialog::OnSortChanged(int logicalIndex, Qt::SortOrder) {
-	if (logicalIndex != 2) {
-		return;
-	}
-
-	foreach (ServerItem *si, qlItems) {
-		if (si->uiPing && (si->uiPing != si->uiPingSort)) {
-			si->uiPingSort = si->uiPing;
-			si->setDatas();
-		}
-	}
+	
 }
 
 void ConnectDialog::on_qaFavoriteAdd_triggered() {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->currentItem());
-	if (!si || (si->itType == ServerItem::FavoriteType))
-		return;
-
-	si = new ServerItem(si);
-	qtwServers->fixupName(si);
-	qlItems << si;
-	qtwServers->siFavorite->addServerItem(si);
-	qtwServers->setCurrentItem(si);
-	startDns(si);
+	
 }
 
 void ConnectDialog::on_qaFavoriteAddNew_triggered() {
-	ConnectDialogEdit *cde = new ConnectDialogEdit(this);
-
-	if (cde->exec() == QDialog::Accepted) {
-		ServerItem *si = new ServerItem(cde->qsName, cde->qsHostname, cde->usPort, cde->qsUsername, cde->qsPassword);
-		qlItems << si;
-		qtwServers->siFavorite->addServerItem(si);
-		qtwServers->setCurrentItem(si);
-		startDns(si);
-	}
-	delete cde;
+	
 }
 
 void ConnectDialog::on_qaFavoriteEdit_triggered() {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->currentItem());
-	if (!si || (si->itType != ServerItem::FavoriteType))
-		return;
-
-	QString host;
-#ifdef USE_ZEROCONF
-	if (!si->zeroconfHost.isEmpty())
-		host = QLatin1Char('@') + si->zeroconfHost;
-	else
-		host = si->qsHostname;
-#else
-	host          = si->qsHostname;
-#endif
-	ConnectDialogEdit *cde = new ConnectDialogEdit(this, si->qsName, host, si->qsUsername, si->usPort, si->qsPassword);
-
-	if (cde->exec() == QDialog::Accepted) {
-		si->qsName     = cde->qsName;
-		si->qsUsername = cde->qsUsername;
-		si->qsPassword = cde->qsPassword;
-		if ((cde->qsHostname != host) || (cde->usPort != si->usPort)) {
-			stopDns(si);
-
-			si->qlAddresses.clear();
-			si->reset();
-
-			si->usPort = cde->usPort;
-#ifdef USE_ZEROCONF
-			if (cde->qsHostname.startsWith(QLatin1Char('@'))) {
-				si->qsHostname   = QString();
-				si->zeroconfHost = cde->qsHostname.mid(1);
-				si->zeroconfRecord =
-					BonjourRecord(si->zeroconfHost, QLatin1String("_mumble._tcp."), QLatin1String("local."));
-			} else {
-				si->qsHostname     = cde->qsHostname;
-				si->zeroconfHost   = QString();
-				si->zeroconfRecord = BonjourRecord();
-			}
-#else
-            si->qsHostname = cde->qsHostname;
-#endif
-			startDns(si);
-		}
-		si->setDatas();
-	}
-	delete cde;
+	
 }
 
 void ConnectDialog::on_qaFavoriteRemove_triggered() {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->currentItem());
-	if (!si || (si->itType != ServerItem::FavoriteType))
-		return;
-
-	stopDns(si);
-	qlItems.removeAll(si);
-	delete si;
+	
 }
 
 void ConnectDialog::on_qaFavoriteCopy_triggered() {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->currentItem());
-	if (!si)
-		return;
-
-	QApplication::clipboard()->setMimeData(si->toMimeData());
+	
 }
 
 void ConnectDialog::on_qaFavoritePaste_triggered() {
-	ServerItem *si = ServerItem::fromMimeData(QApplication::clipboard()->mimeData());
-	if (!si)
-		return;
-
-	qlItems << si;
-	qtwServers->siFavorite->addServerItem(si);
-	qtwServers->setCurrentItem(si);
-	startDns(si);
+	
 }
 
 void ConnectDialog::on_qaUrl_triggered() {
-	auto *si = static_cast< const ServerItem * >(qtwServers->currentItem());
-	if (!si || si->qsUrl.isEmpty()) {
-		return;
-	}
-
-	const QStringList allowedSchemes = { QLatin1String("http"), QLatin1String("https") };
-
-	const auto url = QUrl(si->qsUrl);
-	if (allowedSchemes.contains(url.scheme())) {
-		QDesktopServices::openUrl(url);
-	} else {
-		// Inform user that the requested URL has been blocked
-		QMessageBox msgBox;
-		msgBox.setText(QObject::tr("<b>Blocked URL scheme \"%1\"</b>").arg(url.scheme()));
-		msgBox.setInformativeText(QObject::tr("The URL uses a scheme that has been blocked for security reasons."));
-		msgBox.setDetailedText(QObject::tr("Blocked URL: \"%1\"").arg(url.toString()));
-		msgBox.setIcon(QMessageBox::Warning);
-		msgBox.exec();
-	}
+	
 }
 
 void ConnectDialog::on_qtwServers_customContextMenuRequested(const QPoint &mpos) {
-	ServerItem *si = static_cast< ServerItem * >(qtwServers->itemAt(mpos));
-	qmPopup->clear();
-
-	if (si && si->bParent) {
-		si = nullptr;
-	}
-
-	if (si) {
-		if (!Global::get().s.disableConnectDialogEditing) {
-			if (si->itType == ServerItem::FavoriteType) {
-				qmPopup->addAction(qaFavoriteEdit);
-				qmPopup->addAction(qaFavoriteRemove);
-			} else {
-				qmPopup->addAction(qaFavoriteAdd);
-			}
-		}
-
-		if (!si->qsUrl.isEmpty()) {
-			qmPopup->addAction(qaUrl);
-		}
-	}
-
-	qmPopup->popup(qtwServers->viewport()->mapToGlobal(mpos), nullptr);
+	
 }
 
 void ConnectDialog::on_qtwServers_itemDoubleClicked(QTreeWidgetItem *item, int) {
-	qtwServers->setCurrentItem(item);
-	accept();
+	
 }
 
 void ConnectDialog::on_qtwServers_currentItemChanged(QTreeWidgetItem *item, QTreeWidgetItem *) {
-	ServerItem *si = static_cast< ServerItem * >(item);
-
-	if (si->siParent == qtwServers->siFavorite) {
-		qpbEdit->setEnabled(true);
-	} else {
-		qpbEdit->setEnabled(false);
-	}
-
-	bool bOk = !si->qlAddresses.isEmpty();
-	if (!bAllowHostLookup) {
-		bOk = true;
-	}
-	qdbbButtonBox->button(QDialogButtonBox::Ok)->setEnabled(bOk);
-
-	bLastFound = true;
+	
 }
 
 void ConnectDialog::on_qtwServers_itemExpanded(QTreeWidgetItem *item) {
-	if (qtwServers->siPublic && item == qtwServers->siPublic) {
-		if (!Global::get().s.bPingServersDialogViewed) {
-			// Ask the user for consent to ping the servers. If the user does
-			// not give consent, disable the public server list and return.
-			int result = QMessageBox::question(
-				this, tr("Consent to the transmission of private data"),
-				tr("<p>To measure the latency (ping) of public servers and determine the number of active users, "
-				   "your IP address must be transmitted to each public server.</p>"
-				   "<p>Do you consent to the transmission of your IP address? If you answer no, the public server "
-				   "list will be deactivated. However, you can reactivate it at any time in the network settings.</p>"),
-				QMessageBox::Yes | QMessageBox::No);
-			Global::get().s.bPingServersDialogViewed = true;
-			if (result == QMessageBox::No) {
-				Global::get().s.bDisablePublicList = true;
-				item->setExpanded(false);
-				item->setHidden(true);
-				return;
-			}
-		}
-		qgbSearch->setVisible(true);
-		initList();
-		fillList();
-	}
-
-	ServerItem *p = static_cast< ServerItem * >(item);
-
-	foreach (ServerItem *si, p->qlChildren) { startDns(si); }
+	
 }
 
 void ConnectDialog::on_qtwServers_itemCollapsed(QTreeWidgetItem *item) {
-	if (qtwServers->siPublic && item == qtwServers->siPublic) {
-		qgbSearch->setVisible(false);
-	}
+	
 }
 
 void ConnectDialog::initList() {
-	if (bPublicInit || (qlPublicServers.count() > 0))
-		return;
-
-	bPublicInit = true;
-
-	QUrl url;
-	url.setPath(QLatin1String("/v1/list"));
-
-	QUrlQuery query;
-	query.addQueryItem(QLatin1String("version"), Version::getRelease());
-	url.setQuery(query);
-
-	WebFetch::fetch(QLatin1String("publist"), url, this, SLOT(fetched(QByteArray, QUrl, QMap< QString, QString >)));
+	
 }
-
-#ifdef USE_ZEROCONF
-void ConnectDialog::onResolved(const BonjourRecord record, const QString host, const uint16_t port) {
-	qlBonjourActive.removeAll(record);
-	foreach (ServerItem *si, qlItems) {
-		if (si->zeroconfRecord == record) {
-			unsigned short usport = static_cast< unsigned short >(port);
-			if ((host != si->qsHostname) || (usport != si->usPort)) {
-				stopDns(si);
-				si->usPort     = static_cast< unsigned short >(port);
-				si->qsHostname = host;
-				startDns(si);
-			}
-		}
-	}
-}
-
-void ConnectDialog::onUpdateLanList(const QList< BonjourRecord > &list) {
-	QSet< ServerItem * > items;
-#	if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
-	QSet< ServerItem * > old =
-		QSet< ServerItem * >(qtwServers->siLAN->qlChildren.begin(), qtwServers->siLAN->qlChildren.end());
-#	else
-	// In Qt 5.14 QList::toSet() has been deprecated as there exists a dedicated constructor of QSet for this now
-	QSet< ServerItem * > old = qtwServers->siLAN->qlChildren.toSet();
-#	endif
-
-	foreach (const BonjourRecord &record, list) {
-		bool found = false;
-		foreach (ServerItem *si, old) {
-			if (si->zeroconfRecord == record) {
-				items.insert(si);
-				found = true;
-				break;
-			}
-		}
-		if (!found) {
-			ServerItem *si = new ServerItem(record);
-			qlItems << si;
-			Global::get().zeroconf->startResolver(record);
-			startDns(si);
-			qtwServers->siLAN->addServerItem(si);
-		}
-	}
-	QSet< ServerItem * > remove = old.subtract(items);
-	foreach (ServerItem *si, remove) {
-		stopDns(si);
-		qlItems.removeAll(si);
-		delete si;
-	}
-}
-
-void ConnectDialog::onLanResolveError(const BonjourRecord record) {
-	qlBonjourActive.removeAll(record);
-}
-#endif
 
 void ConnectDialog::fillList() {
-	QList< QTreeWidgetItem * > ql;
-	QList< QTreeWidgetItem * > qlNew;
-
-	foreach (const PublicInfo &pi, qlPublicServers) {
-		bool found = false;
-		foreach (ServerItem *si, qlItems) {
-			if ((pi.qsIp == si->qsHostname) && (pi.usPort == si->usPort)) {
-				si->qsCountry       = pi.qsCountry;
-				si->qsCountryCode   = pi.qsCountryCode;
-				si->qsContinentCode = pi.qsContinentCode;
-				si->qsUrl           = pi.quUrl.toString();
-				si->bCA             = pi.bCA;
-				si->setDatas();
-
-				if (si->itType == ServerItem::PublicType)
-					found = true;
-			}
-		}
-		if (!found)
-			ql << new ServerItem(pi);
-	}
-
-	while (!ql.isEmpty()) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-		ServerItem *si = static_cast< ServerItem * >(ql.takeAt(QRandomGenerator::global()->generate() % ql.count()));
-#else
-		// Qt 5.10 introduces the QRandomGenerator class and in Qt 5.15 qrand got deprecated in its favor
-		ServerItem *si = static_cast< ServerItem * >(ql.takeAt(qrand() % ql.count()));
-#endif
-		qlNew << si;
-		qlItems << si;
-	}
-
-	foreach (QTreeWidgetItem *qtwi, qlNew) {
-		ServerItem *si = static_cast< ServerItem * >(qtwi);
-		qtwServers->siPublic->addServerItem(si);
-		filterServer(si);
-		startDns(si);
-	}
+	
 }
 
 void ConnectDialog::timeTick() {
-	if (!bLastFound && !Global::get().s.qsLastServer.isEmpty()) {
-		QList< QTreeWidgetItem * > items =
-			qtwServers->findItems(Global::get().s.qsLastServer, Qt::MatchExactly | Qt::MatchRecursive);
-		if (!items.isEmpty()) {
-			bLastFound = true;
-			qtwServers->setCurrentItem(items.at(0));
-			if (Global::get().s.bAutoConnect && bAutoConnect) {
-				siAutoConnect = static_cast< ServerItem * >(items.at(0));
-				if (!siAutoConnect->qlAddresses.isEmpty()) {
-					accept();
-					return;
-				} else if (!bAllowHostLookup) {
-					accept();
-					return;
-				}
-			}
-		}
-	}
-
-	if (bAllowHostLookup) {
-		// Start DNS Lookup of first unknown hostname
-		foreach (const UnresolvedServerAddress &unresolved, qlDNSLookup) {
-			if (qsDNSActive.contains(unresolved)) {
-				continue;
-			}
-
-			qlDNSLookup.removeAll(unresolved);
-			qlDNSLookup.append(unresolved);
-
-			qsDNSActive.insert(unresolved);
-			ServerResolver *sr = new ServerResolver();
-			QObject::connect(sr, SIGNAL(resolved()), this, SLOT(lookedUp()));
-			sr->resolve(unresolved.hostname, unresolved.port);
-			break;
-		}
-	}
-
-	ServerItem *current = static_cast< ServerItem * >(qtwServers->currentItem());
-	ServerItem *hover =
-		static_cast< ServerItem * >(qtwServers->itemAt(qtwServers->viewport()->mapFromGlobal(QCursor::pos())));
-
-	ServerItem *si = nullptr;
-
-	if (tCurrent.elapsed() >= 1000000ULL)
-		si = current;
-	if (!si && (tHover.elapsed() >= 1000000ULL))
-		si = hover;
-
-	if (si) {
-		QString hostname    = si->qsHostname.toLower();
-		unsigned short port = si->usPort;
-		UnresolvedServerAddress unresolved(hostname, port);
-
-		if (si->qlAddresses.isEmpty()) {
-			if (!hostname.isEmpty()) {
-				qlDNSLookup.removeAll(unresolved);
-				qlDNSLookup.prepend(unresolved);
-			}
-			si = nullptr;
-		}
-	}
-
-	if (!si) {
-		if (qlItems.isEmpty())
-			return;
-
-		bool expanded;
-
-		do {
-			++iPingIndex;
-			if (iPingIndex >= qlItems.count()) {
-				if (tRestart.isElapsed(1000000ULL))
-					iPingIndex = 0;
-				else
-					return;
-			}
-			si = qlItems.at(iPingIndex);
-
-			ServerItem *p = si->siParent;
-			expanded      = true;
-			while (p && expanded) {
-				expanded = expanded && p->isExpanded();
-				p        = p->siParent;
-			}
-		} while (si->qlAddresses.isEmpty() || !expanded);
-	}
-
-	if (si == current)
-		tCurrent.restart();
-	if (si == hover)
-		tHover.restart();
-
-	for (const ServerAddress &addr : si->qlAddresses) {
-		sendPing(addr.host.toAddress(), addr.port, si->m_version);
-	}
+	
 }
 
 void ConnectDialog::filterPublicServerList() const {
-	if (!Global::get().s.bDisablePublicList) {
-		foreach (ServerItem *const si, qtwServers->siPublic->qlChildren) { filterServer(si); }
-	}
+	
 }
 
 void ConnectDialog::filterServer(ServerItem *const si) const {
-	if (!si->qsName.contains(qsSearchServername, Qt::CaseInsensitive)) {
-		si->setHidden(true);
-		return;
-	}
-	if (qsSearchLocation != QLatin1String("all")) {
-		if (qsSearchLocation != si->qsCountry && qsSearchLocation != si->qsContinentCode) {
-			si->setHidden(true);
-			return;
-		}
-	}
-	if (Global::get().s.ssFilter == Settings::ShowReachable && si->dPing == 0.0) {
-		si->setHidden(true);
-		return;
-	} else if (Global::get().s.ssFilter == Settings::ShowPopulated && si->uiUsers == 0) {
-		si->setHidden(true);
-		return;
-	}
-	si->setHidden(false);
+	
 }
 
 void ConnectDialog::addCountriesToSearchLocation() const {
-	QMap< QString, QString > qmCountries;
-
-	foreach (const PublicInfo &pi, qlPublicServers) {
-		if (pi.qsCountry != tr("Unknown") && !qmCountries.contains(pi.qsCountry)) {
-			qmCountries.insert(pi.qsCountry, pi.qsCountryCode);
-		}
-	}
-
-	foreach (auto location, qmCountries.keys()) {
-		// Set Icon, Text and Data
-		qcbSearchLocation->addItem(
-			ServerItem::loadIcon(QString::fromLatin1(":/flags/%1.svg").arg(qmCountries.value(location))), location,
-			location);
-	}
+	
 }
 
 void ConnectDialog::startDns(ServerItem *si) {
-	if (!bAllowHostLookup) {
-		return;
-	}
-
-	QString hostname    = si->qsHostname.toLower();
-	unsigned short port = si->usPort;
-	UnresolvedServerAddress unresolved(hostname, port);
-
-	if (si->qlAddresses.isEmpty()) {
-		// Determine if qsHostname is an IP address
-		// or a hostname. If it is an IP address, we
-		// can treat it as resolved as-is.
-		QHostAddress qha(si->qsHostname);
-		bool hostnameIsIPAddress = !qha.isNull();
-		if (hostnameIsIPAddress) {
-			si->qlAddresses.append(ServerAddress(HostAddress(qha), port));
-		} else {
-			si->qlAddresses = qhDNSCache.value(unresolved);
-		}
-	}
-
-	if (qtwServers->currentItem() == si)
-		qdbbButtonBox->button(QDialogButtonBox::Ok)->setEnabled(!si->qlAddresses.isEmpty());
-
-	if (!si->qlAddresses.isEmpty()) {
-		foreach (const ServerAddress &addr, si->qlAddresses) { qhPings[addr].insert(si); }
-		return;
-	}
-#ifdef USE_ZEROCONF
-	if (bAllowZeroconf && si->qsHostname.isEmpty() && !si->zeroconfRecord.serviceName.isEmpty()) {
-		if (!qlBonjourActive.contains(si->zeroconfRecord)) {
-			Global::get().zeroconf->startResolver(si->zeroconfRecord);
-			qlBonjourActive.append(si->zeroconfRecord);
-		}
-		return;
-	}
-#endif
-	if (!qhDNSWait.contains(unresolved)) {
-		if (si->itType == ServerItem::PublicType)
-			qlDNSLookup.append(unresolved);
-		else
-			qlDNSLookup.prepend(unresolved);
-	}
-	qhDNSWait[unresolved].insert(si);
+	
 }
 
 void ConnectDialog::stopDns(ServerItem *si) {
-	if (!bAllowHostLookup) {
-		return;
-	}
-
-	foreach (const ServerAddress &addr, si->qlAddresses) {
-		if (qhPings.contains(addr)) {
-			qhPings[addr].remove(si);
-			if (qhPings[addr].isEmpty()) {
-				qhPings.remove(addr);
-				qhPingRand.remove(addr);
-			}
-		}
-	}
-
-	QString hostname    = si->qsHostname.toLower();
-	unsigned short port = si->usPort;
-	UnresolvedServerAddress unresolved(hostname, port);
-
-	if (qhDNSWait.contains(unresolved)) {
-		qhDNSWait[unresolved].remove(si);
-		if (qhDNSWait[unresolved].isEmpty()) {
-			qhDNSWait.remove(unresolved);
-			qlDNSLookup.removeAll(unresolved);
-		}
-	}
+	
 }
 
 void ConnectDialog::lookedUp() {
-	ServerResolver *sr = qobject_cast< ServerResolver * >(QObject::sender());
-	sr->deleteLater();
-
-	QString hostname    = sr->hostname().toLower();
-	unsigned short port = sr->port();
-	UnresolvedServerAddress unresolved(hostname, port);
-
-	qsDNSActive.remove(unresolved);
-
-	// An error occurred, or no records were found.
-	if (sr->records().size() == 0) {
-		return;
-	}
-
-	QSet< ServerAddress > qs;
-	foreach (ServerResolverRecord record, sr->records()) {
-		foreach (const HostAddress &ha, record.addresses()) { qs.insert(ServerAddress(ha, record.port())); }
-	}
-
-	QSet< ServerItem * > waiting = qhDNSWait[unresolved];
-	foreach (ServerItem *si, waiting) {
-		foreach (const ServerAddress &addr, qs) { qhPings[addr].insert(si); }
-
-		si->qlAddresses = qs.values();
-	}
-
-	qlDNSLookup.removeAll(unresolved);
-	qhDNSCache.insert(unresolved, qs.values());
-	qhDNSWait.remove(unresolved);
-
-	foreach (ServerItem *si, waiting) {
-		if (si == qtwServers->currentItem()) {
-			on_qtwServers_currentItemChanged(si, si);
-			if (si == siAutoConnect)
-				accept();
-		}
-	}
-
-	if (bAllowPing) {
-		for (const ServerAddress &addr : qs) {
-			sendPing(addr.host.toAddress(), addr.port, Version::UNKNOWN);
-		}
-	}
+	
 }
 
 void ConnectDialog::sendPing(const QHostAddress &host, unsigned short port, Version::full_t protocolVersion) {
-	ServerAddress addr(HostAddress(host), port);
-
-	quint64 uiRand;
-	if (qhPingRand.contains(addr)) {
-		uiRand = qhPingRand.value(addr);
-	} else {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
-		uiRand = QRandomGenerator::global()->generate64() << 32;
-#else
-		// Qt 5.10 introduces the QRandomGenerator class and in Qt 5.15 qrand got deprecated in its favor
-		uiRand = (static_cast< quint64 >(qrand()) << 32) | static_cast< quint64 >(qrand());
-#endif
-		qhPingRand.insert(addr, uiRand);
-	}
-
-	Mumble::Protocol::PingData pingData;
-	// "Encrypt" the timestamp so that server's can't spoof the returned timestamp (easily) to fake a better ping
-	pingData.timestamp                    = tPing.elapsed() ^ uiRand;
-	pingData.requestAdditionalInformation = true;
-
-	if (!writePing(host, port, protocolVersion, pingData)) {
-		return;
-	}
-	if (protocolVersion == Version::UNKNOWN) {
-		// Also attempt to use new ping format in case we are pinging a server that only knows the new format
-		writePing(host, port, Mumble::Protocol::PROTOBUF_INTRODUCTION_VERSION, pingData);
-	}
-
-
-	const QSet< ServerItem * > &qs = qhPings.value(addr);
-
-	foreach (ServerItem *si, qs)
-		++si->uiSent;
+	
 }
 
 bool ConnectDialog::writePing(const QHostAddress &host, unsigned short port, Version::full_t protocolVersion,
 							  const Mumble::Protocol::PingData &pingData) {
-	m_udpPingEncoder.setProtocolVersion(protocolVersion);
-
-	gsl::span< const Mumble::Protocol::byte > encodedPacket = m_udpPingEncoder.encodePingPacket(pingData);
-
-	if (bIPv4 && host.protocol() == QAbstractSocket::IPv4Protocol) {
-		qusSocket4->writeDatagram(reinterpret_cast< const char * >(encodedPacket.data()), encodedPacket.size(), host,
-								  port);
-	} else if (bIPv6 && host.protocol() == QAbstractSocket::IPv6Protocol) {
-		qusSocket6->writeDatagram(reinterpret_cast< const char * >(encodedPacket.data()), encodedPacket.size(), host,
-								  port);
-	} else {
-		return false;
-	}
-
-	return true;
+	
 }
 
 void ConnectDialog::udpReply() {
-	QUdpSocket *sock = qobject_cast< QUdpSocket * >(sender());
-
-	while (sock->hasPendingDatagrams()) {
-		QHostAddress host;
-		unsigned short port;
-
-		gsl::span< Mumble::Protocol::byte > buffer = m_udpDecoder.getBuffer();
-
-		std::size_t len = sock->readDatagram(reinterpret_cast< char * >(buffer.data()), buffer.size(), &host, &port);
-
-		// Pings are special in that they can be decoded in the new or the old format, if the protocol version is set to
-		// the old format (which UNKNOWN does). Thus by setting the version to UNKNOWN, we effectively enable to decode
-		// either format. We have to reset it to this value every time, since the call to decode may set the protocol
-		// version to a more recent version (if a ping in new format is detected).
-		m_udpDecoder.setProtocolVersion(Version::UNKNOWN);
-
-		if (m_udpDecoder.decodePing(buffer.subspan(0, len))
-			&& m_udpDecoder.getMessageType() == Mumble::Protocol::UDPMessageType::Ping) {
-			if (host.scopeId() == QLatin1String("0"))
-				host.setScopeId(QLatin1String(""));
-
-			ServerAddress address(HostAddress(host), port);
-
-			if (qhPings.contains(address)) {
-				Mumble::Protocol::PingData pingData = m_udpDecoder.getPingData();
-
-				quint64 elapsed = tPing.elapsed() - (pingData.timestamp ^ qhPingRand.value(address));
-
-				for (ServerItem *si : qhPings.value(address)) {
-					si->m_version    = pingData.serverVersion;
-					quint32 users    = pingData.userCount;
-					quint32 maxusers = pingData.maxUserCount;
-					si->uiBandwidth  = pingData.maxBandwidthPerUser;
-
-					if (!si->uiPingSort)
-						si->uiPingSort = qmPingCache.value(UnresolvedServerAddress(si->qsHostname, si->usPort));
-
-					si->setDatas(static_cast< double >(elapsed), users, maxusers);
-					if (si->itType == ServerItem::PublicType) {
-						filterServer(si);
-					}
-				}
-			}
-		}
-	}
+	
 }
 
 void ConnectDialog::fetched(QByteArray xmlData, QUrl, QMap< QString, QString > headers) {
-	if (xmlData.isNull()) {
-		QMessageBox::warning(this, QLatin1String("Mumble"), tr("Failed to fetch server list"), QMessageBox::Ok);
-		return;
-	}
-
-	QDomDocument doc;
-	doc.setContent(xmlData);
-
-	qlPublicServers.clear();
-	qsUserCountry       = headers.value(QLatin1String("Geo-Country"));
-	qsUserCountryCode   = headers.value(QLatin1String("Geo-Country-Code")).toLower();
-	qsUserContinentCode = headers.value(QLatin1String("Geo-Continent-Code")).toLower();
-
-	QDomElement root = doc.documentElement();
-	QDomNode n       = root.firstChild();
-	while (!n.isNull()) {
-		QDomElement e = n.toElement();
-		if (!e.isNull()) {
-			if (e.tagName() == QLatin1String("server")) {
-				PublicInfo pi;
-				pi.qsName          = e.attribute(QLatin1String("name"));
-				pi.quUrl           = e.attribute(QLatin1String("url"));
-				pi.qsIp            = e.attribute(QLatin1String("ip"));
-				pi.usPort          = e.attribute(QLatin1String("port")).toUShort();
-				pi.qsCountry       = e.attribute(QLatin1String("country"), tr("Unknown"));
-				pi.qsCountryCode   = e.attribute(QLatin1String("country_code")).toLower();
-				pi.qsContinentCode = e.attribute(QLatin1String("continent_code")).toLower();
-				pi.bCA             = e.attribute(QLatin1String("ca")).toInt() ? true : false;
-
-				qlPublicServers << pi;
-			}
-		}
-		n = n.nextSibling();
-	}
-	addCountriesToSearchLocation();
-	tPublicServers.restart();
-
-	fillList();
+	
 }
 
 void ConnectDialog::on_qleSearchServername_textChanged(const QString &searchServername) {
-	qsSearchServername = searchServername;
-	filterPublicServerList();
+	
 }
 
 void ConnectDialog::on_qcbSearchLocation_currentIndexChanged(int searchLocationIndex) {
-	qsSearchLocation = qcbSearchLocation->itemData(searchLocationIndex).toString();
-	filterPublicServerList();
+
 }
 
 void ConnectDialog::on_qcbFilter_currentIndexChanged(int filterIndex) {
-	const QString filter = qcbFilter->itemText(filterIndex);
-	if (filter == tr("Show All")) {
-		Global::get().s.ssFilter = Settings::ShowAll;
-	} else if (filter == tr("Show Reachable")) {
-		Global::get().s.ssFilter = Settings::ShowReachable;
-	} else if (filter == tr("Show Populated")) {
-		Global::get().s.ssFilter = Settings::ShowPopulated;
-	}
 
-	filterPublicServerList();
 }

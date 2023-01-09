@@ -10,6 +10,7 @@ void CALLBACK MyDispatchProc1(SIMCONNECT_RECV *pData, DWORD cbData, void *pConte
 			switch (pObjData->dwRequestID) {
 				case REQUEST_OWN_AIRCRAFT:
 					DataOwnAircraft *pS = (DataOwnAircraft *) &pObjData->dwData;
+					pThis->packetCount  = 0;
 					pThis->own                    = pS;
 					emit pThis->RaiseSimdataUpdated();
 					//qDebug()<<"\n======================\n" << pS->com1ActiveMHz << pS->com2ActiveMHz << pS->comReceiveAll << "\n======================\n";
@@ -31,6 +32,17 @@ void CALLBACK MyDispatchProc1(SIMCONNECT_RECV *pData, DWORD cbData, void *pConte
 SimulatorSimConnect::SimulatorSimConnect() {
 	own = new DataOwnAircraft();
 	pThis = this;
+	connectTimer = new QTimer();
+	connectTimer->setInterval(5000);
+	connectTimer->start();
+	connect(connectTimer, &QTimer::timeout, this, &SimulatorSimConnect::onConnectTimerElipsed);
+}
+
+void SimulatorSimConnect::onConnectTimerElipsed() {
+	if (this->initSimEvents()) {
+		qDebug() << "\n========================\nGOOD!!!!!!!!!!!!!\n=============================\n";
+		connectTimer->stop();
+	}
 }
 
 bool SimulatorSimConnect::initSimEvents() {
@@ -43,7 +55,7 @@ bool SimulatorSimConnect::initSimEvents() {
 		hr += SimConnect_RequestDataOnSimObject(hSimConnect, REQUEST_OWN_AIRCRAFT, DEFINITION_OWN_AIRCRAFT,
 			SIMCONNECT_OBJECT_ID_USER, SIMCONNECT_PERIOD_SIM_FRAME);
 		timer = new QTimer();
-		timer->setInterval(10);
+		timer->setInterval(1000);
 		timer->start();
 		connect(timer, &QTimer::timeout, this, &SimulatorSimConnect::onPosTimerElipsed);
 		return true;
@@ -56,10 +68,16 @@ bool SimulatorSimConnect::initSimEvents() {
 
 void SimulatorSimConnect::onPosTimerElipsed() {
 	callProc();
-	
+	packetCount++;
+	if (packetCount >= 10) {
+		qDebug() << "\n========================\nLost\n=============================\n";
+		closeSimconnect();
+		connectTimer->start();
+	}
 }
 
 void SimulatorSimConnect::closeSimconnect() {
+	timer->stop();
 	SimConnect_Close(hSimConnect);
 }
 

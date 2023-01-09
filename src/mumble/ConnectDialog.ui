@@ -14,122 +14,40 @@
    <string>Mumble Server Connect</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="0" colspan="3">
-    <widget class="QDialogButtonBox" name="qdbbButtonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="3">
-    <widget class="ServerView" name="qtwServers">
+   <item row="0" column="0">
+    <widget class="QLabel" name="qlbUsername">
      <property name="contextMenuPolicy">
       <enum>Qt::CustomContextMenu</enum>
      </property>
-     <property name="dragEnabled">
-      <bool>true</bool>
+     <property name="text">
+      <string>Username</string>
      </property>
-     <property name="dragDropMode">
-      <enum>QAbstractItemView::DragDrop</enum>
-     </property>
-     <property name="alternatingRowColors">
-      <bool>true</bool>
-     </property>
-     <property name="autoExpandDelay">
-      <number>250</number>
-     </property>
-     <property name="rootIsDecorated">
-      <bool>true</bool>
-     </property>
-     <property name="uniformRowHeights">
-      <bool>true</bool>
-     </property>
-     <property name="sortingEnabled">
-      <bool>true</bool>
-     </property>
-     <attribute name="headerStretchLastSection">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string>Servername</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Ping</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Users</string>
-      </property>
-     </column>
     </widget>
    </item>
-   <item row="1" column="0" colspan="3">
-    <widget class="QGroupBox" name="qgbSearch">
-     <property name="enabled">
-      <bool>true</bool>
+   <item row="1" column="0">
+    <widget class="QLabel" name="qlbPassword">
+     <property name="text">
+      <string>Password</string>
      </property>
-     <property name="title">
-      <string>Search</string>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="qleUsername"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="qlePassword"/>
+   </item>
+   <item row="4" column="0" colspan="4" alignment="Qt::AlignHCenter">
+    <widget class="QDialogButtonBox" name="qdbbButtonBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
      </property>
-     <layout class="QGridLayout">
-      <item row="1" column="0">
-       <widget class="QLabel" name="qlSearchServername">
-        <property name="text">
-         <string>Servername</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLineEdit" name="qleSearchServername">
-        <property name="placeholderText">
-         <string>Servername</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="qlSearchLocation">
-        <property name="text">
-         <string>Location</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QComboBox" name="qcbSearchLocation"/>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="qlFilter">
-        <property name="text">
-         <string>Filter</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QComboBox" name="qcbFilter">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <item>
-         <property name="text">
-          <string>Show All</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Show Populated</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Show Reachable</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-     </layout>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
     </widget>
    </item>
   </layout>
@@ -178,13 +96,6 @@
    </property>
   </action>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>ServerView</class>
-   <extends>QTreeWidget</extends>
-   <header>ConnectDialog.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>

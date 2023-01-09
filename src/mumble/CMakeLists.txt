@@ -585,7 +585,7 @@ if(WIN32)
 		"os_win.cpp"
 
 		"${CMAKE_SOURCE_DIR}/overlay/ods.cpp"
-	)
+	 )
 
 	# WinGUIDs.cpp includes initguid.h which causes a macro definition in guiddef.h to be
 	# changed in such a way that subsequent usages break (redefinition errors).

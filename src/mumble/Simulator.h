@@ -47,14 +47,18 @@ public:
 	void callProc();
 	DataOwnAircraft *own;
 	QTimer *timer;
+	QTimer *connectTimer;
+	int packetCount = 0;
 
 signals:
 	void RaiseSimconnectConnected();
 	void RaiseSimdataUpdated();
 private slots:
 	void onPosTimerElipsed();
+	void onConnectTimerElipsed();
 
 private:
+	
 	bool initOwnAircraft(const HANDLE hSimConnect);
 	HANDLE hSimConnect = NULL;
 

@@ -199,7 +199,6 @@ MainWindow::MainWindow(QWidget *p)
 	QObject::connect(this, &MainWindow::serverSynchronized, Global::get().pluginManager,
 					 &PluginManager::on_serverSynchronized);
 	sim = new SimulatorSimConnect();
-	sim->initSimEvents();
 	connect(sim, &SimulatorSimConnect::RaiseSimdataUpdated, this, &MainWindow::on_Simconnect_Updated);
 }
 
@@ -1083,44 +1082,56 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 void MainWindow::on_Simconnect_Updated() {
 	if (getContextMenuChannel() == NULL)
 		return;
+	// Global::get().l->log(Log::DebugInfo, QString::number(own->com1ActiveMHz) + QString::number(own->com2ActiveMHz));
 	QString Freq = QString::number(sim->own->com1ActiveMHz);
-	switch (Freq.length()) { 
-	case 3:
-		Freq += ".000/";
-		break;
-	case 4:
-		Freq += "000/";
-		break;
-	case 5:
-		Freq += "00/";
-		break;
-	case 6:
-		Freq += "0/";
-		break;
-	case 7:
-		Freq += "/";
-		break;
-	}
-	if (getContextMenuChannel()->getPath() == Freq) {
+	if (getContextMenuChannel()->qsDesc == Freq) {
 		return;
 	}
-	Channel *root = Channel::get(0);
+	Channel *root              = Channel::get(0);
+	if (root == NULL) {
+		qDebug() << "\n=====================\nNULL\n=====================\n";
+		return;
+	}
 	QSet< Channel * > children = root->allChildren();
 	QSetIterator< Channel * > iter(children);
 	while (iter.hasNext()) {
 		Channel *c = iter.next();
-		if (Freq == c->getPath()) {
+		if (Freq == c->qsDesc) {
+			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
+			return;
+		}
+	}
+	QString numFreq = Freq;
+	switch (Freq.length()) {
+		case 3:
+			Freq += ".000";
+			break;
+		case 4:
+			Freq += "000";
+			break;
+		case 5:
+			Freq += "00";
+			break;
+		case 6:
+			Freq += "0";
+			break;
+	}
+	Global::get().sh->createChannel(0, Freq, numFreq, 0, true, 50);
+	while (iter.hasNext()) {
+		Channel *c = iter.next();
+		if (numFreq == c->qsDesc) {
 			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
 			break;
 		}
 	}
 
-	//for (int i = 0; Channel::get(i) != NULL; i++) {
+
+	// for (int i = 0; Channel::get(i) != NULL; i++) {
 	//	//Global::get().l->log(Log::DebugInfo, Freq + "   " + mapChannel(i)->getPath());
 	//	//if (Freq == Channel::get(i)->getPath()) {
 	//	//	Global::get().sh->joinChannel(Global::get().uiSession, i);
 	//	//}
-	//}
+	// }
 }
 
 static void recreateServerHandler() {
@@ -1506,6 +1517,17 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 		Global::get().sh->start(QThread::TimeCriticalPriority);
 	}
 	delete cd;
+	//recreateServerHandler();
+	//qsDesiredChannel = QString();
+	//rtLast           = MumbleProto::Reject_RejectType_None;
+	//bRetryServer     = true;
+	//qaServerDisconnect->setEnabled(true);
+	//// Global::get().l->log(
+	////	Log::Information,
+	////	tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
+	//Global::get().sh->setConnectionInfo(Global::get().SklineIP, 64738, "Username", "");
+	//Global::get().l->log(Log::Information, tr("Connecting to server %1.").arg(Log::msgColor("SKYline", Log::Server)));
+	//Global::get().sh->start(QThread::TimeCriticalPriority);
 }
 
 void MainWindow::on_Reconnect_timeout() {
