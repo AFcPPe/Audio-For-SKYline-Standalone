@@ -2904,10 +2904,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>%1에 연결 중</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>유저 이름 입력</translation>
     </message>
@@ -2916,24 +2912,12 @@ Are you sure you wish to replace your certificate?
         <translation>서버 이름</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>알 수 없음</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>유저</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>서버 목록 가져오기 실패</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble 서버 연결</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>핑</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2974,74 +2958,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>웹 페이지 열기(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>서버 목록</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>검색</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>위치</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>필터</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>모두 표시</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>채워짐 표시</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>연결 가능 표시</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>모두</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>아프리카</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>아시아</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>유럽</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>북아메리카</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>오세아니아</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>남아메리카</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>개인 데이터 전송 동의</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;공용 서버의 지연 시간을 (ping) 측정하고 활성 유저 수를 확인하려면 IP 주소를 각 공용 서버로 전송해야 합니다.&lt;/p&gt;&lt;p&gt;IP 주소 전송에 동의하십니까? 아니오로 응답하면 공용 서버 목록이 비활성화됩니다. 그러나 네트워크 설정에서 언제든지 다시 활성화할 수 있습니다.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>연결(&amp;O)</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3106,6 +3022,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">유저 이름</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">비밀번호</translation>
     </message>
 </context>
 <context>
@@ -7727,18 +7651,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>로컬 별명 조절...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;차단된 URL 스킴 &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>URL은 보안상의 이유로 차단된 스킴를 사용합니다.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>차단된 URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

@@ -2904,10 +2904,6 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>%1 adresine bağlanılıyor</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Kullanıcı ismi giriniz</translation>
     </message>
@@ -2916,24 +2912,12 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
         <translation>Sunucu ismi</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Bilinmiyor</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Kullanıcılar</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Sucunu listesi alımı başarısız oldu</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble Sunucu Bağlantısı</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Ping</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2974,74 +2958,6 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>&amp;Web Sayfasını Aç</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Sunucu listesi</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Ara</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Konum</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filtre</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Tümünü Göster</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Yoğunluğu Göster</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Ulaşılabilinenleri Göster</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Hepsi</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrika</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Asya</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Avrupa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Kuzey Amerika</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Okyanusya</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Güney Amerika</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Özel verilerin iletilmesine izin verme</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Genel sunucuların gecikmesini (ping) ölçmek ve etkin kullanıcı sayısını belirlemek için, IP adresinizin her bir genel sunucuya iletilmesi gerekir.&lt;/p&gt;&lt;p&gt;IP adresinizin iletilmesine izin veriyor musunuz? Hayır cevabını verirseniz, genel sunucu listesi devre dışı bırakılacaktır. Ancak, ağ ayarlarından istediğiniz zaman yeniden etkinleştirebilirsiniz.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Bağlan</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3106,6 +3022,14 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Kullanıcı ismi</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Parola</translation>
     </message>
 </context>
 <context>
@@ -7787,18 +7711,6 @@ Ne tür alternatifler olduğunu görmek için &lt;a href=&quot;https://wiki.mumb
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Yerel Takma Ad Ayarı...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Engellenen URL şeması &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>URL, güvenlik nedenleriyle engellenmiş bir şema kullanıyor.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Engellenen URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

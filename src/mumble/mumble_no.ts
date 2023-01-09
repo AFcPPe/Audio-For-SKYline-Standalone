@@ -2919,10 +2919,6 @@ Er du sikker på at du vil erstatte ditt sertifikat?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Kobler til %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Skriv inn brukernavn</translation>
     </message>
@@ -2931,24 +2927,12 @@ Er du sikker på at du vil erstatte ditt sertifikat?
         <translation>Tjenernavn</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Ukjent</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Brukere</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Innhenting av tjenerliste feilet</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble tjenertilknytning</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Ping</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2989,74 +2973,6 @@ Er du sikker på at du vil erstatte ditt sertifikat?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Åpne &amp;nettsted</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Tjenerliste</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Søk</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Posisjon</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filter</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Vis alle</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Vis anvendte</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Vis anvendbare</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Alle</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrika</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Asia</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Europa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Nord-Amerika</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oseania</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Sør-Amerika</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Samtykk til overføring av privat data</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;For å måle latensen til offentlige tjenere og fastsette antallet aktive brukere, blir IP-adressen din sendt til hver offentlige tjener.&lt;/p&gt;&lt;p&gt;Samtykker du til dette? Svarer du nei vil den offentlige tjenerlisten skrus av. (Til du skrur den på fra nettverksinnstillingene.)&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation type="unfinished">&amp;Koble til</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3121,6 +3037,14 @@ Er du sikker på at du vil erstatte ditt sertifikat?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Brukernavn</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Passord</translation>
     </message>
 </context>
 <context>
@@ -7743,18 +7667,6 @@ Du finner tilgjengelige alternativer i &lt;a href=&quot;https://wiki.mumble.info
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Lokal kallenavnsjustering …</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Blokkert nettadresse-forordning «%1»&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation type="unfinished">Nettadressen bruker en forordning som har blitt blokkert av sikkerhetshensyn.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Blokkert nettadresse: «%1»</translation>
     </message>
     <message>
         <source>Default Device</source>

@@ -2905,10 +2905,6 @@ Haluatko varmasti korvata varmenteen?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Yhdistetään %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Kirjoita käyttäjänimi</translation>
     </message>
@@ -2917,24 +2913,12 @@ Haluatko varmasti korvata varmenteen?
         <translation>Palvelimen nimi</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Tuntematon</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Käyttäjät</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Epäonnistui noutamaan palvelinlistan</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble-palvelimeen yhdistäminen</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Vasteaika</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2975,74 +2959,6 @@ Haluatko varmasti korvata varmenteen?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Avaa &amp;verkkosivu</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Palvelinlista</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Haku</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Sijainti</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Suodatus</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Näytä kaikki</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Näytä käytössä olevat</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Näytä tavoitettavissa</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Kaikki</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrikka</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Aasia</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Eurooppa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Pohjois-Amerikka</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oseania</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Etelä-Amerikka</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Hyväksy yksityisten tietojen lähettäminen</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Jotta julkisten palvelinten viive (ping) voidaan mitata ja niiden aktiivisten käyttäjien määrä selvittää, IP-osoitteesi täytyy lähettää jokaiselle julkiselle palvelimelle. &lt;/p&gt;&lt;p&gt;Hyväksytkö IP-osoitteesi lähettämisen? Jos vastaat ei, julkisten palvelinten lista otetaan pois käytöstä. Voit ottaa sen koska tahansa takaisin käyttöön verkkoasetuksissa.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Yhdistä</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3107,6 +3023,14 @@ Haluatko varmasti korvata varmenteen?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Käyttäjänimi</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Salasana</translation>
     </message>
 </context>
 <context>
@@ -7728,18 +7652,6 @@ Lisätietoa löydät &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_M
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Paikallisen nimimerkin määrittäminen...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Estetty URL-rakenne &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>URLn rakenne on estetty turvallisuussyistä.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Estetty URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

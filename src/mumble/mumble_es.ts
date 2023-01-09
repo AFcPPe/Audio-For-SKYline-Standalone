@@ -2905,10 +2905,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Conectando a %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Introduzca el nombre de usuario</translation>
     </message>
@@ -2917,24 +2913,12 @@ Are you sure you wish to replace your certificate?
         <translation>Nombre del servidor</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Desconocido</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Usuarios</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>No se pudo obtener la lista de servidores</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Conexión al servidor Mumble</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Ping</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2975,74 +2959,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Abrir página &amp;web</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Lista de servidores</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Buscar</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Ubicación</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filtrar</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Mostrar todo</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Mostrar en uso</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Mostrar alcanzables</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Todos</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>África</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Asia</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Europa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>América del Norte</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oceanía</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>América del Sur</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Consentir la transmisión de información privada</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Para medir la latencia (ping) de servidores públicos y determinar el número de usuarios activos, es necesario transmitir tu dirección IP a cada servidor público.&lt;/p&gt;&lt;p&gt;Consientes a la transmisión de tu dirección IP? Si respondes que no, la lista de servidores públicos será desactivada. Sin embargo, puedes activarla cuando quieras en la configuración de red.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>C&amp;onectar</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3107,6 +3023,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Nombre de usuario</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Contraseña</translation>
     </message>
 </context>
 <context>
@@ -7706,18 +7630,6 @@ Vea &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;la
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Ajuste del Apodo Local...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>La URL usa un esquema que ha sido bloqueado por razones de seguridad.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>URL bloqueada: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

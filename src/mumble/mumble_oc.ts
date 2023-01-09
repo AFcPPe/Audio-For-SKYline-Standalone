@@ -2865,10 +2865,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Connexion a %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Picatz un nom d’utilizaire</translation>
     </message>
@@ -2877,24 +2873,12 @@ Are you sure you wish to replace your certificate?
         <translation>Nom del servidor</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Desconegut</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Utilizaires</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Recuperacion impossibla de la lista dels servidors</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Connexion al servidor Mumble</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Laténcia</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2935,74 +2919,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Dobrir la pagina &amp;web</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Lista de servidors</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Recercar</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Emplaçament</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filtrar</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Afichar tot</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Totes / Totas</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Africa</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Asia</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Euròpa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>America del nòrd</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oceania</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>America del Sud</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Consentir a la transmission d’informacions privadas</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>C&amp;onnexion</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3067,6 +2983,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Nom d&apos;_utilizaire</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Senhal</translation>
     </message>
 </context>
 <context>
@@ -7628,18 +7552,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Local Nickname Adjustment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -2894,10 +2894,6 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Kapcsolódás: %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Felhasználónév megadása</translation>
     </message>
@@ -2906,24 +2902,12 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
         <translation>Kiszolgáló neve</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Ismeretlen</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Férőhely</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Kiszolgálók listájának letöltése sikertelen</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Kapcsolódás Mumble kiszolgálóhoz</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Válaszidő</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2964,74 +2948,6 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>&amp;Honlap megnyitása</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Kiszolgálók listája</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Keresés</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Terület</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Szűrő</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Összes mutatása</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Csak népszerű</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Csak elérhető</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Összes</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrika</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Ázsia</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Európa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Észak-Amerika</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Óceánia</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Dél-Amerika</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Hozzájárulás adat-továbbításhoz</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ahhoz, hogy a nyilvános kiszolgálók válaszidejét (ping) mérni tudjuk és létszámot lekérdezzük az ön IP-címének továbbítása szükséges ezen kiszolgálók számára.&lt;/p&gt;&lt;p&gt;Hozzájárul az IP-címe továbbításához? Nemleges válasz esetén nem lesznek elérhetők a nyilvános kiszolgálók. Ez a beállítás utólag bármikor visszavonható a Mumble beállításaiban.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Kapcsolódás</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3096,6 +3012,14 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Felhasználónév</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Jelszó</translation>
     </message>
 </context>
 <context>
@@ -7681,18 +7605,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Tiltott hivatkozás: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

@@ -2905,10 +2905,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Ansluter till %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Ange användarnamn</translation>
     </message>
@@ -2917,24 +2913,12 @@ Are you sure you wish to replace your certificate?
         <translation>Servernamn</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Okänd</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Användare</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Serverlistan kunde inte hämtas</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble - Anslut till server</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Ping</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2975,74 +2959,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Öppna &amp;hemsida</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Serverlista</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Sök</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Plats</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filter</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Visa alla</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Visa ifyllt</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Visa nåbar</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Alla</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrika</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Asien</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Europa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Nordamerika</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oceanien</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Sydamerika</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Samtycke till överföring av privata uppgifter</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;För att mäta latenstiden (ping) för offentliga servrar och fastställa antalet aktiva användare måste din IP-adress överföras till varje offentlig server.&lt;/p&gt;&lt;p&gt;Godkänner du att din IP-adress överförs? Om du svarar nej kommer listan över offentliga servrar att avaktiveras. Du kan dock återaktivera den när som helst i nätverksinställningarna.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Anslut</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3107,6 +3023,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Användarnamn</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Lösenord</translation>
     </message>
 </context>
 <context>
@@ -7728,18 +7652,6 @@ Se &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;Mum
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Justering av lokalt smeknamn ...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Blockerat URL-schema &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>URL:n använder ett schema som har blockerats av säkerhetsskäl.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Blockerad URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

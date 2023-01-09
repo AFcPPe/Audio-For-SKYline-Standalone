@@ -2906,10 +2906,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Подключение к %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Введите имя пользователя</translation>
     </message>
@@ -2918,24 +2914,12 @@ Are you sure you wish to replace your certificate?
         <translation>Название сервера</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Неизвестно</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Пользователей</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Ошибка при получении списка серверов</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Подключение к серверу</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Пинг</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2976,74 +2960,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Посетить &amp;веб-страницу</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Список серверов</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Поиск</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Местоположение</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Фильтр</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Показать все</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Показать населенные</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Показать доступные</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Все</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Африка</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Азия</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Европа</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Северная Америка</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Океания</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Южная Америка</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Согласие на передачу личных данных</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Для измерения задержки (пинга) до публичных серверов и определения количества активных пользователей, ваш IP адрес должен быть передан каждому публичному серверу.&lt;/p&gt;&lt;p&gt;Согласны ли вы на передачу своего IP адреса? Если вы ответите &quot;нет&quot;, список публичных серверов будет деактивирован. Вы всегда можете включить его в настройках сети.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Подключиться</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3108,6 +3024,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Логин</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Пароль</translation>
     </message>
 </context>
 <context>
@@ -7789,18 +7713,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Локальная настройка ника...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Заблокированная схема URL &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>URL-адрес использует схему, которая была заблокирована из соображений безопасности.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Заблокированный URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

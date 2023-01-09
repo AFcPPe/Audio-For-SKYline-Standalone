@@ -2906,10 +2906,6 @@ Czy na pewno chcesz zastąpić swój bieżący certyfikat?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Łączenie do %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Podaj nazwę użytkownika</translation>
     </message>
@@ -2918,24 +2914,12 @@ Czy na pewno chcesz zastąpić swój bieżący certyfikat?
         <translation>Nazwa serwera</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Nieznane</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Użytkowników</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Nie udało się załadować listy serwerów</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Lista serwerów Mumble</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Opóźnienie</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2976,74 +2960,6 @@ Czy na pewno chcesz zastąpić swój bieżący certyfikat?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Otwórz &amp;stronę</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Lista serwerów</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Szukaj</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Lokalizacja</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filtr</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Wyświetlaj wszystkie</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Wyświetlaj zaludnione</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Wyświetlaj osiągalne</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Wszystkie</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afryka</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Azja</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Europa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Ameryka Północna</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oceania</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Ameryka Południowa</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Zgoda na przesyłanie danych prywatnych</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Aby zmierzyć opóźnienie (ping) serwerów publicznych i określić liczbę aktywnych użytkowników, adres IP musi zostać przesłany do każdego serwera publicznego.&lt;/p&gt;&lt;p&gt;Czy zgadzasz się na przekazanie swojego adresu IP? Jeśli odpowiesz „nie”, lista serwerów publicznych zostanie dezaktywowana. Możesz ją jednak ponownie aktywować w ustawieniach sieci.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Połącz</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3108,6 +3024,14 @@ Czy na pewno chcesz zastąpić swój bieżący certyfikat?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Hasło</translation>
     </message>
 </context>
 <context>
@@ -7789,18 +7713,6 @@ Zobacz &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Lokalne dopasowanie pseudonimu...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Schemat zablokowanego adresu URL &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>Adres URL korzysta ze schematu, który został zablokowany ze względów bezpieczeństwa.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Zablokowany adres URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

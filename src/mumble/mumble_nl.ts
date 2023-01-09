@@ -2905,10 +2905,6 @@ Weet je zeker dat je je certificaat wil vervangen?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Bezig met verbinden met %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Geef gebruikersnaam in</translation>
     </message>
@@ -2917,24 +2913,12 @@ Weet je zeker dat je je certificaat wil vervangen?
         <translation>Servernaam</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Onbekend</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Gebruikers</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Ophalen serverlijst mislukt</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Verbind met een Mumble-server</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Latentie</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2975,74 +2959,6 @@ Weet je zeker dat je je certificaat wil vervangen?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Open &amp;webpagina</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Serverlijst</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Zoek</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Locatie</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Filter</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Toon alle</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Toon bevolkte</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Toon bereikbare</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Alle</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Afrika</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Azië</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Europa</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Noord-Amerika</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Oceanië</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Zuid-Amerika</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Geef toestemming om privé-gegevens te versturen</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Om de latentie (ping) van publieke servers en het aantal actieve gebruikers te bepalen, wordt je IP adres verzonden naar publieke servers.&lt;/p&gt;&lt;p&gt;Wil je hiervoor toestemming geven? Indien niet, zal de publieke server-lijst gedeactiveerd worden. Je kan deze echter op elk moment opnieuw activeren bij de netwerkinstellingen.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Verbind</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3107,6 +3023,14 @@ Weet je zeker dat je je certificaat wil vervangen?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Gebruikersnaam</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Wachtwoord</translation>
     </message>
 </context>
 <context>
@@ -7728,18 +7652,6 @@ Zie &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;de
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Lokaal bijnaam aanpassen...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;URL-schema &quot;%1&quot; geblokkeerd&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>De URL gebruikt een schema dat geblokkeerd werd vanwege veiligheidsredenen.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>URL geblokkeerd: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

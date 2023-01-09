@@ -2904,10 +2904,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>正在连接 %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>输入用户名</translation>
     </message>
@@ -2916,24 +2912,12 @@ Are you sure you wish to replace your certificate?
         <translation>服务器名</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>未知</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>用户数</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>获取服务器列表失败</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble 服务器连接</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>延迟</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2974,74 +2958,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>打开网页(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>服务器列表</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>搜索</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>位置</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>筛选</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>显示所有</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>显示有人</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>显示可连接</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>所有</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>非洲</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>亚洲</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>欧洲</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>北美洲</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>大洋洲</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>南美洲</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>同意传输私有数据</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;为了获取公共服务器的延迟（Ping）和在线用户数，您的 IP 地址必须被发送到所有公共服务器。&lt;/p&gt;&lt;p&gt;您同意传输您的 IP 地址吗？如果您不同意，公共服务器列表会被禁用。但您随时可以在网络设置内重新启用它。&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>连接(&amp;O)</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3106,6 +3022,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">用户名</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">密码</translation>
     </message>
 </context>
 <context>
@@ -7787,18 +7711,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>本地昵称调整...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;已禁止 URL 方案“%1”&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>此 URL 使用的方案由于安全原因已被禁止。</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>禁止 URL：“%1”</translation>
     </message>
     <message>
         <source>Default Device</source>

@@ -2905,10 +2905,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>Γίνεται σύνδεση στο %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>Εισαγάγετε το όνομα χρήστη</translation>
     </message>
@@ -2917,24 +2913,12 @@ Are you sure you wish to replace your certificate?
         <translation>Όνομα διακομιστή</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation>Άγνωστο</translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>Χρήστες</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>Αποτυχία λήψης λίστας διακομιστών</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Σύνδεση Διακομιστή Mumble</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>Ping</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2975,74 +2959,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>Άνοιγμα &amp;Ιστοσελίδας</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation>Λίστα διακομιστών</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Αναζήτηση</translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation>Τοποθεσία</translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation>Φίλτρο</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation>Εμφάνιση όλων</translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation>Εμφάνιση κατοικημένων</translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation>Εμφάνιση προσβάσιμων</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation>Όλοι</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation>Αφρική</translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation>Ασία</translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation>Ευρώπη</translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation>Βόρεια Αμερική</translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation>Ωκεανία</translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation>Νότια Αμερική</translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation>Συγκατάθεση για τη διαβίβαση ιδιωτικών δεδομένων</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Για να μετρήσετε την καθυστέρηση (ping) των δημόσιων διακομιστών και να καθορίσετε τον αριθμό των ενεργών χρηστών, η διεύθυνση IP σας πρέπει να διαβιβάζεται σε κάθε δημόσιο διακομιστή. &lt;/p&gt;&lt;p&gt;Συμφωνείτε με τη μετάδοση της διεύθυνσής σας IP; Εάν απαντήσετε όχι, η δημόσια λίστα διακομιστών θα απενεργοποιηθεί. Ωστόσο, μπορείτε να το ενεργοποιήσετε ξανά ανά πάσα στιγμή στις ρυθμίσεις δικτύου.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation>&amp;Σύνδεση</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3107,6 +3023,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished">Όνομα χρήστη</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Κωδικός πρόσβασης</translation>
     </message>
 </context>
 <context>
@@ -7728,18 +7652,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Local Nickname Adjustment...</source>
         <translation>Τοπική προσαρμογή ψευδωνύμου...</translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Αποκλεισμένο σχέδιο URL &quot;%1&quot;&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation>Το URL χρησιμοποιεί ένα σχήμα που έχει αποκλειστεί για λόγους ασφαλείας.</translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
-        <translation>Αποκλεισμένο URL: &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Default Device</source>

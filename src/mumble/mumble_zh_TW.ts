@@ -2881,10 +2881,6 @@ Are you sure you wish to replace your certificate?
 <context>
     <name>ConnectDialog</name>
     <message>
-        <source>Connecting to %1</source>
-        <translation>正在連接到 %1</translation>
-    </message>
-    <message>
         <source>Enter username</source>
         <translation>輸入帳號</translation>
     </message>
@@ -2893,24 +2889,12 @@ Are you sure you wish to replace your certificate?
         <translation>伺服器名稱</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Users</source>
         <translation>使用者</translation>
     </message>
     <message>
-        <source>Failed to fetch server list</source>
-        <translation>無法抓取伺服器清單</translation>
-    </message>
-    <message>
         <source>Mumble Server Connect</source>
         <translation>Mumble 伺服器連線</translation>
-    </message>
-    <message>
-        <source>Ping</source>
-        <translation>反應時間</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -2951,74 +2935,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Open &amp;Webpage</source>
         <translation>開啟網頁(&amp;W)</translation>
-    </message>
-    <message>
-        <source>Server list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Filter</source>
-        <translation type="unfinished">過濾</translation>
-    </message>
-    <message>
-        <source>Show All</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Populated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Reachable</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="unfinished">全部</translation>
-    </message>
-    <message>
-        <source>Africa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Asia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Europe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>North America</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Oceania</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>South America</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Consent to the transmission of private data</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>C&amp;onnect</source>
-        <translation type="unfinished">連線(&amp;C)</translation>
     </message>
     <message>
         <source>Adding host %1</source>
@@ -3083,6 +2999,14 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Password:</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">密碼</translation>
     </message>
 </context>
 <context>
@@ -7657,18 +7581,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Local Nickname Adjustment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The URL uses a scheme that has been blocked for security reasons.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blocked URL: &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
