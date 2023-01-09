@@ -33,13 +33,15 @@ struct DataOwnAircraft {
 
 };
 
+
+
 class SimulatorSimConnect : public QObject {
 
 Q_OBJECT
 
 public:
 	SimulatorSimConnect();
-	int packetcount = 0;
+
 	bool initSimEvents();
 	void closeSimconnect();
 	void callProc();
@@ -55,18 +57,11 @@ private slots:
 private:
 	bool initOwnAircraft(const HANDLE hSimConnect);
 	HANDLE hSimConnect = NULL;
+
+
+
 };
 
 static SimulatorSimConnect *pThis = NULL;
-
-class Simulator :public QObject{
-	Q_OBJECT
-public:
-	Simulator();
-	
-private slots:
-	void onSimconnectUpdated();
-	
-};
 
 #endif

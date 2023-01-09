@@ -206,7 +206,6 @@ void ServerItem::init() {
 	setData(2, Qt::DisplayRole, QVariant());
 	emitDataChanged();
 	qsHostname = Global::get().SklineIP;
-	qsName          = "SKYline";
 	qsCountryCode   = "cn";
 	qsCountry       = "China";
 }
@@ -773,8 +772,6 @@ ConnectDialogEdit::ConnectDialogEdit(QWidget *p, const QString &name, const QStr
 	qlePassword->setText(password);
 
 	validate();
-	qleServer->setDisabled(true);
-	qleServer->setText(Global::get().SklineIP);
 }
 
 ConnectDialogEdit::ConnectDialogEdit(QWidget *parent) : QDialog(parent) {
@@ -802,8 +799,6 @@ ConnectDialogEdit::ConnectDialogEdit(QWidget *parent) : QDialog(parent) {
 		}
 	}
 	qleUsername->setText(Global::get().s.qsUsername);
-	qleServer->setDisabled(true);
-	qleServer->setText(Global::get().SklineIP);
 }
 
 void ConnectDialogEdit::init() {
