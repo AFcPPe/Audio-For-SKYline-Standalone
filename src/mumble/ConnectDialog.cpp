@@ -959,7 +959,6 @@ void ConnectDialogEdit::on_qcbShowPassword_toggled(bool checked) {
 ConnectDialog::ConnectDialog(QWidget *p, bool autoconnect) : QDialog(p), bAutoConnect(autoconnect) {
 	setupUi(this);
 	qlbUsername->setText(tr("Username:"));
-	qlbPassword->setText(tr("Password:"));
 	
 	
 }
@@ -969,6 +968,10 @@ ConnectDialog::~ConnectDialog() {
 
 void ConnectDialog::accept() {
 	
+	if (this->qleUsername->text() == "")
+		return;
+	this->qsUsername = this->qleUsername->text();
+	QDialog::accept();
 }
 
 void ConnectDialog::OnSortChanged(int logicalIndex, Qt::SortOrder) {
