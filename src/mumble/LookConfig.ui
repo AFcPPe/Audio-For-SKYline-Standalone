@@ -159,6 +159,9 @@
    </item>
    <item row="0" column="0" colspan="2">
     <widget class="QGroupBox" name="qgbLayout">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="title">
       <string>Layout</string>
      </property>

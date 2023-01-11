@@ -200,6 +200,8 @@ MainWindow::MainWindow(QWidget *p)
 					 &PluginManager::on_serverSynchronized);
 	sim = new SimulatorSimConnect();
 	connect(sim, &SimulatorSimConnect::RaiseSimdataUpdated, this, &MainWindow::on_Simconnect_Updated);
+	Global::get().s.wlWindowLayout = Settings::LayoutStacked;
+	setupView(false);
 }
 
 void MainWindow::createActions() {
