@@ -383,7 +383,7 @@ void MainWindow::setupGui() {
 #else
 	qaAudioTTS->setChecked(Global::get().s.bTTS);
 #endif
-	qaFilterToggle->setChecked(Global::get().s.bFilterActive);
+	//qaFilterToggle->setChecked(Global::get().s.bFilterActive);
 
 	qaHelpWhatsThis->setShortcuts(QKeySequence::WhatsThis);
 
@@ -1075,7 +1075,7 @@ void MainWindow::toggleSearchDialogVisibility() {
 }
 
 void MainWindow::enableRecording(bool recordingAllowed) {
-	qaRecording->setEnabled(recordingAllowed);
+//	qaRecording->setEnabled(recordingAllowed);
 
 	Global::get().recordingAllowed = recordingAllowed;
 
@@ -1547,7 +1547,7 @@ void MainWindow::on_qmSelf_aboutToShow() {
 	ClientUser *user = ClientUser::get(Global::get().uiSession);
 
 	qaServerTexture->setEnabled(user != nullptr);
-	qaSelfComment->setEnabled(user != nullptr);
+//	qaSelfComment->setEnabled(user != nullptr);
 
 	qaServerTextureRemove->setEnabled(user && !user->qbaTextureHash.isEmpty());
 
@@ -1637,7 +1637,7 @@ void MainWindow::on_qmServer_aboutToShow() {
 	qmServer->addAction(qaServerConnect);
 	qmServer->addSeparator();
 	qmServer->addAction(qaServerDisconnect);
-	qmServer->addAction(qaServerInformation);
+//	qmServer->addAction(qaServerInformation);
 	qmServer->addAction(qaServerTokens);
 	qmServer->addAction(qaServerUserList);
 	qmServer->addAction(qaServerBanList);
@@ -1653,7 +1653,7 @@ void MainWindow::on_qmServer_aboutToShow() {
 
 	qaServerBanList->setEnabled(Global::get().pPermissions & (ChanACL::Ban | ChanACL::Write));
 	qaServerUserList->setEnabled(Global::get().pPermissions & (ChanACL::Register | ChanACL::Write));
-	qaServerInformation->setEnabled(Global::get().uiSession != 0);
+//	qaServerInformation->setEnabled(Global::get().uiSession != 0);
 	qaServerTokens->setEnabled(Global::get().uiSession != 0);
 
 	if (!qlServerActions.isEmpty()) {
@@ -1767,7 +1767,8 @@ void MainWindow::qmUser_aboutToShow() {
 	qmUser->addAction(qaUserLocalNickname);
 
 	if (isSelf)
-		qmUser->addAction(qaSelfComment);
+		;
+	//		qmUser->addAction(qaSelfComment);
 	else {
 		qmUser->addAction(qaUserCommentView);
 		qmUser->addAction(qaUserCommentReset);
@@ -2293,7 +2294,7 @@ void MainWindow::on_qmConfig_aboutToShow() {
 	qmConfig->addAction(qaAudioTTS);
 	qmConfig->addSeparator();
 	qmConfig->addAction(qaConfigMinimal);
-	qmConfig->addAction(qaFilterToggle);
+//	qmConfig->addAction(qaFilterToggle);
 
 	qaTalkingUIToggle->setChecked(Global::get().talkingUI && Global::get().talkingUI->isVisible());
 
@@ -2725,7 +2726,7 @@ void MainWindow::on_qaAudioReset_triggered() {
 }
 
 void MainWindow::on_qaFilterToggle_triggered() {
-	Global::get().s.bFilterActive = qaFilterToggle->isChecked();
+//	Global::get().s.bFilterActive = qaFilterToggle->isChecked();
 	updateUserModel();
 }
 
@@ -3363,7 +3364,7 @@ void MainWindow::serverConnected() {
 	}
 	Global::get().l->log(Log::ServerConnected, tr("Connected."));
 	qaServerDisconnect->setEnabled(true);
-	qaServerInformation->setEnabled(true);
+//	qaServerInformation->setEnabled(true);
 	qaServerBanList->setEnabled(true);
 
 	Channel *root = Channel::get(Channel::ROOT_ID);
@@ -3406,7 +3407,7 @@ void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString re
 	Global::get().pPermissions     = ChanACL::None;
 	Global::get().bAttenuateOthers = false;
 	qaServerDisconnect->setEnabled(false);
-	qaServerInformation->setEnabled(false);
+//	qaServerInformation->setEnabled(false);
 	qaServerBanList->setEnabled(false);
 	qtvUsers->setCurrentIndex(QModelIndex());
 	qteChat->setEnabled(false);

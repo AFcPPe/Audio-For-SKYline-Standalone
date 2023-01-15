@@ -99,9 +99,7 @@
     <addaction name="qaAudioDeaf"/>
     <addaction name="qaSelfPrioritySpeaker"/>
     <addaction name="separator"/>
-    <addaction name="qaRecording"/>
     <addaction name="separator"/>
-    <addaction name="qaSelfComment"/>
     <addaction name="qaServerTexture"/>
     <addaction name="qaServerTextureRemove"/>
     <addaction name="separator"/>
@@ -192,19 +190,9 @@
     <bool>false</bool>
    </attribute>
    <addaction name="qaServerConnect"/>
-   <addaction name="qaServerInformation"/>
-   <addaction name="separator"/>
    <addaction name="qaAudioMute"/>
    <addaction name="qaAudioDeaf"/>
-   <addaction name="qaRecording"/>
-   <addaction name="separator"/>
-   <addaction name="qaSelfComment"/>
-   <addaction name="separator"/>
    <addaction name="qaConfigDialog"/>
-   <addaction name="separator"/>
-   <addaction name="qaFilterToggle"/>
-   <addaction name="separator"/>
-   <addaction name="qaSearch"/>
   </widget>
   <widget class="QDockWidget" name="qdwMinimalViewNote">
    <property name="sizePolicy">
@@ -324,27 +312,6 @@
    </property>
    <property name="whatsThis">
     <string>This lets you edit the server-side IP ban list.</string>
-   </property>
-  </action>
-  <action name="qaServerInformation">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>skin:Information_icon.svg</normaloff>skin:Information_icon.svg</iconset>
-   </property>
-   <property name="text">
-    <string>&amp;Information...</string>
-   </property>
-   <property name="toolTip">
-    <string>Show information about the server connection</string>
-   </property>
-   <property name="whatsThis">
-    <string>This will show extended information about the connection to the server.</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>true</bool>
    </property>
   </action>
   <action name="qaUserKick">
@@ -619,35 +586,6 @@
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
-   </property>
-  </action>
-  <action name="qaFilterToggle">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>skin:filter_off.svg</normaloff>
-     <normalon>skin:filter_on.svg</normalon>
-     <activeon>skin:filter_on.svg</activeon>skin:filter_off.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Channel &amp;Filter</string>
-   </property>
-   <property name="toolTip">
-    <string>Toggle the channel filter (Alt+F)</string>
-   </property>
-   <property name="whatsThis">
-    <string>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel's context menu.</string>
-   </property>
-   <property name="shortcut">
-    <string>Alt+F</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>false</bool>
    </property>
   </action>
   <action name="qaAudioWizard">
@@ -954,21 +892,6 @@ the channel's context menu.</string>
     <bool>true</bool>
    </property>
   </action>
-  <action name="qaSelfComment">
-   <property name="icon">
-    <iconset>
-     <normaloff>skin:self_comment.svg</normaloff>skin:self_comment.svg</iconset>
-   </property>
-   <property name="text">
-    <string>&amp;Change Comment...</string>
-   </property>
-   <property name="toolTip">
-    <string>Change your own comment</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>true</bool>
-   </property>
-  </action>
   <action name="qaSelfRegister">
    <property name="text">
     <string>R&amp;egister...</string>
@@ -991,21 +914,6 @@ the channel's context menu.</string>
    </property>
    <property name="text">
     <string>Priority Speaker</string>
-   </property>
-  </action>
-  <action name="qaRecording">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>skin:actions/media-record.svg</normaloff>skin:actions/media-record.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Recording</string>
-   </property>
-   <property name="iconVisibleInMenu">
-    <bool>true</bool>
    </property>
   </action>
   <action name="qaShow">
@@ -1058,21 +966,6 @@ the channel's context menu.</string>
    </property>
    <property name="whatsThis">
     <string>Silently disables Text-To-Speech for all text messages from the user.</string>
-   </property>
-  </action>
-  <action name="qaSearch">
-   <property name="icon">
-    <iconset>
-     <normaloff>skin:magnifier.svg</normaloff>skin:magnifier.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Search</string>
-   </property>
-   <property name="toolTip">
-    <string>Search for a user or channel (Ctrl+F)</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>

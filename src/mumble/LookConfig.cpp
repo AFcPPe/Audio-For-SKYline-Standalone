@@ -22,7 +22,7 @@ static ConfigWidget *LookConfigNew(Settings &st) {
 	return new LookConfig(st);
 }
 
-static ConfigRegistrar registrar(1100, LookConfigNew);
+//static ConfigRegistrar registrar(1100, LookConfigNew);
 
 LookConfig::LookConfig(Settings &st) : ConfigWidget(st) {
 	setupUi(this);

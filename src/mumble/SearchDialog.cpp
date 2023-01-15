@@ -146,10 +146,10 @@ SearchDialog::SearchDialog(QWidget *parent) : QWidget(parent), m_itemDelegate(ne
 	if (Global::get().mw) {
 		QObject::connect(Global::get().mw, &MainWindow::serverSynchronized, this,
 						 &SearchDialog::on_serverConnectionSynchronized);
-
+		 
 		// Add the action to toggle the search dialog to this dialof as well in order to make sure that
 		// toggling it off again also works when the search dialog has focus.
-		addAction(Global::get().mw->qaSearch);
+//		addAction(Global::get().mw->qaSearch);
 	}
 	if (Global::get().sh) {
 		QObject::connect(Global::get().sh.get(), &ServerHandler::disconnected, this,

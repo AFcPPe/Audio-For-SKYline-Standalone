@@ -27,7 +27,7 @@ static ConfigWidget *PluginConfigDialogNew(Settings &st) {
 	return new PluginConfig(st);
 }
 
-static ConfigRegistrar registrarPluginConfig(5000, PluginConfigDialogNew);
+//static ConfigRegistrar registrarPluginConfig(5000, PluginConfigDialogNew);
 
 
 PluginConfig::PluginConfig(Settings &st) : ConfigWidget(st) {
