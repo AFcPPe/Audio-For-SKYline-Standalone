@@ -200,6 +200,9 @@ MainWindow::MainWindow(QWidget *p)
 					 &PluginManager::on_serverSynchronized);
 	sim = new SimulatorSimConnect();
 	connect(sim, &SimulatorSimConnect::RaiseSimdataUpdated, this, &MainWindow::on_Simconnect_Updated);
+	qtvUsers->setVisible(false);
+	//menubar->setVisible(false);
+
 	Global::get().s.wlWindowLayout = Settings::LayoutStacked;
 	setupView(false);
 }
@@ -1496,6 +1499,7 @@ void MainWindow::setupView(bool toggle_minimize) {
 			qwPTTButtonWidget = nullptr;
 		}
 	}
+	menubar->setVisible(false);
 }
 
 void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
