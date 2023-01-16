@@ -243,6 +243,32 @@
     </layout>
    </widget>
   </widget>
+  <widget class="QDockWidget" name="qdwFreq">
+   <property name="features">
+    <set>QDockWidget::NoDockWidgetFeatures</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>4</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <widget class="QLCDNumber" name="lcdNumber">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="digitCount">
+      <number>7</number>
+     </property>
+     <property name="value" stdset="0">
+      <double>118.099999999999994</double>
+     </property>
+    </widget>
+   </widget>
+  </widget>
   <action name="qaQuit">
    <property name="text">
     <string>&amp;Quit Mumble</string>
@@ -968,6 +994,7 @@
     <string>Silently disables Text-To-Speech for all text messages from the user.</string>
    </property>
   </action>
+  <zorder>qdwFreq</zorder>
  </widget>
  <customwidgets>
   <customwidget>

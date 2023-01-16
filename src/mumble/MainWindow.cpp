@@ -437,6 +437,12 @@ void MainWindow::setupGui() {
 
 	qaTransmitModeSeparator = qtIconToolbar->insertSeparator(qaConfigDialog);
 	qaTransmitMode          = qtIconToolbar->insertWidget(qaTransmitModeSeparator, qcbTransmitMode);
+	qdwFreq->setTitleBarWidget(dtbChatDockTitle);
+	qtIconToolbar->addWidget(qdwFreq);
+
+
+	
+	
 
 	connect(qcbTransmitMode, SIGNAL(activated(int)), this, SLOT(qcbTransmitMode_activated(int)));
 
