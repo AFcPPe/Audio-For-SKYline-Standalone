@@ -66,7 +66,7 @@
      <x>0</x>
      <y>0</y>
      <width>735</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="qmConfig">
@@ -153,10 +153,10 @@
     <string>This is the chatbar&lt;br /&gt;If you enter text here and then press enter the text is sent to the user or channel that was selected. If nothing is selected the message is sent to your current channel.</string>
    </property>
    <property name="features">
-    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
+    <set>QDockWidget::NoDockWidgetFeatures</set>
    </property>
    <property name="windowTitle">
-    <string>Chatbar</string>
+    <string/>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -251,20 +251,77 @@
     <number>4</number>
    </attribute>
    <widget class="QWidget" name="dockWidgetContents_2">
-    <widget class="QLCDNumber" name="lcdNumber">
+    <widget class="QLCDNumber" name="qlncom1">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>5</y>
+       <width>71</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
+     <property name="digitCount">
+      <number>7</number>
+     </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
+     <property name="value" stdset="0">
+      <double>133.074999999999989</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbcom1">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
-       <width>111</width>
+       <y>10</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>COM1:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbcom2">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>10</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>COM1:</string>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="qlncom2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>5</y>
+       <width>71</width>
        <height>23</height>
       </rect>
      </property>
      <property name="digitCount">
       <number>7</number>
      </property>
+     <property name="segmentStyle">
+      <enum>QLCDNumber::Flat</enum>
+     </property>
      <property name="value" stdset="0">
-      <double>118.099999999999994</double>
+      <double>121.875000000000000</double>
      </property>
     </widget>
    </widget>

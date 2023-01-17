@@ -1506,6 +1506,11 @@ void MainWindow::setupView(bool toggle_minimize) {
 		}
 	}
 	menubar->setVisible(false);
+	QWidget *org   = qdwChat->titleBarWidget();
+	QWidget *empty         = new QWidget();
+	qdwChat->setTitleBarWidget(empty);
+	delete org;
+	qteChat->verticalScrollBar()->hide();
 }
 
 void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
