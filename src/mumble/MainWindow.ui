@@ -153,10 +153,10 @@
     <string>This is the chatbar&lt;br /&gt;If you enter text here and then press enter the text is sent to the user or channel that was selected. If nothing is selected the message is sent to your current channel.</string>
    </property>
    <property name="features">
-    <set>QDockWidget::NoDockWidgetFeatures</set>
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
    </property>
    <property name="windowTitle">
-    <string/>
+    <string>Chatbar</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -302,7 +302,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>COM1:</string>
+      <string>COM2:</string>
      </property>
     </widget>
     <widget class="QLCDNumber" name="qlncom2">

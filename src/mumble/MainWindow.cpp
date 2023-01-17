@@ -1091,6 +1091,8 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 }
 
 void MainWindow::on_Simconnect_Updated() {
+	qlncom1->display(QString::number(sim->own->com1ActiveMHz));
+	qlncom2->display(QString::number(sim->own->com2ActiveMHz));
 	if (getContextMenuChannel() == NULL)
 		return;
 	// Global::get().l->log(Log::DebugInfo, QString::number(own->com1ActiveMHz) + QString::number(own->com2ActiveMHz));
@@ -1098,6 +1100,7 @@ void MainWindow::on_Simconnect_Updated() {
 	if (getContextMenuChannel()->qsDesc == Freq) {
 		return;
 	}
+	
 	Channel *root              = Channel::get(0);
 	if (root == NULL) {
 		qDebug() << "\n=====================\nNULL\n=====================\n";
@@ -1127,6 +1130,7 @@ void MainWindow::on_Simconnect_Updated() {
 			Freq += "0";
 			break;
 	}
+
 	Global::get().sh->createChannel(0, Freq, numFreq, 0, true, 50);
 	while (iter.hasNext()) {
 		Channel *c = iter.next();
@@ -1135,6 +1139,7 @@ void MainWindow::on_Simconnect_Updated() {
 			break;
 		}
 	}
+
 
 
 	// for (int i = 0; Channel::get(i) != NULL; i++) {

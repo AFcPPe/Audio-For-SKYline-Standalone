@@ -251,7 +251,8 @@ void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {
 			Global::get().l->log(Log::PermissionDenied, tr("Denied: Cannot modify SuperUser."));
 		} break;
 		case MumbleProto::PermissionDenied_DenyType_ChannelName: {
-			Global::get().l->log(Log::PermissionDenied, tr("Denied: Invalid channel name."));
+			qDebug() << tr("Denied: Invalid channel name.") << "\n";
+			//Global::get().l->log(Log::PermissionDenied, tr("Denied: Invalid channel name."));
 		} break;
 		case MumbleProto::PermissionDenied_DenyType_TextTooLong: {
 			Global::get().l->log(Log::PermissionDenied, tr("Denied: Text message too long."));
@@ -313,10 +314,13 @@ void MainWindow::msgPermissionDenied(const MumbleProto::PermissionDenied &msg) {
 								 tr("You are not allowed to listen to more channels than you currently are."));
 		} break;
 		default: {
+
 			if (msg.has_reason())
-				Global::get().l->log(Log::PermissionDenied, tr("Denied: %1.").arg(u8(msg.reason()).toHtmlEscaped()));
+				qDebug() << tr("Denied: %1.").arg(u8(msg.reason()).toHtmlEscaped())<< "\n";
+			// Global::get().l->log(Log::PermissionDenied,tr("Denied: %1.").arg(u8(msg.reason()).toHtmlEscaped()));
 			else
-				Global::get().l->log(Log::PermissionDenied, tr("Permission denied."));
+				qDebug() << tr("Permission denied.") << "\n";
+				//Global::get().l->log(Log::PermissionDenied, tr("Permission denied."));
 		} break;
 	}
 }
