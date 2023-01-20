@@ -692,6 +692,7 @@ int main(int argc, char **argv) {
 
 	// By setting the TalkingUI's position **before** making it visible tends to more reliably include the
 	// window's frame to be included in the positioning calculation on X11 (at least using KDE Plasma)
+	Global::get().s.bShowTalkingUI = false;
 	Global::get().talkingUI->setVisible(Global::get().s.bShowTalkingUI);
 
 	QObject::connect(Global::get().mw, &MainWindow::userAddedChannelListener, Global::get().talkingUI,

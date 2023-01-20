@@ -205,6 +205,7 @@ MainWindow::MainWindow(QWidget *p)
 
 	Global::get().s.wlWindowLayout = Settings::LayoutStacked;
 	setupView(false);
+	
 }
 
 void MainWindow::createActions() {
@@ -3719,6 +3720,10 @@ void MainWindow::on_qaTalkingUIToggle_triggered() {
 	Global::get().talkingUI->setVisible(!Global::get().talkingUI->isVisible());
 
 	Global::get().s.bShowTalkingUI = Global::get().talkingUI->isVisible();
+
+	//Global::get().talkingUI->setVisible(false);
+
+	//Global::get().s.bShowTalkingUI = false;
 }
 
 /**

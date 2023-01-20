@@ -570,6 +570,7 @@ void TalkingUI::setVisible(bool visible) {
 	}
 
 	QWidget::setVisible(visible);
+	//QWidget::setVisible(false);
 }
 
 QSize TalkingUI::sizeHint() const {
