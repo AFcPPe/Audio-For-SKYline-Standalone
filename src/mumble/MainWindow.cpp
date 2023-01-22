@@ -205,6 +205,13 @@ MainWindow::MainWindow(QWidget *p)
 
 	Global::get().s.wlWindowLayout = Settings::LayoutStacked;
 	setupView(false);
+	connect(qdialCom1, &QDial::valueChanged, this, &MainWindow::on_qdialCom1Changed);
+	connect(qdialCom2, &QDial::valueChanged, this, &MainWindow::on_qdialCom2Changed);
+	qlncom1->display("118.000");
+	qlncom2->display("118.000");
+	connect(&switchTimer, &QTimer::timeout, this, &MainWindow::on_switchTimerElapsed);
+	switchTimer.setInterval(1000);
+	switchTimer.start();
 	
 }
 
@@ -1092,11 +1099,13 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 }
 
 void MainWindow::on_Simconnect_Updated() {
-	qlncom1->display(QString::number(sim->own->com1ActiveMHz));
-	qlncom2->display(QString::number(sim->own->com2ActiveMHz));
-	if (getContextMenuChannel() == NULL)
+	if (qcbSimulator->isChecked()) {
+		qlncom1->display(QString::number(sim->own->com1ActiveMHz));
+		qlncom2->display(QString::number(sim->own->com2ActiveMHz));
+	}
+	/*if (getContextMenuChannel() == NULL)
 		return;
-	// Global::get().l->log(Log::DebugInfo, QString::number(own->com1ActiveMHz) + QString::number(own->com2ActiveMHz));
+	 Global::get().l->log(Log::DebugInfo, QString::number(own->com1ActiveMHz) + QString::number(own->com2ActiveMHz));
 	QString Freq = QString::number(sim->own->com1ActiveMHz);
 	if (getContextMenuChannel()->qsDesc == Freq) {
 		return;
@@ -1139,7 +1148,7 @@ void MainWindow::on_Simconnect_Updated() {
 			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
 			break;
 		}
-	}
+	}*/
 
 
 
@@ -3910,4 +3919,109 @@ void MainWindow::destroyUserInformation() {
 			return;
 		}
 	}
+}
+
+
+void MainWindow::on_qdialCom1Changed() {
+	QString orgNum;
+	if (qcbSimulator->isChecked())
+		orgNum = QString::number(sim->own->com1ActiveMHz);
+	else
+		orgNum = QString::number(118 + qdialCom1->value() * 0.025);
+	switch (orgNum.length()) {
+		case 3:
+			orgNum += ".000";
+			break;
+		case 4:
+			orgNum += "000";
+			break;
+		case 5:
+			orgNum += "00";
+			break;
+		case 6:
+			orgNum += "0";
+			break;
+	}
+	qlncom1->display(orgNum);
+	
+}
+
+void MainWindow::on_qdialCom2Changed() {
+	QString orgNum;
+	if (qcbSimulator->isChecked())
+		orgNum = QString::number(sim->own->com2ActiveMHz);
+	else 
+		orgNum = QString::number(118 + qdialCom2->value() * 0.025);
+	switch (orgNum.length()) {
+		case 3:
+			orgNum += ".000";
+			break;
+		case 4:
+			orgNum += "000";
+			break;
+		case 5:
+			orgNum += "00";
+			break;
+		case 6:
+			orgNum += "0";
+			break;
+	}
+	qlncom2->display(orgNum);
+}
+
+void MainWindow::on_switchTimerElapsed() {
+	QString Freq;
+	if (qcbSimulator->isChecked()) {
+		qlncom1->display(QString::number(sim->own->com1ActiveMHz));
+		qlncom2->display(QString::number(sim->own->com2ActiveMHz));
+		Freq = QString::number(sim->own->com1ActiveMHz);
+	} else {
+		Freq = QString::number(118 + qdialCom1->value() * 0.025);
+	}
+	// Channel
+	if (getContextMenuChannel() == NULL)
+		return;
+	if (getContextMenuChannel()->qsDesc == Freq) {
+		return;
+	}
+
+	Channel *root = Channel::get(0);
+	if (root == NULL) {
+		qDebug() << "\n=====================\nNULL\n=====================\n";
+		return;
+	}
+	QSet< Channel * > children = root->allChildren();
+	QSetIterator< Channel * > iter(children);
+	while (iter.hasNext()) {
+		Channel *c = iter.next();
+		if (Freq == c->qsDesc) {
+			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
+			return;
+		}
+	}
+	QString numFreq = Freq;
+	switch (Freq.length()) {
+		case 3:
+			Freq += ".000";
+			break;
+		case 4:
+			Freq += "000";
+			break;
+		case 5:
+			Freq += "00";
+			break;
+		case 6:
+			Freq += "0";
+			break;
+	}
+
+	Global::get().sh->createChannel(0, Freq, numFreq, 0, true, 50);
+	while (iter.hasNext()) {
+		Channel *c = iter.next();
+		if (numFreq == c->qsDesc) {
+			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
+			break;
+		}
+	}
+
 }

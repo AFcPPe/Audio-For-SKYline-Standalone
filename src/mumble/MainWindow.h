@@ -141,6 +141,9 @@ public:
 	void updateChatBar();
 	void openTextMessageDialog(ClientUser *p);
 	void openUserLocalNicknameDialog(const ClientUser &p);
+	double Com1 = 118.0;
+	double Com2 = 118.0;
+	QTimer switchTimer;
 
 #ifdef Q_OS_WIN
 	bool nativeEvent(const QByteArray &eventType, void *message, long *result) Q_DECL_OVERRIDE;
@@ -333,6 +336,9 @@ public slots:
 	void onResetAudio();
 	void showRaiseWindow();
 	void on_qaFilterToggle_triggered();
+	void on_qdialCom1Changed();
+	void on_qdialCom2Changed();
+	void on_switchTimerElapsed();
 	/// Opens a save dialog for the image referenced by qtcSaveImageCursor.
 	void saveImageAs();
 	/// Returns the path to the user's image directory, optionally with a

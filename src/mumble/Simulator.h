@@ -19,8 +19,8 @@ struct DataOwnAircraft {
 	double longitude;
 	double altitude;
 	double onGround;
-	double com1ActiveMHz;  //!< COM1 active frequency
-	double com2ActiveMHz;  //!< COM2 active frequency
+	double com1ActiveMHz = 118.0;  //!< COM1 active frequency
+	double com2ActiveMHz = 118.0; //!< COM2 active frequency
 	double com1StandbyMHz; //!< COM1 standby frequency
 	double com2StandbyMHz; //!< COM2 standby frequency
 	double comTransmit1;   //!< COM1 transmit, means also receiving

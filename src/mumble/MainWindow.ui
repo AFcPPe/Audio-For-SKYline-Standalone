@@ -276,7 +276,7 @@
       <enum>QLCDNumber::Flat</enum>
      </property>
      <property name="value" stdset="0">
-      <double>133.074999999999989</double>
+      <double>118.000000000000000</double>
      </property>
     </widget>
     <widget class="QLabel" name="qlbcom1">
@@ -295,7 +295,7 @@
     <widget class="QLabel" name="qlbcom2">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>160</x>
        <y>10</y>
        <width>54</width>
        <height>12</height>
@@ -308,7 +308,7 @@
     <widget class="QLCDNumber" name="qlncom2">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>200</x>
        <y>5</y>
        <width>71</width>
        <height>23</height>
@@ -321,7 +321,91 @@
       <enum>QLCDNumber::Flat</enum>
      </property>
      <property name="value" stdset="0">
-      <double>121.875000000000000</double>
+      <double>118.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDial" name="qdialCom1">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>759</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="wrapping">
+      <bool>true</bool>
+     </property>
+     <property name="notchTarget">
+      <double>20.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDial" name="qdialCom2">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>0</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>759</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="wrapping">
+      <bool>true</bool>
+     </property>
+     <property name="notchTarget">
+      <double>20.000000000000000</double>
+     </property>
+     <property name="notchesVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="qcbSimulator">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>10</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连接模拟器</string>
+     </property>
+     <property name="tristate">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
