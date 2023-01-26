@@ -1099,9 +1099,39 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 }
 
 void MainWindow::on_Simconnect_Updated() {
+	QString orgNum1 = QString::number(sim->own->com1ActiveMHz);
+	QString orgNum2  = QString::number(sim->own->com2ActiveMHz);
 	if (qcbSimulator->isChecked()) {
-		qlncom1->display(QString::number(sim->own->com1ActiveMHz));
-		qlncom2->display(QString::number(sim->own->com2ActiveMHz));
+		switch (orgNum1.length()) {
+			case 3:
+				orgNum1 += ".000";
+				break;
+			case 4:
+				orgNum1 += "000";
+				break;
+			case 5:
+				orgNum1 += "00";
+				break;
+			case 6:
+				orgNum1 += "0";
+				break;
+		}
+		switch (orgNum2.length()) {
+			case 3:
+				orgNum2 += ".000";
+				break;
+			case 4:
+				orgNum2 += "000";
+				break;
+			case 5:
+				orgNum2 += "00";
+				break;
+			case 6:
+				orgNum2 += "0";
+				break;
+		}
+		qlncom1->display(orgNum1);
+		qlncom2->display(orgNum2);
 	}
 	/*if (getContextMenuChannel() == NULL)
 		return;
@@ -1481,7 +1511,7 @@ void MainWindow::setupView(bool toggle_minimize) {
 		qdwLog->setVisible(false);
 		qdwChat->setVisible(false);
 		qtIconToolbar->setVisible(false);
-	}
+	} 
 	menuBar()->setVisible(showit);
 
 	if (showit) {
@@ -3972,8 +4002,6 @@ void MainWindow::on_qdialCom2Changed() {
 void MainWindow::on_switchTimerElapsed() {
 	QString Freq;
 	if (qcbSimulator->isChecked()) {
-		qlncom1->display(QString::number(sim->own->com1ActiveMHz));
-		qlncom2->display(QString::number(sim->own->com2ActiveMHz));
 		Freq = QString::number(sim->own->com1ActiveMHz);
 	} else {
 		Freq = QString::number(118 + qdialCom1->value() * 0.025);

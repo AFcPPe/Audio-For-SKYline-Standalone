@@ -90,6 +90,11 @@ AudioInputDialog::AudioInputDialog(Settings &st) : ConfigWidget(st) {
 
 	// Hide the slider by default
 	showSpeexNoiseSuppressionSlider(false);
+	qgbAudio->setVisible(false);
+	qgbMisc->setVisible(false);
+	qgbCompression->setVisible(false);
+	qcbSystem->setVisible(false);
+	qliSystem->setVisible(false);
 
 #ifndef USE_RNNOISE
 	// Hide options related to RNNoise
@@ -657,6 +662,11 @@ AudioOutputDialog::AudioOutputDialog(Settings &st) : ConfigWidget(st) {
 	qlBloom->setToolTip(bloomTooltip);
 	qsBloom->setToolTip(bloomTooltip);
 	qsbBloom->setToolTip(bloomTooltip);
+
+	qgbLoopback->setVisible(false);
+	qgbPositionalAudio->setVisible(false);
+	qcbSystem->setVisible(false);
+	qliSystem->setVisible(false);
 }
 
 QString AudioOutputDialog::title() const {
