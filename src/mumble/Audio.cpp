@@ -102,7 +102,7 @@ void LoopUser::fetchFrames() {
 
 	qetLastFetch.restart();
 }
-
+ 
 RecordUser::RecordUser() {
 	qsName = QLatin1String("Recorder");
 }

@@ -3,11 +3,11 @@
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
-set(MUMBLE_RC "${CMAKE_CURRENT_BINARY_DIR}/mumble.rc")
+set(MUMBLE_RC "${CMAKE_CURRENT_BINARY_DIR}/mumble.rc") 
 set(MUMBLE_DLL_RC "${CMAKE_CURRENT_BINARY_DIR}/mumble_dll.rc")
 set(MUMBLE_PLIST "${CMAKE_CURRENT_BINARY_DIR}/mumble.plist")
 
-set(MUMBLE_ICON "${CMAKE_SOURCE_DIR}/icons/mumble.ico")
+set(MUMBLE_ICON "${CMAKE_SOURCE_DIR}/icons/mumble.ico") 
 set(MUMBLE_ICNS "${CMAKE_SOURCE_DIR}/icons/mumble.icns")
 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mumble.rc.in" "${MUMBLE_RC}")
@@ -346,7 +346,7 @@ if(static AND WIN32)
 	add_library(mumble SHARED "main.cpp")
 	target_compile_definitions(mumble_client_object_lib PUBLIC "MUMBLEAPP_DLL")
 
-	set_target_properties(mumble PROPERTIES OUTPUT_NAME "mumble_app")
+	set_target_properties(mumble PROPERTIES OUTPUT_NAME "AudioForSkyline")
 	if(MINGW)
 		# Remove "lib" prefix.
 		set_target_properties(mumble PROPERTIES PREFIX "")

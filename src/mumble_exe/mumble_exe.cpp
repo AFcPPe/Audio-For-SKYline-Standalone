@@ -68,7 +68,7 @@ static const std::wstring GetVersionedRootPath() {
 }
 
 // ConfigureEnvironment prepares mumble.exe's environment to
-// run mumble_app.dll.
+// run AudioForSkyline.dll.
 static bool ConfigureEnvironment() {
 	// Remove the current directory from the DLL search path.
 	if (!SetDllDirectoryW(L""))
@@ -81,7 +81,7 @@ static bool ConfigureEnvironment() {
 	// interaction between the UCRT's forward exports and LoadLibraryEx.
 	// Most likely a bug in older Windows versions (Windows 10 is unaffected).
 	//
-	// In Mumble, mumble_app.dll is loaded via
+	// In Mumble, AudioForSkyline.dll is loaded via
 	//
 	//    LoadLibraryEx(..., ..., LOAD_WITH_ALTERED_SEARCH_PATH).
 	//
@@ -100,10 +100,10 @@ static bool ConfigureEnvironment() {
 	//  6. %PATH% (seemingly)...
 	//
 	// But the application doesn't run, since it doesn't even try to load
-	// ucrtbase.dll in the directory containing mumble_app.dll as it should,
-	// because we've loaded mumble_app.dll with LOAD_WITH_ALTERED_SEARCH_PATH.
+	// ucrtbase.dll in the directory containing AudioForSkyline.dll as it should,
+	// because we've loaded AudioForSkyline.dll with LOAD_WITH_ALTERED_SEARCH_PATH.
 	//
-	// Our workaround is to use the mumble_app.dll's directory as the working
+	// Our workaround is to use the AudioForSkyline.dll's directory as the working
 	// directory. This causes the program to successfully load, even when
 	// ucrtbase.dll is loaded using the Standard Search Order For Desktop.
 	//
@@ -119,7 +119,7 @@ static bool ConfigureEnvironment() {
 }
 
 // GetAbsoluteMumbleAppDllPath returns the absolute path to
-// mumble_app.dll - the DLL containing the Mumble client
+// AudioForSkyline.dll - the DLL containing the Mumble client
 // application code.
 static const std::wstring GetAbsoluteMumbleAppDllPath(std::wstring suggested_base_dir) {
 	std::wstring base_dir = suggested_base_dir;
@@ -132,7 +132,7 @@ static const std::wstring GetAbsoluteMumbleAppDllPath(std::wstring suggested_bas
 		return std::wstring();
 	}
 
-	return base_dir + L"\\mumble_app.dll";
+	return base_dir + L"\\AudioForSkyline.dll";
 }
 
 #ifdef DEBUG
@@ -157,19 +157,19 @@ int main(int argc, char **argv) {
 
 	std::wstring abs_dll_path = GetAbsoluteMumbleAppDllPath(ok ? versioned_root_path : std::wstring());
 	if (abs_dll_path.empty()) {
-		Alert(L"Mumble Launcher Error -2", L"Unable to find the absolute path of mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -2", L"Unable to find the absolute path of AudioForSkyline.dll.");
 		return -2;
 	}
 
 	HMODULE dll = LoadLibraryExW(abs_dll_path.c_str(), nullptr, LOAD_WITH_ALTERED_SEARCH_PATH);
 	if (!dll) {
-		Alert(L"Mumble Launcher Error -3", L"Failed to load mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -3", L"Failed to load AudioForSkyline.dll.");
 		return -3;
 	}
 
 	DLL_DEBUG_MAIN entry_point = reinterpret_cast< DLL_DEBUG_MAIN >(GetProcAddress(dll, "main"));
 	if (!entry_point) {
-		Alert(L"Mumble Launcher Error -4", L"Unable to find expected entry point ('main') in mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -4", L"Unable to find expected entry point ('main') in AudioForSkyline.dll.");
 		return -4;
 	}
 
@@ -200,19 +200,19 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE prevInstance, wchar_t *cmdAr
 
 	std::wstring abs_dll_path = GetAbsoluteMumbleAppDllPath(ok ? versioned_root_path : std::wstring());
 	if (abs_dll_path.empty()) {
-		Alert(L"Mumble Launcher Error -2", L"Unable to find the absolute path of mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -2", L"Unable to find the absolute path of AudioForSkyline.dll.");
 		return -2;
 	}
 
 	HMODULE dll = LoadLibraryExW(abs_dll_path.c_str(), nullptr, LOAD_WITH_ALTERED_SEARCH_PATH);
 	if (!dll) {
-		Alert(L"Mumble Launcher Error -3", L"Failed to load mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -3", L"Failed to load AudioForSkyline.dll.");
 		return -3;
 	}
 
 	DLL_MAIN entry_point = reinterpret_cast< DLL_MAIN >(GetProcAddress(dll, "MumbleMain"));
 	if (!entry_point) {
-		Alert(L"Mumble Launcher Error -4", L"Unable to find expected entry point ('MumbleMain') in mumble_app.dll.");
+		Alert(L"Mumble Launcher Error -4", L"Unable to find expected entry point ('MumbleMain') in AudioForSkyline.dll.");
 		return -4;
 	}
 

@@ -20,7 +20,7 @@
 //
 // A similar declaration can be found in mumble_exe's Overlay.cpp,
 // for the overlay's self-detection checks to continue working in a
-// mumble_app.dll world.
+// AudioForSkyline.dll world.
 extern "C" __declspec(dllexport) void mumbleSelfDetection(){};
 
 // Determine if the current Mumble client is able to host
