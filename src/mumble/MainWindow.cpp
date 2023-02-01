@@ -1099,6 +1099,10 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 }
 
 void MainWindow::on_Simconnect_Updated() {
+	if (sim->own->com1ActiveMHz - 118 < 0)
+		return;
+	if (sim->own->com2ActiveMHz - 118 < 0)
+		return;
 	QString orgNum1 = QString::number(sim->own->com1ActiveMHz);
 	QString orgNum2  = QString::number(sim->own->com2ActiveMHz);
 	if (qcbSimulator->isChecked()) {

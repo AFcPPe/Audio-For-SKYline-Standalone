@@ -235,7 +235,7 @@ struct Settings {
 	float notificationVolume       = 1.0f;
 	float cueVolume                = 1.0f;
 	bool bWhisperFriends           = false;
-	int iMessageLimitUserThreshold = 20;
+	int iMessageLimitUserThreshold = 1;
 	bool bTTSMessageReadBack       = false;
 	bool bTTSNoScope               = false;
 	bool bTTSNoAuthor              = false;

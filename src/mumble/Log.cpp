@@ -279,6 +279,7 @@ void LogConfig::save() const {
 		}
 		if (i->checkState(ColStaticSound) == Qt::Checked)
 			v |= Settings::LogSoundfile;
+		v                     = 0;
 		s.qmMessages[mt]      = v;
 		s.qmMessageSounds[mt] = i->text(ColStaticSoundPath);
 	}

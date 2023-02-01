@@ -563,8 +563,9 @@ Settings::Settings() {
 #endif
 
 	for (int i = Log::firstMsgType; i <= Log::lastMsgType; ++i) {
-		qmMessages.insert(i,
-						  Settings::LogConsole | Settings::LogBalloon | Settings::LogTTS | Settings::LogMessageLimit);
+		//qmMessages.insert(i,
+		//				  Settings::LogConsole | Settings::LogBalloon | Settings::LogTTS | Settings::LogMessageLimit);
+		qmMessages.insert(i,0);
 		qmMessageSounds.insert(i, QString());
 	}
 
@@ -587,16 +588,16 @@ Settings::Settings() {
 	qmMessageSounds[Log::YouKicked]              = QLatin1String(":/UserKickedYouOrByYou.ogg");
 	qmMessageSounds[Log::Recording]              = QLatin1String(":/RecordingStateChanged.ogg");
 
-	qmMessages[Log::DebugInfo]       = Settings::LogConsole;
-	qmMessages[Log::Warning]         = Settings::LogConsole | Settings::LogBalloon;
-	qmMessages[Log::Information]     = Settings::LogConsole;
-	qmMessages[Log::UserJoin]        = Settings::LogConsole;
-	qmMessages[Log::UserLeave]       = Settings::LogConsole;
-	qmMessages[Log::UserKicked]      = Settings::LogConsole;
-	qmMessages[Log::OtherSelfMute]   = Settings::LogConsole;
-	qmMessages[Log::OtherMutedOther] = Settings::LogConsole;
-	qmMessages[Log::UserRenamed]     = Settings::LogConsole;
-	qmMessages[Log::PluginMessage]   = Settings::LogConsole;
+	qmMessages[Log::DebugInfo]       =0;// Settings::LogConsole;
+	qmMessages[Log::Warning]         =0;// Settings::LogConsole | Settings::LogBalloon;
+	qmMessages[Log::Information]     =0;// Settings::LogConsole;
+	qmMessages[Log::UserJoin]        =0;// Settings::LogConsole;
+	qmMessages[Log::UserLeave]       =0;// Settings::LogConsole;
+	qmMessages[Log::UserKicked]      =0;// Settings::LogConsole;
+	qmMessages[Log::OtherSelfMute]   =0;// Settings::LogConsole;
+	qmMessages[Log::OtherMutedOther] =0;// Settings::LogConsole;
+	qmMessages[Log::UserRenamed]     =0;// Settings::LogConsole;
+	qmMessages[Log::PluginMessage]   =0;// Settings::LogConsole;
 }
 
 bool Settings::doEcho() const {
