@@ -6,10 +6,10 @@
 set(MUMBLE_RC "${CMAKE_CURRENT_BINARY_DIR}/mumble.rc") 
 set(MUMBLE_DLL_RC "${CMAKE_CURRENT_BINARY_DIR}/mumble_dll.rc")
 set(MUMBLE_PLIST "${CMAKE_CURRENT_BINARY_DIR}/mumble.plist")
-
+  
 set(MUMBLE_ICON "${CMAKE_SOURCE_DIR}/icons/mumble.ico") 
 set(MUMBLE_ICNS "${CMAKE_SOURCE_DIR}/icons/mumble.icns")
-
+ 
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mumble.rc.in" "${MUMBLE_RC}")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mumble_dll.rc.in" "${MUMBLE_DLL_RC}")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/mumble.plist.in" "${MUMBLE_PLIST}")
@@ -317,9 +317,9 @@ set(MUMBLE_SOURCES
 	"${SHARED_SOURCE_DIR}/SignalCurry.h"
 	"${SHARED_SOURCE_DIR}/User.cpp"
 	"${SHARED_SOURCE_DIR}/User.h"
-
+	 
 	"${3RDPARTY_DIR}/smallft/smallft.cpp"
-
+	 
 	"mumble.qrc"
 	"${CMAKE_SOURCE_DIR}/themes/DefaultTheme.qrc"
 )

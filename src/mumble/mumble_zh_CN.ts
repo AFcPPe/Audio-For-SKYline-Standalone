@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>Mumble - Add channel</source>
-        <translation type="unfinished">Mumble - 添加频道</translation>
+        <translation type="unfinished">Audio For SKYline - 添加频道</translation>
     </message>
     <message>
         <source>Default server value</source>
@@ -33,7 +33,7 @@
     </message>
     <message>
         <source>Mumble - Edit %1</source>
-        <translation>Mumble - 编辑 %1</translation>
+        <translation type="unfinished">Audio For SKYline - 编辑 %1</translation>
     </message>
     <message>
         <source>ID: %1</source>
@@ -88,8 +88,8 @@
 This value enables you to change the way Mumble arranges the channels in the tree. A channel with a higher &lt;i&gt;Position&lt;/i&gt; value will always be placed below one with a lower value and the other way around. If the &lt;i&gt;Position&lt;/i&gt; value of two channels is equal they will get sorted alphabetically by their name.</source>
         <oldsource>&lt;b&gt;Position&lt;/b&gt;&lt;br/&gt;
 This value enables you to change the way mumble arranges the channels in the tree. A channel with a higher &lt;i&gt;Position&lt;/i&gt; value will always be placed below one with a lower value and the other way around. If the &lt;i&gt;Position&lt;/i&gt; value of two channels is equal they will get sorted alphabetically by their name.</oldsource>
-        <translation>&lt;b&gt;位置&lt;/b&gt;&lt;br/&gt;
-这个值允许您更改 Mumble 在频道树列表中排列频道的方式。一个拥有较高&lt;i&gt;位置&lt;/i&gt;值的频道总是被排在拥有较低值的频道下方。如果两个频道的&lt;i&gt;位置&lt;/i&gt;值相同，它们将按名称顺序排列。</translation>
+        <translation type="unfinished">&lt;b&gt;位置&lt;/b&gt;&lt;br/&gt;
+这个值允许您更改 Audio For SKYline 在频道树列表中排列频道的方式。一个拥有较高&lt;i&gt;位置&lt;/i&gt;值的频道总是被排在拥有较低值的频道下方。如果两个频道的&lt;i&gt;位置&lt;/i&gt;值相同，它们将按名称顺序排列。</translation>
     </message>
     <message>
         <source>Position</source>
@@ -382,7 +382,7 @@ Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;
     </message>
     <message>
         <source>&lt;b&gt;Password&lt;/b&gt;&lt;br /&gt;This field allows you to easily set and change the password of a channel. It uses Mumble&apos;s access tokens feature in the background. Use ACLs and groups if you need more fine grained and powerful access control.</source>
-        <translation>&lt;b&gt;密码&lt;/b&gt;&lt;br /&gt;您可以为频道设置一个密码，其本质为 Mumble 的访问令牌功能。如果您需要更细致、强大的访问控制，请使用 ACL 和分组功能。</translation>
+        <translation type="unfinished">&lt;b&gt;密码&lt;/b&gt;&lt;br /&gt;您可以为频道设置一个密码，其本质为 Audio For SKYline 的访问令牌功能。如果您需要更细致、强大的访问控制，请使用 ACL 和分组功能。</translation>
     </message>
     <message>
         <source>This shows all the entries active on this channel. Entries inherited from parent channels will be shown in italics.&lt;br /&gt;ACLs are evaluated top to bottom, meaning priority increases as you move down the list.</source>
@@ -611,11 +611,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     <name>AboutDialog</name>
     <message>
         <source>About Mumble</source>
-        <translation>关于 Mumble</translation>
+        <translation type="unfinished">关于 Audio For SKYline</translation>
     </message>
     <message>
         <source>&amp;About Mumble</source>
-        <translation>关于 Mumble(&amp;A)</translation>
+        <translation type="unfinished">关于 Audio For SKYline(&amp;A)</translation>
     </message>
     <message>
         <source>&amp;License</source>
@@ -647,11 +647,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;An Open Source, low-latency, high quality voice-chat utility&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Mumble（%1）&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;一款开放源代码、低延迟、高音质的语音聊天工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;h3&gt;Audio For SKYline</translation>
     </message>
     <message>
         <source>For a list of authors, please see &lt;a href=&quot;https://github.com/mumble-voip/mumble/graphs/contributors&quot;&gt;https://github.com/mumble-voip/mumble/graphs/contributors&lt;/a&gt;</source>
-        <translation>作者列表，请见 &lt;a href=&quot;https://github.com/mumble-voip/mumble/graphs/contributors&quot;&gt;https://github.com/mumble-voip/mumble/graphs/contributors&lt;/a&gt;</translation>
+        <translation type="unfinished">作者6184</translation>
     </message>
 </context>
 <context>
@@ -706,7 +706,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;DoublePush Time&lt;/b&gt;&lt;br /&gt;If you press the push-to-talk key twice during the configured interval of time it will be locked. Mumble will keep transmitting until you hit the key once more to unlock PTT again.</source>
-        <translation>&lt;b&gt;双击时间&lt;/b&gt;&lt;br /&gt;如果您在配置的时间间隔内按下两次按键发言快捷键，它将会被锁定。 Mumble 将连续传输语音，直到您再次按下该键解锁按键发言状态。</translation>
+        <translation type="unfinished">&lt;b&gt;双击时间&lt;/b&gt;&lt;br /&gt;如果您在配置的时间间隔内按下两次按键发言快捷键，它将会被锁定。 Audio For SKYline 将连续传输语音，直到您再次按下该键解锁按键发言状态。</translation>
     </message>
     <message>
         <source>Reset audio cue to default</source>
@@ -790,7 +790,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;This sets the quality of compression.&lt;/b&gt;&lt;br /&gt;This determines how much bandwidth Mumble is allowed to use for outgoing audio.</source>
-        <translation>&lt;b&gt;设置压缩质量&lt;/b&gt;&lt;br /&gt;这决定了允许 Mumble 传出音频使用的带宽。</translation>
+        <translation type="unfinished">&lt;b&gt;设置压缩质量&lt;/b&gt;&lt;br /&gt;这决定了允许 Audio For SKYline 传出音频使用的带宽。</translation>
     </message>
     <message>
         <source>Audio per packet</source>
@@ -826,7 +826,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;Maximum amplification of input.&lt;/b&gt;&lt;br /&gt;Mumble normalizes the input volume before compressing, and this sets how much it&apos;s allowed to amplify.&lt;br /&gt;The actual level is continually updated based on your current speech pattern, but it will never go above the level specified here.&lt;br /&gt;If the &lt;i&gt;Microphone loudness&lt;/i&gt; level of the audio statistics hover around 100%, you probably want to set this to 2.0 or so, but if, like most people, you are unable to reach 100%, set this to something much higher.&lt;br /&gt;Ideally, set it so &lt;i&gt;Microphone Loudness * Amplification Factor &gt;= 100&lt;/i&gt;, even when you&apos;re speaking really soft.&lt;br /&gt;&lt;br /&gt;Note that there is no harm in setting this to maximum, but Mumble will start picking up other conversations if you leave it to auto-tune to that level.</source>
-        <translation>&lt;b&gt;输入的最大放大倍数&lt;/b&gt;&lt;br /&gt;Mumble 会在压缩前将输入音量标准化，并设置允许放大的倍数。&lt;br /&gt;实际级别会根据您当前的语音模式不断更新，但永远不会超过此处指定的级别。&lt;br /&gt;如果音频统计的&lt;i&gt;麦克风响度&lt;/i&gt;级别徘徊在 100% 左右，您可能希望将此值设置为 2.0 左右，但如果像大多数人一样，无法达到 100%，请将此值设置得更高。&lt;br /&gt;一般来说，应该将其设置到&lt;i&gt;麦克风响度 * 放大倍数 &gt;= 100&lt;/i&gt;，即使您说话十分柔和。&lt;br /&gt;&lt;br /&gt;请注意，将此值设置为最大没有任何害处，但如果您使其自动调整到该级别，Mumble 将会开始接收其他对话。</translation>
+        <translation type="unfinished">&lt;b&gt;输入的最大放大倍数&lt;/b&gt;&lt;br /&gt;Audio For SKYline 会在压缩前将输入音量标准化，并设置允许放大的倍数。&lt;br /&gt;实际级别会根据您当前的语音模式不断更新，但永远不会超过此处指定的级别。&lt;br /&gt;如果音频统计的&lt;i&gt;麦克风响度&lt;/i&gt;级别徘徊在 100% 左右，您可能希望将此值设置为 2.0 左右，但如果像大多数人一样，无法达到 100%，请将此值设置得更高。&lt;br /&gt;一般来说，应该将其设置到&lt;i&gt;麦克风响度 * 放大倍数 &gt;= 100&lt;/i&gt;，即使您说话十分柔和。&lt;br /&gt;&lt;br /&gt;请注意，将此值设置为最大没有任何害处，但如果您使其自动调整到该级别，Audio For SKYline 将会开始接收其他对话。</translation>
     </message>
     <message>
         <source>Current speech detection chance</source>
@@ -994,7 +994,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>If checked, Mumble will enable Opus&apos; low-delay mode when the quality is set to &lt;b&gt;64 kbit/s&lt;/b&gt; or higher. Low-delay mode decreases latency by &lt;b&gt;~15 milliseconds&lt;/b&gt; in the round trip. This mode may require an higher bitrate to preserve the same quality, in comparison with the music and VOIP modes.</source>
-        <translation>选中时，Mumble 会在质量设置为 &lt;b&gt;64 千比特/秒&lt;/b&gt;或更高时启用 Opus 的低延迟模式。低延迟模式下，每次往返会降低&lt;b&gt;约 15 毫秒&lt;/b&gt;延迟。与音乐和 VOIP 模式相比，此模式可能需要较高的比特率以保证音频质量。</translation>
+        <translation type="unfinished">选中时，Audio For SKYline 会在质量设置为 &lt;b&gt;64 千比特/秒&lt;/b&gt;或更高时启用 Opus 的低延迟模式。低延迟模式下，每次往返会降低&lt;b&gt;约 15 毫秒&lt;/b&gt;延迟。与音乐和 VOIP 模式相比，此模式可能需要较高的比特率以保证音频质量。</translation>
     </message>
     <message>
         <source>Allow low delay mode</source>
@@ -1157,11 +1157,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
-        <translation>访问麦克风的权限被拒绝。请您前往“系统偏好设置 -&gt; 安全性与隐私 -&gt; 隐私 -&gt; 麦克风”，允许 Mumble 使用麦克风。</translation>
+        <translation type="unfinished">访问麦克风的权限被拒绝。请您前往“系统偏好设置 -&gt; 安全性与隐私 -&gt; 隐私 -&gt; 麦克风”，允许 Audio For SKYline 使用麦克风。</translation>
     </message>
     <message>
         <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
-        <translation>访问麦克风的权限被拒绝。请您检查操作系统的麦克风设置，允许 Mumble 使用麦克风。</translation>
+        <translation type="unfinished">访问麦克风的权限被拒绝。请您检查操作系统的麦克风设置，允许 Audio For SKYline 使用麦克风。</translation>
     </message>
     <message>
         <source>Disabled</source>
@@ -1342,15 +1342,15 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;Attenuate volume of other applications during speech&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This sets the attenuation of other applications if the feature is enabled.</source>
-        <translation>&lt;b&gt;在有人说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Mumble 支持在传入和/或传出语音期间减小其他应用程序的音量。如果启用此功能，则会设置其他应用程序的音量衰减。</translation>
+        <translation type="unfinished">&lt;b&gt;在有人说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Audio For SKYline 支持在传入和/或传出语音期间减小其他应用程序的音量。如果启用此功能，则会设置其他应用程序的音量衰减。</translation>
     </message>
     <message>
         <source>If checked Mumble lowers the volume of other applications while other users talk</source>
-        <translation>选中时，Mumble 会在其他用户说话时减小其他应用程序的音量</translation>
+        <translation type="unfinished">选中时，Audio For SKYline 会在其他用户说话时减小其他应用程序的音量</translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate applications while other users talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while other users talk to you.</source>
-        <translation>&lt;b&gt;在其他用户说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Mumble 支持在传入和/或传出语音期间减小其他应用程序的音量。该选项使 Mumble 在其他用户与您交谈时激活该功能。</translation>
+        <translation type="unfinished">&lt;b&gt;在其他用户说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Audio For SKYline 支持在传入和/或传出语音期间减小其他应用程序的音量。该选项使 Audio For SKYline 在其他用户与您交谈时激活该功能。</translation>
     </message>
     <message>
         <source>while other users talk</source>
@@ -1358,11 +1358,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>If checked Mumble lowers the volume of other applications while you talk</source>
-        <translation>选中时，Mumble 会在您说话时减小其他应用程序的音量</translation>
+        <translation type="unfinished">选中时，Audio For SKYline 会在您说话时减小其他应用程序的音量</translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate applications while you talk&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other applications during incoming and/or outgoing speech. This makes mumble activate the feature while you talk.</source>
-        <translation>&lt;b&gt;在您说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Mumble 支持在传入和/或传出语音期间减小其他应用程序的音量。该选项使 Mumble 在您说话时激活该功能。</translation>
+        <translation type="unfinished">&lt;b&gt;在您说话时减小其他应用程序的音量&lt;/b&gt;&lt;br /&gt;Audio For SKYline 支持在传入和/或传出语音期间减小其他应用程序的音量。该选项使 Audio For SKYline 在您说话时激活该功能。</translation>
     </message>
     <message>
         <source>while you talk</source>
@@ -1382,19 +1382,19 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>If checked Mumble lowers the volume of other users while you talk if you have the &quot;Priority Speaker&quot; status.</source>
-        <translation>选中时，如果您具有“优先发言人”状态，Mumble 会在您说话时减小其他用户的音量。</translation>
+        <translation type="unfinished">选中时，如果您具有“优先发言人”状态，Audio For SKYline 会在您说话时减小其他用户的音量。</translation>
     </message>
     <message>
         <source>If checked, Mumble will only attenuate applications that are using the same output source as Mumble</source>
-        <translation>如果选中，Mumble 将仅减小音频输出源与 Mumble 相同的应用程序的音量</translation>
+        <translation type="unfinished">如果选中，Audio For SKYline 将仅减小音频输出源与 Audio For SKYline 相同的应用程序的音量</translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate only applications using the same output as Mumble&lt;/b&gt;&lt;br /&gt;If checked, applications that use a different output than Mumble will not be attenuated.</source>
-        <translation>&lt;b&gt;仅减小音频输出源与 Mumble 相同的应用程序的音量&lt;/b&gt;&lt;br /&gt;如果选中，则输出源与 Mumble 不同的应用程序将不会被减小音量。</translation>
+        <translation type="unfinished">&lt;b&gt;仅减小音频输出源与 Audio For SKYline 相同的应用程序的音量&lt;/b&gt;&lt;br /&gt;如果选中，则输出源与 Audio For SKYline 不同的应用程序将不会被减小音量。</translation>
     </message>
     <message>
         <source>Only attenuate applications using the same output device</source>
-        <translation>仅衰减音频输出设备与 Mumble 相同的应用程序</translation>
+        <translation type="unfinished">仅衰减音频输出设备与 Audio For SKYline 相同的应用程序</translation>
     </message>
     <message>
         <source>If checked, PulseAudio loopback modules will be attenuated</source>
@@ -1402,7 +1402,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;Attenuate PulseAudio loopback modules&lt;/b&gt;&lt;br /&gt;If loopback modules are linked to Mumble&apos;s output device/sink, they will also be attenuated.</source>
-        <translation>&lt;b&gt;减小 PulseAudio 回放模块的音量&lt;/b&gt;&lt;br /&gt;如果回放模块被链接到 Mumble 的输出设备/接收器，它们也将被衰减。</translation>
+        <translation type="unfinished">&lt;b&gt;减小 PulseAudio 回放模块的音量&lt;/b&gt;&lt;br /&gt;如果回放模块被链接到 Audio For SKYline 的输出设备/接收器，它们也将被衰减。</translation>
     </message>
     <message>
         <source>Attenuate PulseAudio loopback modules</source>
@@ -1418,7 +1418,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;Attenuate other users while talking as Priority Speaker&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other users while you talk as the &lt;i&gt;Priority Speaker&lt;/i&gt; to avoid getting disturbed. Checking this checkbox will enable this feature.</source>
-        <translation>&lt;b&gt;在作为优先发言人说话时减小其他用户的音量&lt;/b&gt;&lt;br /&gt;Mumble 支持您在作为&lt;i&gt;优先发言人&lt;/i&gt;说话时减小其他用户的音量以避免受到干扰。选中此选项将启用此功能。</translation>
+        <translation type="unfinished">&lt;b&gt;在作为优先发言人说话时减小其他用户的音量&lt;/b&gt;&lt;br /&gt;Audio For SKYline 支持您在作为&lt;i&gt;优先发言人&lt;/i&gt;说话时减小其他用户的音量以避免受到干扰。选中此选项将启用此功能。</translation>
     </message>
     <message>
         <source>Attenuate other users while talking as Priority Speaker</source>
@@ -1552,7 +1552,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>The file &apos;%1&apos; cannot be used by Mumble. Please select a file with a compatible format and encoding.</source>
-        <translation>Mumble 无法使用文件“%1”。请选择格式与编码兼容的文件。</translation>
+        <translation type="unfinished">Audio For SKYline 无法使用文件“%1”。请选择格式与编码兼容的文件。</translation>
     </message>
 </context>
 <context>
@@ -1637,7 +1637,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This is the probability that the last frame (20 ms) was speech and not environment noise.&lt;br /&gt;Voice activity transmission depends on this being right. The trick with this is that the middle of a sentence is always detected as speech; the problem is the pauses between words and the start of speech. It&apos;s hard to distinguish a sigh from a word starting with &apos;h&apos;.&lt;br /&gt;If this is in bold font, it means Mumble is currently transmitting (if you&apos;re connected).</source>
-        <translation>这是最后一帧（20 毫秒）是语音而非环境噪声的概率。&lt;br /&gt;语音激活的传输取决于此概率。其策略是句子的中间部分总是被检测为语音；问题在于词语之间和语句开始的停顿。很难区分叹气与以“h”开头的单词。&lt;br /&gt;如果此值为粗体字，则表示 Mumble 当前正在传输（如果您已连接）。</translation>
+        <translation type="unfinished">这是最后一帧（20 毫秒）是语音而非环境噪声的概率。&lt;br /&gt;语音激活的传输取决于此概率。其策略是句子的中间部分总是被检测为语音；问题在于词语之间和语句开始的停顿。很难区分叹气与以“h”开头的单词。&lt;br /&gt;如果此值为粗体字，则表示 Audio For SKYline 当前正在传输（如果您已连接）。</translation>
     </message>
     <message>
         <source>Configuration feedback</source>
@@ -1712,7 +1712,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Welcome to the Mumble Audio Wizard</source>
-        <translation>欢迎来到 Mumble 音频设置向导</translation>
+        <translation type="unfinished">欢迎来到 Audio For SKYline 音频设置向导</translation>
     </message>
     <message>
         <source>Finished</source>
@@ -1720,7 +1720,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Enjoy using Mumble</source>
-        <translation>祝您使用 Mumble 愉快</translation>
+        <translation type="unfinished">祝您使用 Audio For SKYline 愉快</translation>
     </message>
     <message>
         <source>Device selection</source>
@@ -1728,7 +1728,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Selecting the input and output device to use with Mumble.</source>
-        <translation>选择 Mumble 使用的输入和输出设备。</translation>
+        <translation type="unfinished">选择 Audio For SKYline 使用的输入和输出设备。</translation>
     </message>
     <message>
         <source>This is the device your microphone is connected to.</source>
@@ -1801,7 +1801,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This allows Mumble to use positional audio to place voices.</source>
-        <translation>允许 Mumble 根据位置的不同播放位置音频。</translation>
+        <translation type="unfinished">允许 Audio For SKYline 根据位置的不同播放位置音频。</translation>
     </message>
     <message>
         <source>&lt;p&gt;
@@ -1863,11 +1863,11 @@ Congratulations. You should now be ready to enjoy a richer sound experience with
 Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren&apos;t deprecated.
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;
-祝贺，您现在可以开始体验 Mumble 的丰富音频功能。
+        <translation type="unfinished">&lt;p&gt;
+祝贺，您现在可以开始体验 Audio For SKYline 的丰富音频功能。
 &lt;/p&gt;
 &lt;p&gt;
-Mumble 仍在持续开发中，开发团队希望能专注于大多数用户需要的功能。所以这个选项使 Mumble 支持向开发者提交关于设置的匿名统计数据。这些数据会帮助我们未来的开发进程，也保证您需要的功能不会被废弃。
+Audio For SKYline 仍在持续开发中，开发团队希望能专注于大多数用户需要的功能。所以这个选项使 Audio For SKYline 支持向开发者提交关于设置的匿名统计数据。这些数据会帮助我们未来的开发进程，也保证您需要的功能不会被废弃。
 &lt;/p&gt;
 </translation>
     </message>
@@ -1897,11 +1897,11 @@ Mumble 仍在持续开发中，开发团队希望能专注于大多数用户需�
     </message>
     <message>
         <source>Letting Mumble figure out when you&apos;re talking and when you&apos;re silent.</source>
-        <translation>让 Mumble 能够判断您是否正在说话。</translation>
+        <translation type="unfinished">让 Audio For SKYline 能够判断您是否正在说话。</translation>
     </message>
     <message>
         <source>This will help Mumble figure out when you are talking. The first step is selecting which data value to use.</source>
-        <translation>这些设置能让 Mumble 判断您是否正在说话。首先选择使用哪种数据来判断发言状态。</translation>
+        <translation type="unfinished">这些设置能让 Audio For SKYline 判断您是否正在说话。首先选择使用哪种数据来判断发言状态。</translation>
     </message>
     <message>
         <source>Raw amplitude from input</source>
@@ -1926,7 +1926,7 @@ Mumble 仍在持续开发中，开发团队希望能专注于大多数用户需�
     </message>
     <message>
         <source>Submit anonymous statistics to the Mumble project</source>
-        <translation>向 Mumble 发送匿名统计数据</translation>
+        <translation type="unfinished">向 Audio For SKYline 发送匿名统计数据</translation>
     </message>
     <message>
         <source>Push To Talk:</source>
@@ -1986,11 +1986,11 @@ Mumble 仍在持续开发中，开发团队希望能专注于大多数用户需�
     </message>
     <message>
         <source>You already set a customized quality configuration in Mumble. Select this setting to keep it.</source>
-        <translation>您已在 Mumble 中设置了自定义质量。选择此设置以保留它。</translation>
+        <translation type="unfinished">您已在 Audio For SKYline 中设置了自定义质量。选择此设置以保留它。</translation>
     </message>
     <message>
         <source>Enables attenuation of other applications while users talk to you. This means that as soon someone starts to speak to you in Mumble, the sound of all other applications (like audio players) will get attenuated so you can hear them more clearly.</source>
-        <translation>在其他用户与您交谈时衰减其他应用程序的音量。这意味着一旦有人开始在 Mumble 中与您交谈，所有其他应用程序（如音频播放器）的声音音量将会被减小，以便您可以更清楚地听到其他人的声音。</translation>
+        <translation type="unfinished">在其他用户与您交谈时衰减其他应用程序的音量。这意味着一旦有人开始在 Audio For SKYline 中与您交谈，所有其他应用程序（如音频播放器）的声音音量将会被减小，以便您可以更清楚地听到其他人的声音。</translation>
     </message>
     <message>
         <source>Apply some high contrast optimizations for visually impaired users</source>
@@ -2040,7 +2040,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>In this configuration Mumble will use a &lt;b&gt;low amount of bandwidth&lt;/b&gt;. This will inevitably result in high latency and poor quality. Choose this only if your connection cannot handle the other settings. (16kbit/s, 60ms per packet)</source>
-        <translation>在此配置下，Mumble 会使用&lt;b&gt;较小的带宽&lt;/b&gt;，但不可避免地会导致较高的延迟和较低的音质。仅在网络连接无法支持其他配置时使用。（16 千比特/秒，每个数据包 60 毫秒）</translation>
+        <translation type="unfinished">在此配置下，Audio For SKYline 会使用&lt;b&gt;较小的带宽&lt;/b&gt;，但不可避免地会导致较高的延迟和较低的音质。仅在网络连接无法支持其他配置时使用。（16 千比特/秒，每个数据包 60 毫秒）</translation>
     </message>
     <message>
         <source>This is the &lt;b&gt;recommended default&lt;/b&gt; configuration. It provides a good balance between quality, latency, and bandwidth usage. (40kbit/s, 20ms per packet)</source>
@@ -2048,7 +2048,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>This configuration is only recommended for use in setups where bandwidth is not an issue, like a LAN. It provides the lowest latency supported by Mumble and &lt;b&gt;high quality&lt;/b&gt;. (72kbit/s, 10ms per packet)</source>
-        <translation>仅在带宽完全不是问题的情况下使用，例如局域网中。使 Mumble 启用所支持的最低延迟和&lt;b&gt;最高音质&lt;/b&gt;。（72 千比特/秒，每个数据包 10 毫秒）</translation>
+        <translation type="unfinished">仅在带宽完全不是问题的情况下使用，例如局域网中。使 Audio For SKYline 启用所支持的最低延迟和&lt;b&gt;最高音质&lt;/b&gt;。（72 千比特/秒，每个数据包 10 毫秒）</translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
@@ -2060,11 +2060,11 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the audio tuning wizard for Mumble. This will help you correctly set the input levels of your sound card, and also set the correct parameters for sound processing in Mumble. &lt;/p&gt;&lt;p&gt;Please be aware that as long as this wizard is active, audio will be looped locally to allow you to listen to it, and no audio will be sent to the server. &lt;/p&gt;&lt;p&gt;Note that you can cancel this wizard at any time without it having an effect on your current audio systems. The settings are only once this wizard has been completed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是 Mumble 的音频设置向导。它将帮助您正确地设置您的声卡的输入电平，以及正确的 Mumble 声音处理参数。&lt;/p&gt;&lt;p&gt;请注意，在整个设置过程中，音频将采用本地回放的方式使您能听到，而且没有任何音频会被发送到服务器。&lt;/p&gt;&lt;p&gt;您可以随时退出此向导，而不会影响您的音频设置。设置只会在向导完成时被保存。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;这是 Audio For SKYline 的音频设置向导。它将帮助您正确地设置您的声卡的输入电平，以及正确的 Audio For SKYline 声音处理参数。&lt;/p&gt;&lt;p&gt;请注意，在整个设置过程中，音频将采用本地回放的方式使您能听到，而且没有任何音频会被发送到服务器。&lt;/p&gt;&lt;p&gt;您可以随时退出此向导，而不会影响您的音频设置。设置只会在向导完成时被保存。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble supports positional audio for some games, and will position the voice of other users relative to their position in game. Depending on their position, the volume of the voice will be changed between the speakers to simulate the direction and distance the other user is at. Such positioning depends on your speaker configuration being correct in your operating system, so a test is done here. &lt;/p&gt;&lt;p&gt;The graph below shows the position of &lt;span style=&quot; color:#56b4e9;&quot;&gt;you&lt;/span&gt;, the &lt;span style=&quot; color:#d55e00;&quot;&gt;speakers&lt;/span&gt; and a &lt;span style=&quot; color:#009e73;&quot;&gt;moving sound source&lt;/span&gt; as if seen from above. You should hear the audio move between the channels. &lt;/p&gt;&lt;p&gt;You can also use your mouse to position the &lt;span style=&quot; color:#009e73;&quot;&gt;sound source&lt;/span&gt; manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble 支持在一些游戏中使用位置音频功能，能够根据玩家在游戏中的相对位置来将用户的语音方位化。根据他们的位置，用户之间语音的音量会随着距离和方向而模拟变化。这需要您在操作系统中正确配置扬声器的立体声，此测试就是为了保证这一点。&lt;/p&gt;&lt;p&gt;下方的图像显示了&lt;span style=&quot; color:#56b4e9;&quot;&gt;您&lt;/span&gt;、&lt;span style=&quot; color:#d55e00;&quot;&gt;扬声器&lt;/span&gt;和&lt;span style=&quot; color:#009e73;&quot;&gt;移动的音源&lt;/span&gt;的俯视图。您应该能够听到音频在声道中的移动。&lt;/p&gt;&lt;p&gt;您也可以使用鼠标手动移动&lt;span style=&quot; color:#009e73;&quot;&gt;音源&lt;/span&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Audio For SKYline 支持在一些游戏中使用位置音频功能，能够根据玩家在游戏中的相对位置来将用户的语音方位化。根据他们的位置，用户之间语音的音量会随着距离和方向而模拟变化。这需要您在操作系统中正确配置扬声器的立体声，此测试就是为了保证这一点。&lt;/p&gt;&lt;p&gt;下方的图像显示了&lt;span style=&quot; color:#56b4e9;&quot;&gt;您&lt;/span&gt;、&lt;span style=&quot; color:#d55e00;&quot;&gt;扬声器&lt;/span&gt;和&lt;span style=&quot; color:#009e73;&quot;&gt;移动的音源&lt;/span&gt;的俯视图。您应该能够听到音频在声道中的移动。&lt;/p&gt;&lt;p&gt;您也可以使用鼠标手动移动&lt;span style=&quot; color:#009e73;&quot;&gt;音源&lt;/span&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Input system</source>
@@ -2107,7 +2107,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     <name>BanEditor</name>
     <message>
         <source>Mumble - Edit Bans</source>
-        <translation>Mumble - 编辑封禁</translation>
+        <translation type="unfinished">Audio For SKYline - 编辑封禁</translation>
     </message>
     <message>
         <source>&amp;Address</source>
@@ -2394,7 +2394,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>This is the certificate Mumble currently uses.</source>
-        <translation>Mumble 当前正在使用的证书。</translation>
+        <translation type="unfinished">Audio For SKYline 当前正在使用的证书。</translation>
     </message>
     <message>
         <source>Current Certificate</source>
@@ -2443,7 +2443,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     <message>
         <source>&lt;p&gt;Mumble can import certificates stored in PKCS #12 format. This is the format used when exporting a key from Mumble, and also when exporting keys from Firefox, Internet Explorer, Opera etc.&lt;/p&gt;&lt;p&gt;If the file is password protected, you will need the password to import the certificate.&lt;/p&gt;</source>
         <oldsource>&lt;p&gt;Mumble can import certificates stored in PKCS #12 format. This is the format used when exporting a key from Mumble, and also when exporting keys from FireFox, Internet Explorer, Opera etc.&lt;/p&gt;&lt;p&gt;If the file is password protected, you will need the password to import the certificate.&lt;/p&gt;</oldsource>
-        <translation>&lt;p&gt;Mumble 可以导入一个 PKCS #12 格式的证书。这种格式的证书不仅可以被 Mumble 导入，还可以由 Firefox、Internet Explorer、Opera 等浏览器导出。&lt;/p&gt;&lt;p&gt;如果文件是被密码保护的，您需要输入密码才能导入证书。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;Audio For SKYline 可以导入一个 PKCS #12 格式的证书。这种格式的证书不仅可以被 Audio For SKYline 导入，还可以由 Firefox、Internet Explorer、Opera 等浏览器导出。&lt;/p&gt;&lt;p&gt;如果文件是被密码保护的，您需要输入密码才能导入证书。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Import from</source>
@@ -2511,7 +2511,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
 Are you sure you wish to replace your certificate?
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;您已经在 Mumble 中保存了一个证书，并且您现在将要替换它。&lt;/p&gt;
+        <translation type="unfinished">&lt;p&gt;您已经在 Audio For SKYline 中保存了一个证书，并且您现在将要替换它。&lt;/p&gt;
 &lt;p&gt;如果您升级到一个由可信证书机构签发的证书，并且证书的使用的电子邮件符合您的当前证书，这是完全安全的，而且您连接到的服务器会根据您的电子邮件地址自动识别这个强证书。
 &lt;/p&gt;
 &lt;p&gt;如果情况不是这样，您将不会被任何注册过的服务器认可。如果您尚未在任何服务器注册过，则没有任何影响。
@@ -2523,7 +2523,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>This is the certificate Mumble currently uses. It will be replaced.</source>
-        <translation>Mumble 当前正在使用的证书。它将会被替换。</translation>
+        <translation type="unfinished">Audio For SKYline 当前正在使用的证书。它将会被替换。</translation>
     </message>
     <message>
         <source>New certificate</source>
@@ -2559,7 +2559,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>This is the certificate Mumble currently uses. It will be exported.</source>
-        <translation>Mumble 当前正在使用的证书。它将会被导出。</translation>
+        <translation type="unfinished">Audio For SKYline 当前正在使用的证书。它将会被导出。</translation>
     </message>
     <message>
         <source>Generate a new certificate for strong authentication</source>
@@ -2567,7 +2567,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>&lt;p&gt;Mumble will now generate a strong certificate for authentication to servers.&lt;/p&gt;&lt;p&gt;If you wish, you may provide some additional information to be stored in the certificate, which will be presented to servers when you connect. If you provide a valid email address, you can upgrade to a CA issued email certificate later on, which provides strong identification.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Mumble 将会生成一个强证书用于服务器认证。&lt;/p&gt;&lt;p&gt;您可以提供一些额外的信息，这些信息将写在证书内，并向您连接的服务器呈现。如果您提供了一个有效的电子邮件地址，就可以随时升级到由证书机构签发的电子邮件证书，可以提供更强的身份认证。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;Audio For SKYline 将会生成一个强证书用于服务器认证。&lt;/p&gt;&lt;p&gt;您可以提供一些额外的信息，这些信息将写在证书内，并向您连接的服务器呈现。如果您提供了一个有效的电子邮件地址，就可以随时升级到由证书机构签发的电子邮件证书，可以提供更强的身份认证。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2579,7 +2579,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Your email address (e.g. johndoe@mumble.info)</source>
-        <translation>您的电子邮件地址（例如 johndoe@mumble.info）</translation>
+        <translation type="unfinished">您的电子邮件地址（例如 1398@skylineadmin.top）</translation>
     </message>
     <message>
         <source>This is your email address. It is strongly recommended to provide a valid email address, as this will allow you to upgrade to a strong certificate without authentication problems.</source>
@@ -2603,7 +2603,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Enjoy using Mumble with strong authentication.</source>
-        <translation>享受 Mumble 的强认证功能。</translation>
+        <translation type="unfinished">享受 Audio For SKYline 的强认证功能。</translation>
     </message>
     <message>
         <source>Automatic certificate creation</source>
@@ -2617,7 +2617,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>&lt;p&gt;Mumble can use certificates to authenticate with servers. Using certificates avoids passwords, meaning you don&apos;t need to disclose any password to the remote site. It also enables very easy user registration and a client side friends list independent of servers.&lt;/p&gt;&lt;p&gt;While Mumble can work without certificates, the majority of servers will expect you to have one.&lt;/p&gt;&lt;p&gt;Creating a new certificate automatically is sufficient for most use cases. But Mumble also supports certificates representing trust in the users ownership of an email address. These certificates are issued by third parties. For more information see our &lt;a href=&quot;http://mumble.info/certificate.php&quot;&gt;user certificate documentation&lt;/a&gt;. &lt;/p&gt;</source>
-        <translation>&lt;p&gt;Mumble 可以使用证书来登录服务器。使用证书代替密码来登录，意味着您无需向远程站点透露密码。这让注册过程更加简单，并且您可以在客户端管理独立于服务端的好友列表。&lt;/p&gt;&lt;p&gt;尽管证书对于 Mumble 不是必须的，但大部分服务器仍然希望您拥有一个证书。&lt;/p&gt;&lt;p&gt;一般来说，直接创建一个新证书即可，但 Mumble 也支持认证由第三方签发的、证明用户电子邮件地址所有权的证书。要获取更多信息，可以查看我们的&lt;a href=&quot;http://mumble.info/certificate.php&quot;&gt;用户证书文档&lt;/a&gt;。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;Audio For SKYline 可以使用证书来登录服务器。使用证书代替密码来登录，意味着您无需向远程站点透露密码。这让注册过程更加简单，并且您可以在客户端管理独立于服务端的好友列表。&lt;/p&gt;&lt;p&gt;尽管证书对于 Audio For SKYline 不是必须的，但大部分服务器仍然希望您拥有一个证书。&lt;/p&gt;&lt;p&gt;一般来说，直接创建一个新证书即可，但 Audio For SKYline 也支持认证由第三方签发的、证明用户电子邮件地址所有权的证书。要获取更多信息，可以查看我们的&lt;a href=&quot;http://mumble.info/certificate.php&quot;&gt;用户证书文档&lt;/a&gt;。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2878,7 +2878,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Mumble Configuration</source>
-        <translation>Mumble 配置</translation>
+        <translation type="unfinished">Audio For SKYline 设置</translation>
     </message>
     <message>
         <source>Configuration categories</source>
@@ -2894,7 +2894,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>This button will restore the defaults for all settings.</source>
-        <translation>将所有设置恢复为默认值。</translation>
+        <translation type="unfinished">将所有设置恢复为默认值。</translation>
     </message>
     <message>
         <source>Defaults (All)</source>
@@ -2917,7 +2917,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Mumble Server Connect</source>
-        <translation>Mumble 服务器连接</translation>
+        <translation type="unfinished">Audio For SKYline 服务器连接</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -3017,7 +3017,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Username:</source>
-        <translation>用户名：</translation>
+        <translation type="unfinished">连飞呼号：</translation>
     </message>
     <message>
         <source>Password:</source>
@@ -3056,8 +3056,8 @@ Are you sure you wish to replace your certificate?
 Internet address of the server. This can be a normal hostname, an IPv4/IPv6 address or a Bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</source>
         <oldsource>&lt;b&gt;Address&lt;/b&gt;&lt;/br&gt;
 Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</oldsource>
-        <translation>&lt;b&gt;地址&lt;/b&gt;&lt;br/&gt;
-服务器的 Internet 地址，可以是普通的主机名、IPv4/IPv6 地址或者一个 Bonjour 服务 ID。Bonjour 服务 ID 必须以“@”为前缀，Mumble 才能识别。</translation>
+        <translation type="unfinished">&lt;b&gt;地址&lt;/b&gt;&lt;br/&gt;
+服务器的 Internet 地址，可以是普通的主机名、IPv4/IPv6 地址或者一个 Bonjour 服务 ID。Bonjour 服务 ID 必须以“@”为前缀，Audio For SKYline 才能识别。</translation>
     </message>
     <message>
         <source>&amp;Port</source>
@@ -3168,11 +3168,11 @@ Label of the server. This is what the server will be named like in your server l
     <name>CrashReporter</name>
     <message>
         <source>Mumble Crash Report</source>
-        <translation>Mumble 崩溃报告</translation>
+        <translation type="unfinished">Audio For SKYline 崩溃报告</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;We&apos;re terribly sorry, but it seems Mumble has crashed. Do you want to send a crash report to the Mumble developers?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The crash report contains a partial copy of Mumble&apos;s memory at the time it crashed, and will help the developers fix the problem.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;很抱歉，Mumble 发生了崩溃。您是否需要向 Mumble 开发者发送崩溃报告？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;此报告包含部分 Mumble 崩溃时的内存快照，可以帮助开发者更好地解决问题。&lt;/p&gt;</translation>
+        <translation type="unfinished">很抱歉，Audio For SKYline发生了崩溃，请联系6184</translation>
     </message>
     <message>
         <source>Email address (optional)</source>
@@ -3197,7 +3197,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>Thank you for helping make Mumble better!</source>
-        <translation>感谢您帮助 Mumble 变得更好！</translation>
+        <translation type="unfinished">感谢您帮助 Audio For SKYline 变得更好！</translation>
     </message>
     <message>
         <source>Crash upload failed</source>
@@ -3225,7 +3225,7 @@ Label of the server. This is what the server will be named like in your server l
     <message>
         <source>The database &apos;%1&apos; is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.</source>
         <oldsource>The database &apos;%1&apos; is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
-        <translation>数据库“%1”是只读的。在修复此错误前，Mumble 将无法保存服务器设置（即 SSL 证书）。</translation>
+        <translation type="unfinished">数据库“%1”是只读的。在修复此错误前，Audio For SKYline 将无法保存服务器设置（即 SSL 证书）。</translation>
     </message>
     <message>
         <source>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</source>
@@ -3233,7 +3233,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>Mumble failed to initialize a database in any of the possible locations.</source>
-        <translation>Mumble 无法从任何可能的位置初始化数据库。</translation>
+        <translation type="unfinished">Audio For SKYline 无法从任何可能的位置初始化数据库。</translation>
     </message>
 </context>
 <context>
@@ -3302,7 +3302,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can enable &lt;span style=&quot; font-style:italic;&quot;&gt;Access for assistive devices&lt;/span&gt; in the system&apos;s Accessibility preferences. However, please note that this change also potentially allows malicious programs to read what is typed on your keyboard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble 目前仅支持鼠标按钮和键盘修饰键（Alt、Ctrl、Cmd 等）作为全局快捷键。&lt;/p&gt;&lt;p&gt;如果您希望更灵活，可以在系统辅助功能偏好设置中启用&lt;span style=&quot; font-style:italic;&quot;&gt;辅助设备访问&lt;/span&gt;。但请注意，此更改还可能允许恶意程序读取键盘上键入的内容。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Audio For SKYline 目前仅支持鼠标按钮和键盘修饰键（Alt、Ctrl、Cmd 等）作为全局快捷键。&lt;/p&gt;&lt;p&gt;如果您希望更灵活，可以在系统辅助功能偏好设置中启用&lt;span style=&quot; font-style:italic;&quot;&gt;辅助设备访问&lt;/span&gt;。但请注意，此更改还可能允许恶意程序读取键盘上键入的内容。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Open Accessibility Preferences</source>
@@ -3344,9 +3344,9 @@ Label of the server. This is what the server will be named like in your server l
         <source>&lt;b&gt;Enable shortcuts in privileged applications&lt;/b&gt;.&lt;br /&gt;Also known as &quot;UIAccess&quot;. This allows Mumble to receive global shortcut events from programs running at high privilege levels, such as an Admin Command Prompt or older games that run with admin privileges.
 &lt;br /&gt;&lt;br /&gt;
 Without this option enabled, using Mumble&apos;s global shortcuts in privileged applications will not work. This can seem inconsistent: for example, if the Push-to-Talk button is pressed in a non-privileged program, but released in a privileged application, Mumble will not observe that it has been released and you will continue to talk until you press the Push-to-Talk button again.</source>
-        <translation>&lt;b&gt;允许在特权应用中使用快捷键&lt;/b&gt;。&lt;br /&gt;这也被称为“UIAccess”，使 Mumble 可以从高权限应用程序接收全局快捷键事件，例如在管理员命令提示符或以管理员权限运行的旧游戏中。
+        <translation type="unfinished">&lt;b&gt;允许在特权应用中使用快捷键&lt;/b&gt;。&lt;br /&gt;这也被称为“UIAccess”，使 Audio For SKYline 可以从高权限应用程序接收全局快捷键事件，例如在管理员命令提示符或以管理员权限运行的旧游戏中。
 &lt;br /&gt;&lt;br /&gt;
-如果未启用此选项，则在特权应用程序中，Mumble 全局快捷键将不起作用。这可能导致看起来不一致的行为：例如，如果在非特权程序中按住按键发言键，但在特权应用程序中松开，Mumble 将无法发现它已被释放，您将会继续保持说话状态，直到您再次按下按键发言键。</translation>
+如果未启用此选项，则在特权应用程序中，Audio For SKYline 全局快捷键将不起作用。这可能导致看起来不一致的行为：例如，如果在非特权程序中按住按键发言键，但在特权应用程序中松开，Audio For SKYline 将无法发现它已被释放，您将会继续保持说话状态，直到您再次按下按键发言键。</translation>
     </message>
     <message>
         <source>Enable shortcuts in privileged applications</source>
@@ -3354,7 +3354,7 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble&apos;s Global Shortcuts system does currently not work properly in combination with the Wayland protocol. For more information, visit &lt;a href=&quot;https://github.com/mumble-voip/mumble/issues/5257&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/mumble-voip/mumble/issues/5257&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble 的全局快捷键系统目前不能在 Wayland 接口下正常工作。要了解更多信息，请访问 &lt;a href=&quot;https://github.com/mumble-voip/mumble/issues/5257&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/mumble-voip/mumble/issues/5257&lt;/span&gt;&lt;/a&gt;。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Audio For SKYline 的全局快捷键系统目前不能在 Wayland 接口下正常工作</translation>
     </message>
 </context>
 <context>
@@ -3388,7 +3388,7 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     <name>GlobalShortcutConfig</name>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can add Mumble as a trusted accessibility program in the Security &amp; Privacy section of your Mac&apos;s System Preferences.&lt;/p&gt;&lt;p&gt;In the Security &amp; Privacy preference pane, change to the Privacy tab. Then choose Accessibility (near the bottom) in the list to the left. Finally, add Mumble to the list of trusted accessibility programs.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble 目前仅支持鼠标按钮和键盘修饰键（Alt、Ctrl、Cmd 等）作为全局快捷键。&lt;/p&gt;&lt;p&gt;如果您希望更灵活，可以在 Mac 系统偏好设置的“安全性与隐私”中将 Mumble 添加为信任的辅助功能程序。&lt;/p&gt;&lt;p&gt;在偏好设置的“安全性与隐私”面板，转到“隐私”标签。然后在左侧的列表内选择“辅助功能”（靠近底部）。最后，在右侧添加 Mumble 作为信任的辅助功能程序&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Audio For SKYline 目前仅支持鼠标按钮和键盘修饰键（Alt、Ctrl、Cmd 等）作为全局快捷键。&lt;/p&gt;&lt;p&gt;如果您希望更灵活，可以在 Mac 系统偏好设置的“安全性与隐私”中将 Audio For SKYline 添加为信任的辅助功能程序。&lt;/p&gt;&lt;p&gt;在偏好设置的“安全性与隐私”面板，转到“隐私”标签。然后在左侧的列表内选择“辅助功能”（靠近底部）。最后，在右侧添加 Audio For SKYline 作为信任的辅助功能程序&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Shortcuts</source>
@@ -3578,12 +3578,12 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
 This field describes the size of an LCD device. The size is given either in pixels (for Graphic LCDs) or in characters (for Character LCDs).&lt;/p&gt;
 &lt;h3&gt;Enabled:&lt;/h3&gt;
 &lt;p&gt;This decides whether Mumble should draw to a particular LCD device.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;您系统中可用的 LCD 设备列表。此列表按设备名称排列，也包含屏幕的尺寸。Mumble 支持在同时输出到多个 LCD 设备。&lt;/p&gt;
+        <translation type="unfinished">&lt;p&gt;您系统中可用的 LCD 设备列表。此列表按设备名称排列，也包含屏幕的尺寸。Audio For SKYline 支持在同时输出到多个 LCD 设备。&lt;/p&gt;
 &lt;h3&gt;尺寸：&lt;/h3&gt;
 &lt;p&gt;
 此区域显示了 LCD 设备的尺寸。该尺寸以像素（图像 LCD）或者字符数（字符 LCD）表示。&lt;/p&gt;
 &lt;h3&gt;启用：&lt;/h3&gt;
-&lt;p&gt;表示 Mumble 是否应该向该 LCD 设备输出显示。&lt;/p&gt;</translation>
+&lt;p&gt;表示 Audio For SKYline 是否应该向该 LCD 设备输出显示。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Size</source>
@@ -3827,16 +3827,16 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Click here to toggle console output for %1 events.&lt;br /&gt;If checked, this option makes Mumble output all %1 events in its message log.</source>
-        <translation>点击这里开关“%1”事件的控制台输出。&lt;br /&gt;如果选中此选项，Mumble 将会把所有“%1”事件输出到消息日志。</translation>
+        <translation type="unfinished">点击这里开关“%1”事件的控制台输出。&lt;br /&gt;如果选中此选项，Audio For SKYline 将会把所有“%1”事件输出到消息日志。</translation>
     </message>
     <message>
         <source>Click here to toggle pop-up notifications for %1 events.&lt;br /&gt;If checked, a notification pop-up will be created by Mumble for every %1 event.</source>
         <oldsource>Click here to toggle pop-up notifications for %1 events.&lt;br /&gt;If checked, a notification pop-up will be created by mumble for every %1 event.</oldsource>
-        <translation>点击这里开关“%1”事件的弹出通知。&lt;br /&gt;如果选中此选项，Mumble 将会为所有“%1”事件弹出一个通知。</translation>
+        <translation type="unfinished">点击这里开关“%1”事件的弹出通知。&lt;br /&gt;如果选中此选项，Audio For SKYline 将会为所有“%1”事件弹出一个通知。</translation>
     </message>
     <message>
         <source>Click here to toggle window highlight for %1 events.&lt;br /&gt;If checked, Mumble&apos;s window will be highlighted for every %1 event, if not active.</source>
-        <translation>点击这里开关“%1”事件的窗口高亮。&lt;br /&gt;如果选中此选项，在 Mumble 窗口未激活的情况下，每次“%1”事件都会高亮窗口。</translation>
+        <translation type="unfinished">点击这里开关“%1”事件的窗口高亮。&lt;br /&gt;如果选中此选项，在 Audio For SKYline 窗口未激活的情况下，每次“%1”事件都会高亮窗口。</translation>
     </message>
     <message>
         <source>Path to sound file used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change&lt;br /&gt;Ensure that sound notifications for these events are enabled or this field will not have any effect.</source>
@@ -3845,12 +3845,12 @@ This field describes the size of an LCD device. The size is given either in pixe
     <message>
         <source>Click here to toggle Text-To-Speech for %1 events.&lt;br /&gt;If checked, Mumble uses Text-To-Speech to read %1 events out loud to you. Text-To-Speech is also able to read the contents of the event which is not true for sound files. Text-To-Speech and sound files cannot be used at the same time.</source>
         <oldsource>Click here to toggle sound notification for %1 events.&lt;br /&gt;If checked, Mumble uses a soundfile predefined by you to indicate %1 events. Soundfiles and Text-To-Speech cannot be used at the same time.</oldsource>
-        <translation>点击这里开关“%1”事件的语音播报。&lt;br /&gt;如果选中此选项，Mumble 将会使用文字转语音引擎为您播报“%1”事件。语音播报能够读出事件内容，这是提示音所不具备的功能。语音播报和提示音不能同时启用。</translation>
+        <translation type="unfinished">点击这里开关“%1”事件的语音播报。&lt;br /&gt;如果选中此选项，Audio For SKYline 将会使用文字转语音引擎为您播报“%1”事件。语音播报能够读出事件内容，这是提示音所不具备的功能。语音播报和提示音不能同时启用。</translation>
     </message>
     <message>
         <source>Click here to toggle sound notification for %1 events.&lt;br /&gt;If checked, Mumble uses a sound file predefined by you to indicate %1 events. Sound files and Text-To-Speech cannot be used at the same time.</source>
         <oldsource>Path to soundfile used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Doubleclick to change&lt;br /&gt;Be sure that sound notifications for these events are enabled or this field will not have any effect.</oldsource>
-        <translation>点击这里开关“%1”事件的提示音。&lt;br /&gt;如果选中此选项，Mumble 会使用您设定好的声音文件提示“%1”事件。提示音和语音播报不能同时启用。</translation>
+        <translation type="unfinished">点击这里开关“%1”事件的提示音。&lt;br /&gt;如果选中此选项，Audio For SKYline 会使用您设定好的声音文件提示“%1”事件。提示音和语音播报不能同时启用。</translation>
     </message>
     <message>
         <source>Messages</source>
@@ -4130,7 +4130,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;b&gt;If set, users will be shown above subchannels in the channel view.&lt;/b&gt;&lt;br /&gt;A restart of Mumble is required to see the change.</source>
-        <translation>&lt;b&gt;如果选中，频道的用户将会显示在其子频道的上方。&lt;/b&gt;&lt;br /&gt;此更改需要重启 Mumble 才能生效。</translation>
+        <translation type="unfinished">&lt;b&gt;如果选中，频道的用户将会显示在其子频道的上方。&lt;/b&gt;&lt;br /&gt;此更改需要重启 Audio For SKYline 才能生效。</translation>
     </message>
     <message>
         <source>Users above Channels</source>
@@ -4154,7 +4154,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;b&gt;This sets which language Mumble should use.&lt;/b&gt;&lt;br /&gt;You have to restart Mumble to use the new language.</source>
-        <translation>&lt;b&gt;设置 Mumble 应该使用的语言。&lt;/b&gt;&lt;br /&gt;您需要重启 Mumble 才能使用新的语言。</translation>
+        <translation type="unfinished">&lt;b&gt;设置 Audio For SKYline 应该使用的语言。&lt;/b&gt;&lt;br /&gt;您需要重启 Audio For SKYline 才能使用新的语言。</translation>
     </message>
     <message>
         <source>Look and Feel</source>
@@ -4207,7 +4207,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;b&gt;If set, minimizing the Mumble main window will cause it to be hidden and accessible only from the tray. Otherwise, it will be minimized as a window normally would.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;如果设置，最小化时 Mumble 主窗口将被最小化到系统托盘。否则将以普通窗口方式最小化。&lt;/b&gt;</translation>
+        <translation type="unfinished">&lt;b&gt;如果设置，最小化时 Audio For SKYline 主窗口将被最小化到系统托盘。否则将以普通窗口方式最小化。&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Hide in tray when minimized</source>
@@ -4215,7 +4215,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Hide the main Mumble window in the tray when it is minimized.</source>
-        <translation>在最小化时隐藏 Mumble 主窗口到系统托盘。</translation>
+        <translation type="unfinished">在最小化时隐藏 Audio For SKYline 主窗口到系统托盘。</translation>
     </message>
     <message>
         <source>This setting controls when the application will be always on top.</source>
@@ -4299,7 +4299,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;b&gt;Configures which theme the Mumble user interface should be styled with&lt;/b&gt;&lt;br /&gt;Mumble will pick up themes from certain directories and display them in this list. The one you select will be used to customize the visual appearance of Mumble. This includes colors, icons and more.</source>
-        <translation>&lt;b&gt;配置 Mumble 界面应该使用哪种主题设置样式&lt;/b&gt;&lt;br /&gt;Mumble 将从特定目录中获取主题并将其显示在此列表中。您选择的主题将用于自定义 Mumble 的外观，包括颜色、图标等。</translation>
+        <translation type="unfinished">&lt;b&gt;配置 Audio For SKYline 界面应该使用哪种主题设置样式&lt;/b&gt;&lt;br /&gt;Audio For SKYline 将从特定目录中获取主题并将其显示在此列表中。您选择的主题将用于自定义 Audio For SKYline 的外观，包括颜色、图标等。</translation>
     </message>
     <message>
         <source>User Dragging</source>
@@ -4315,7 +4315,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;b&gt;Enable Developer menu&lt;/b&gt;&lt;br /&gt;This enables the &quot;Developer&quot;-menu in Mumble. This menu is used for developer-specific features, such as the Developer Console.</source>
-        <translation>&lt;b&gt;启用开发者菜单&lt;/b&gt;&lt;br /&gt;Mumble 将启用“开发者”菜单。此菜单用于开发者使用的功能，例如开发者控制台。</translation>
+        <translation type="unfinished">&lt;b&gt;启用开发者菜单&lt;/b&gt;&lt;br /&gt;Audio For SKYline 将启用“开发者”菜单。此菜单用于开发者使用的功能，例如开发者控制台。</translation>
     </message>
     <message>
         <source>Enable Developer menu</source>
@@ -4515,7 +4515,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>This setting controls the behavior when closing Mumble. You can choose between being asked for confirmation, minimize instead if closing or just closing without any additional prompt. Optionally, the first two options can only apply when you are currently connected to a server (in that case, Mumble will quit without asking, when not connected to any server).</source>
-        <translation>此设置控制关闭 Mumble 的行为。您可以选择请求确认、关闭时最小化或不确认直接退出。或者，前两个选项可以仅在连接到服务器时生效（如果此时 Mumble 没有连接到任何服务器，则不确认直接退出）。</translation>
+        <translation type="unfinished">此设置控制关闭 Audio For SKYline 的行为。您可以选择请求确认、关闭时最小化或不确认直接退出。或者，前两个选项可以仅在连接到服务器时生效（如果此时 Audio For SKYline 没有连接到服务器，则不确认直接退出）。</translation>
     </message>
     <message>
         <source>Always Ask</source>
@@ -4606,7 +4606,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Mumble</source>
-        <translation type="unfinished">Audio For SKYline - Standalone</translation>
+        <translation type="unfinished">Audio For SKYline</translation>
     </message>
     <message>
         <source>Mumble -- %1</source>
@@ -4686,7 +4686,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>URL scheme is not &apos;mumble&apos;</source>
-        <translation>URL 协议不是“mumble”</translation>
+        <translation type="unfinished">URL 协议不是“Audio For SKYline”</translation>
     </message>
     <message>
         <source>Connecting to %1</source>
@@ -4959,11 +4959,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Restart Mumble?</source>
-        <translation>重新启动 Mumble？</translation>
+        <translation type="unfinished">重新启动 Audio For SKYline？</translation>
     </message>
     <message>
         <source>Some settings will only apply after a restart of Mumble. Restart Mumble now?</source>
-        <translation>某些设置仅在重启 Mumble 后才应用。现在重启 Mumble 吗？</translation>
+        <translation type="unfinished">某些设置仅在重启 Audio For SKYline 后才应用。现在重启 Audio For SKYline 吗？</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -4983,7 +4983,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>This server is using an older encryption standard, and is no longer supported by modern versions of Mumble.</source>
-        <translation>此服务器使用了一个早期的加密标准，当前版本 Mumble 已不支持该标准。</translation>
+        <translation type="unfinished">此服务器使用了一个早期的加密标准，当前版本 Audio For SKYline 已不支持该标准。</translation>
     </message>
     <message>
         <source>Server connection failed: %1.</source>
@@ -5051,7 +5051,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Quit Mumble</source>
-        <translation>退出 Mumble (&amp;Q)</translation>
+        <translation type="unfinished">退出 Audio For SKYline (&amp;Q)</translation>
     </message>
     <message>
         <source>Closes the program</source>
@@ -5285,11 +5285,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Configure Mumble</source>
-        <translation>配置 Mumble</translation>
+        <translation type="unfinished">配置 Audio For SKYline</translation>
     </message>
     <message>
         <source>Allows you to change most settings for Mumble.</source>
-        <translation>允许您更改 Mumble 的大多数设置。</translation>
+        <translation type="unfinished">允许您更改 Audio For SKYline 的大多数设置。</translation>
     </message>
     <message>
         <source>Start the audio configuration wizard</source>
@@ -5313,11 +5313,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Information about Mumble</source>
-        <translation>关于 Mumble 的信息</translation>
+        <translation type="unfinished">关于 Audio For SKYline 的信息</translation>
     </message>
     <message>
         <source>Shows a small dialog with information and license for Mumble.</source>
-        <translation>显示包含 Mumble 信息和许可的对话框。</translation>
+        <translation type="unfinished">显示包含 Audio For SKYline 信息和许可的对话框。</translation>
     </message>
     <message>
         <source>Information about Speex</source>
@@ -5341,11 +5341,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Check for new version of Mumble</source>
-        <translation>检查 Mumble 的新版本</translation>
+        <translation type="unfinished">检查 Audio For SKYline 的新版本</translation>
     </message>
     <message>
         <source>Connects to the Mumble webpage to check if a new version is available, and notifies you with an appropriate download URL if this is the case.</source>
-        <translation>连接到 Mumble 网站，查找是否有可用的新版本，并通知您一个可用的下载地址。</translation>
+        <translation type="unfinished">连接到 Audio For SKYline 网站，查找是否有可用的新版本，并通知您一个可用的下载地址。</translation>
     </message>
     <message>
         <source>Sends a text message to all users in a channel.</source>
@@ -5485,7 +5485,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Mumble: %1</source>
-        <translation>Mumble：%1</translation>
+        <translation type="unfinished">Audio For SKYline：%1</translation>
     </message>
     <message>
         <source>You were denied %1 privileges in %2.</source>
@@ -5778,9 +5778,7 @@ Otherwise abort and check your certificate and username.</source>
         <source>Remote controlling Mumble:
 
 </source>
-        <translation>远程控制 Mumble：
-
-</translation>
+        <translation type="unfinished">远程控制 Audio For SKYline：</translation>
     </message>
     <message>
         <source>Invocation</source>
@@ -5796,7 +5794,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Welcome to Mumble.</source>
-        <translation type="unfinished">欢迎使用 Audio For SKYline</translation>
+        <translation type="unfinished">欢迎使用 Audio For SKYline，祝你在SKYline飞行愉快</translation>
     </message>
     <message>
         <source>Skipping version check in debug mode.</source>
@@ -5934,15 +5932,15 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>&amp;Hide Mumble</source>
-        <translation>隐藏 Mumble (&amp;H)</translation>
+        <translation type="unfinished">隐藏 Audio For SKYline (&amp;H)</translation>
     </message>
     <message>
         <source>Hides the main Mumble window.</source>
-        <translation>隐藏 Mumble 主窗口。</translation>
+        <translation type="unfinished">隐藏 Audio For SKYline 主窗口。</translation>
     </message>
     <message>
         <source>Hides the main Mumble window. Restore by clicking on the tray icon or starting Mumble again.</source>
-        <translation>隐藏 Mumble 主窗口。点击系统托盘图标或者再次启动 Mumble 以恢复。</translation>
+        <translation type="unfinished">隐藏 Audio For SKYline 主窗口。点击系统托盘图标或者再次启动 Audio For SKYline 以恢复。</translation>
     </message>
     <message>
         <source>Show the Developer Console</source>
@@ -5950,7 +5948,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>Shows the Mumble Developer Console, where Mumble&apos;s log output can be inspected.</source>
-        <translation>显示开发者控制台，用于检查 Mumble 的日志输出。</translation>
+        <translation type="unfinished">显示开发者控制台，用于检查 Audio For SKYline 的日志输出。</translation>
     </message>
     <message>
         <source>&amp;Connect...</source>
@@ -6062,7 +6060,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>Shows the main Mumble window.</source>
-        <translation>显示 Mumble 主窗口。</translation>
+        <translation type="unfinished">显示 Audio For SKYline 主窗口。</translation>
     </message>
     <message>
         <source>Server sync protocol violation. No user profile received.</source>
@@ -6224,10 +6222,10 @@ Valid actions are:
                 Stop talking
 
 </source>
-        <translation>用法：mumble rpc &lt;操作&gt; [选项]
+        <translation type="unfinished">用法：Audio For SKYline rpc &lt;操作&gt; [选项]
 
-可以通过“mumble rpc”命令
-远程控制一个正在运行的 Mumble 实例。
+可以通过“Audio For SKYline rpc”命令
+远程控制一个正在运行的 Audio For SKYline 实例。
 
 可用的操作：
   mute
@@ -6312,7 +6310,7 @@ Valid actions are:
     </message>
     <message>
         <source>Mumble - Minimal View</source>
-        <translation>Mumble - 最小化视图</translation>
+        <translation type="unfinished">Audio For SKYline - 最小化视图</translation>
     </message>
     <message>
         <source>Invalid settings file encountered.</source>
@@ -6380,66 +6378,7 @@ Valid options are:
                 Otherwise the locale will be permanently saved to
                 Mumble&apos;s settings.
 </source>
-        <translation>用法：mumble [选项] [&lt;URL&gt; | &lt;插件列表&gt;]
-
-&lt;URL&gt; 指定启动时连接的 URL，而不是显示连接窗口，
-URL 的格式为：
-mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;][/&lt;频道名&gt;[/&lt;子频道名&gt;...]][?version=&lt;x.y.z&gt;]
-
-&lt;插件列表&gt; 是需要安装的插件列表
-必须设置 version 请求参数以调用正确的客户端版本，
-当前的默认值为 1.2.0。
-
-可用的选项：
-  -h, --help    显示此帮助信息并退出。
-  -V, --version 显示版本信息并退出
-  -m, --multiple
-                允许启动多个客户端实例。
-  -c, --config
-                指定替代配置文件。
-                如果您使用此参数同时运行多个 Mumble 实例，
-                请确保在配置文件内设置替代“database”选项。
-  --default-certificate-dir &lt;目录&gt;
-                指定替代的默认证书目录。
-                此路径仅在没有从设置中
-                加载证书时生效。
-  -n, --noidentity
-                禁止加载身份认证文件（即证书）。
-  -jn, --jackname &lt;参数&gt;
-                设置自定义 Jack 客户端名称。
-  --license
-                显示 Mumble 许可。
-  --authors
-                显示 Mumble 作者。
-  --third-party-licenses
-                显示 Mumble 使用的第三方软件的许可。
-  --window-title-ext &lt;参数&gt;
-                设置自定义窗口标题后缀名。
-  --dump-input-streams
-                转储输入链上各部分的 PCM 流。
-                （适用于调试目的）
-                - 原始麦克风输入
-                - 扬声器回声消除重读取
-                - 已处理的麦克风输入
-  --print-echocancel-queue
-                向标准输出打印回声消除队列状态。
-                （适用于调试目的）
-  --translation-dir &lt;目录&gt;
-                指定一个额外的目录，
-                Mumble 会在其中搜索翻译文件
-                来覆盖内置的翻译。
-                通过此方式添加的目录比其它情况
-                下的默认位置具有更高的优先级。
-  --print-translation-dirs
-                输出 Mumble 会在哪些目录搜索翻译文件
-                以覆盖内置翻译。
-                （适用于译者测试自己的翻译）
-  --locale &lt;区域语言代码&gt;
-                用指定字符串对应的语言
-                覆盖 Mumble 的语言设置。
-                如果字符串格式无效，Mumble 会出错。
-                否则，指定的语言会
-                永久保存到 Mumble 设置中。
+        <translation type="unfinished">
 </translation>
     </message>
     <message>
@@ -6452,7 +6391,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>This version of Mumble can&apos;t handle URLs for Mumble version %1</source>
-        <translation>当前版本的 Mumble 无法处理用于 Mumble %1 的 URL</translation>
+        <translation type="unfinished">当前版本的 Audio For SKYline 无法处理用于 Audio For SKYline %1 的 URL</translation>
     </message>
     <message>
         <source>Listen to Channel</source>
@@ -6470,7 +6409,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>Are you sure you want to close Mumble? Perhaps you prefer to minimize it instead?</source>
-        <translation>您确定要关闭 Mumble 吗？可能您更愿意最小化？</translation>
+        <translation type="unfinished">您确定要关闭 Audio For SKYline 吗？可能您更愿意最小化？</translation>
     </message>
     <message>
         <source>Remember this setting</source>
@@ -6489,7 +6428,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     <name>Manual</name>
     <message>
         <source>Manual Mumble Positional Audio</source>
-        <translation>手动 Mumble 位置音频</translation>
+        <translation type="unfinished">手动 Audio For SKYline 位置音频</translation>
     </message>
     <message>
         <source>Position</source>
@@ -6589,7 +6528,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>&lt;b&gt;Enable TCP compatibility mode&lt;/b&gt;.&lt;br /&gt;This will make Mumble use only TCP when communicating with the server. This will increase overhead and cause lost packets to produce noticeable pauses in communication, so this should only be used if you are unable to use the default (which uses UDP for voice and TCP for control).</source>
-        <translation>&lt;b&gt;启用 TCP 兼容模式&lt;/b&gt;。&lt;br /&gt;设置 Mumble 仅使用 TCP 协议与服务器通信。这将会增加开销并且会导致丢包，使您在交谈中遇到中断，所以请仅在无法使用默认模式（UDP 语音，TCP 控制）的情况下使用。</translation>
+        <translation type="unfinished">&lt;b&gt;启用 TCP 兼容模式&lt;/b&gt;。&lt;br /&gt;设置 Audio For SKYline 仅使用 TCP 协议与服务器通信。这将会增加开销并且会导致丢包，使您在交谈中遇到中断，所以请仅在无法使用默认模式（UDP 语音，TCP 控制）的情况下使用。</translation>
     </message>
     <message>
         <source>Reconnect when disconnected</source>
@@ -6597,7 +6536,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>&lt;b&gt;Reconnect when disconnected&lt;/b&gt;.&lt;br /&gt;This will make Mumble try to automatically reconnect after 10 seconds if your server connection fails.</source>
-        <translation>&lt;b&gt;在连接断开时重新连接&lt;/b&gt;。&lt;br /&gt;如果您连接服务器失败，Mumble 将在 10 秒后自动重新连接。</translation>
+        <translation type="unfinished">&lt;b&gt;在连接断开时重新连接&lt;/b&gt;。&lt;br /&gt;如果您连接服务器失败，Audio For SKYline 将在 10 秒后自动重新连接。</translation>
     </message>
     <message>
         <source>Reconnect automatically</source>
@@ -6665,7 +6604,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>&lt;b&gt;Type of proxy to connect through.&lt;/b&gt;&lt;br /&gt;This makes Mumble connect through a proxy for all outgoing connections. Note: Proxy tunneling forces Mumble into TCP compatibility mode, causing all voice data to be sent via the control channel.</source>
-        <translation>&lt;b&gt;连接的代理的类型。&lt;/b&gt;&lt;br /&gt;Mumble 将为所有出站连接使用代理服务器。注意：代理隧道将强制 Mumble 使用 TCP 兼容模式，因此所有的语音数据将通过控制信道传输。</translation>
+        <translation type="unfinished">&lt;b&gt;连接的代理的类型。&lt;/b&gt;&lt;br /&gt;Audio For SKYline 将为所有出站连接使用代理服务器。注意：代理隧道将强制 Audio For SKYline 使用 TCP 兼容模式，因此所有的语音数据将通过控制信道传输。</translation>
     </message>
     <message>
         <source>&lt;b&gt;Hostname of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the hostname of the proxy you wish to tunnel network traffic through.</source>
@@ -6709,15 +6648,15 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>Mumble services</source>
-        <translation>Mumble 服务</translation>
+        <translation type="unfinished">Audio For SKYline 服务</translation>
     </message>
     <message>
         <source>Check for new releases of Mumble automatically.</source>
-        <translation>自动检查 Mumble 更新。</translation>
+        <translation type="unfinished">自动检查 Audio For SKYline 更新。</translation>
     </message>
     <message>
         <source>This will check for new releases of Mumble every time you start the program, and notify you if one is available.</source>
-        <translation>在您每次启动程序时检查 Mumble 的新版本，并在有新版本时通知您。</translation>
+        <translation type="unfinished">在您每次启动程序时检查 Audio For SKYline 的新版本</translation>
     </message>
     <message>
         <source>Check for application updates on startup</source>
@@ -6733,11 +6672,11 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>&lt;b&gt;Submit anonymous statistics.&lt;/b&gt;&lt;br /&gt;Mumble has a small development team, and as such needs to focus its development where it is needed most. By submitting a bit of statistics you help the project determine where to focus development.</source>
-        <translation>&lt;b&gt;提交匿名统计数据。&lt;/b&gt;&lt;br /&gt;Mumble 开发团队的规模很小，因此需要将开发重点放在用户最需要的地方。通过提交一些统计数据，您可以帮助开发团队决定重点开发哪些功能。</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Submit anonymous statistics to the Mumble project</source>
-        <translation>提交匿名统计数据至 Mumble 项目</translation>
+        <translation type="unfinished">提交匿名统计数据至 Audio For SKYline 项目</translation>
     </message>
     <message>
         <source>Submit anonymous statistics</source>
@@ -6745,7 +6684,7 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>Reconnect to last used server when starting Mumble</source>
-        <translation>启动 Mumble 时自动连接到最后使用的服务器</translation>
+        <translation type="unfinished">启动 Audio For SKYline 时自动连接到Audio For SKYline</translation>
     </message>
     <message>
         <source>Reconnect to last server on startup</source>
@@ -6757,17 +6696,17 @@ mumble://[&lt;用户名&gt;[:&lt;密码&gt;]@]&lt;主机名&gt;[:&lt;端口&gt;]
     </message>
     <message>
         <source>Prevent OS information being sent to Mumble servers and web servers</source>
-        <translation>阻止向 Mumble 服务器和网页服务器发送操作系统信息</translation>
+        <translation type="unfinished">阻止向 Audio For SKYline 服务器和网页服务器发送操作系统信息</translation>
     </message>
     <message>
         <source>&lt;b&gt;Don&apos;t send OS information to servers&lt;/b&gt;&lt;br/&gt;
 Prevents the client from sending potentially identifying information about the operating system to the Mumble server and web servers.</source>
-        <translation>&lt;b&gt;请勿向服务器发送操作系统信息&lt;/b&gt;&lt;br/&gt;
-阻止客户端向 Mumble 服务器和网页服务器发送潜在的操作系统识别信息。</translation>
+        <translation type="unfinished">&lt;b&gt;请勿向服务器发送操作系统信息&lt;/b&gt;&lt;br/&gt;
+阻止客户端向 Audio For SKYline 服务器和网页服务器发送潜在的操作系统识别信息。</translation>
     </message>
     <message>
         <source>Do not send OS information to Mumble servers and web servers</source>
-        <translation>请勿向 Mumble 服务器和网页服务器发送操作系统信息</translation>
+        <translation type="unfinished">请勿向 Audio For SKYline 服务器和网页服务器发送操作系统信息</translation>
     </message>
     <message>
         <source>When toggled this hides the public server list from the connect dialog</source>
@@ -6918,7 +6857,7 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Mumble overlay presets (*.mumblelay)</source>
-        <translation>Mumble 游戏内界面预设 (*.mumblelay)</translation>
+        <translation type="unfinished">Audio For SKYline 游戏内界面预设 (*.mumblelay)</translation>
     </message>
     <message>
         <source>Save Overlay Presets</source>
@@ -6939,7 +6878,7 @@ Prevents the client from sending potentially identifying information about the o
     <message>
         <source>This sets whether the overlay is enabled or not. This setting is only checked when applications are started, so make sure Mumble is running and this option is on before you start the application.&lt;br /&gt;Please note that if you start Mumble after starting the application, or if you disable the overlay while the application is running, there is no safe way to restart the overlay without also restarting the application.</source>
         <oldsource>This sets whether the overlay is enabled or not. This setting is only checked when applications are started, so make sure Mumble is running and this option is on before you start the application.&lt;br /&gt;Please note that if you start the application after starting Mumble, or if you disable the overlay while running, there is no safe way to restart the overlay without also restarting the application.</oldsource>
-        <translation>设置是否启用游戏内界面。此设置仅在应用程序启动时检查，因此请确保在启动应用程序前已经运行了 Mumble 并且已启用此选项。&lt;br /&gt;请注意，如果您在启动应用程序之后启动 Mumble，或者在应用程序运行期间禁用了游戏内界面，则除了重启应用程序之外，没有办法安全的重新启动游戏内界面。</translation>
+        <translation type="unfinished">设置是否启用游戏内界面。此设置仅在应用程序启动时检查，因此请确保在启动应用程序前已经运行了 Audio For SKYline 并且已启用此选项。&lt;br /&gt;请注意，如果您在启动应用程序之后启动 Audio For SKYline，或者在应用程序运行期间禁用了游戏内界面，则除了重启应用程序之外，没有办法安全的重新启动游戏内界面。</translation>
     </message>
     <message>
         <source>Layout</source>
@@ -6965,13 +6904,13 @@ Prevents the client from sending potentially identifying information about the o
         <source>Mumble has detected that you do not have the Mumble Overlay installed.
 
 Click the button below to install the overlay.</source>
-        <translation>Mumble 检测到您尚未安装 Mumble 游戏内界面。
+        <translation type="unfinished">Audio For SKYline 检测到您尚未安装 Audio For SKYline 游戏内界面。
 
 点击下面的按钮安装它。</translation>
     </message>
     <message>
         <source>Install Mumble Overlay</source>
-        <translation>安装 Mumble 游戏内界面</translation>
+        <translation type="unfinished">安装 Audio For SKYline 游戏内界面</translation>
     </message>
     <message>
         <source>Overlay Upgrade</source>
@@ -6981,13 +6920,13 @@ Click the button below to install the overlay.</source>
         <source>Mumble has detected an old version of the overlay support files installed on your computer.
 
 To upgrade these files to their latest versions, click the button below.</source>
-        <translation>Mumble 检测到您的计算机上安装了低版本的游戏内界面支持文件。
+        <translation type="unfinished">Audio For SKYline 检测到您的计算机上安装了低版本的游戏内界面支持文件。
 
 点击下面的按钮将这些文件升级到新版本。</translation>
     </message>
     <message>
         <source>Upgrade Mumble Overlay</source>
-        <translation>升级 Mumble 游戏内界面</translation>
+        <translation type="unfinished">升级 Audio For SKYline 游戏内界面</translation>
     </message>
     <message>
         <source>Display a frame counter in the overlay</source>
@@ -7388,7 +7327,7 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>Whether this plugin has the permission to be listening to all keyboard events that occur while Mumble has focus</source>
-        <translation>此插件是否有权限在 Mumble 获得焦点时监听所有键盘事件</translation>
+        <translation type="unfinished">此插件是否有权限在 Audio For SKYline 获得焦点时监听所有键盘事件</translation>
     </message>
     <message>
         <source>Whether this plugin should be enabled</source>
@@ -7617,15 +7556,15 @@ To upgrade these files to their latest versions, click the button below.</source
     <name>QApplication</name>
     <message>
         <source>Failed to restart mumble</source>
-        <translation>重新启动 Mumble 失败</translation>
+        <translation type="unfinished">重新启动 Audio For SKYline 失败</translation>
     </message>
     <message>
         <source>Mumble failed to restart itself. Please restart it manually.</source>
-        <translation>Mumble 重新启动自身失败。请手动重启。</translation>
+        <translation type="unfinished">Audio For SKYline 重新启动自身失败。请手动重启。</translation>
     </message>
     <message>
         <source>Mumble is currently connected to a server</source>
-        <translation>Mumble 已连接到服务器</translation>
+        <translation type="unfinished">Audio For SKYline 已连接到服务器</translation>
     </message>
 </context>
 <context>
@@ -7641,8 +7580,7 @@ To upgrade these files to their latest versions, click the button below.</source
     <message>
         <source>&lt;p&gt;If you&apos;re using Linux this is most likely because you are using a version from your distribution&apos;s package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
 See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;the Mumble wiki&lt;/a&gt; for what alternatives there are.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;如果您正在使用 Linux，这很可能是因为您使用的版本来自发行版的软件包仓库，它们有自己的更新周期。&lt;/p&gt;&lt;p&gt;如果您希望始终使用最新版本的 Mumble，就应该考虑使用其他安装方式。
-阅读 &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;Mumble Wiki&lt;/a&gt; 了解具体方式。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;如果您正在使用 Linux，这很可能是因为您使用的版本来自发行版的软件包仓库，请联系6184</translation>
     </message>
     <message>
         <source>Local Mute</source>
@@ -7666,7 +7604,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>&lt;p&gt;You&apos;re using a Mumble version that &lt;b&gt;explicitly disabled&lt;/b&gt; update-checks.&lt;/p&gt;&lt;p&gt;This means that the update notification you might receive by using this option will &lt;b&gt;most likely be meaningless&lt;/b&gt; for you.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;您正在使用&lt;b&gt;显式禁用&lt;/b&gt;更新检查的 Mumble 版本。&lt;/p&gt;&lt;p&gt;这意味着您通过此选项收到的更新提醒对您来说&lt;b&gt;很可能是无意义的&lt;/b&gt;。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;您正在使用&lt;b&gt;显式禁用&lt;/b&gt;更新检查的 Audio For SKYline 版本。&lt;/p&gt;&lt;p&gt;这意味着您通过此选项收到的更新提醒对您来说&lt;b&gt;很可能是无意义的&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Talking (muted)</source>
@@ -7718,7 +7656,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
-        <translation>访问麦克风的权限被拒绝。请您前往“系统偏好设置 -&gt; 安全性与隐私 -&gt; 隐私 -&gt; 麦克风”，允许 Mumble 使用麦克风。</translation>
+        <translation type="unfinished">访问麦克风的权限被拒绝。请您前往“系统偏好设置 -&gt; 安全性与隐私 -&gt; 隐私 -&gt; 麦克风”，允许 Audio For SKYline 使用麦克风。</translation>
     </message>
     <message>
         <source>If enabled this tries to cancel out echo from the audio stream.</source>
@@ -7755,7 +7693,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>The directories in which Mumble searches for extra translation files are:
 </source>
-        <translation>Mumble 搜索额外翻译文件的文件夹：
+        <translation type="unfinished">Audio For SKYline 搜索额外翻译文件的文件夹：
 </translation>
     </message>
     <message>
@@ -7790,11 +7728,11 @@ You can register them again.</source>
     </message>
     <message>
         <source>It seems that Mumble did not perform a normal shutdown. If you did not intentionally kill the application, this could mean that the used settings caused a crash. Do you want to load the setting&apos;s backup instead?</source>
-        <translation>看起来 Mumble 没有正常退出。如果您并非有意强行结束此应用，则可能是因为某些设置导致的崩溃。您要改为加载设置备份吗？</translation>
+        <translation type="unfinished">看起来 Audio For SKYline 没有正常退出。如果您并非有意强行结束此应用，则可能是因为某些设置导致的崩溃。您要改为加载设置备份吗？</translation>
     </message>
     <message>
         <source>The backed-up settings also seem to have been saved without Mumble exiting normally (potentially indicating a crash).</source>
-        <translation>备份的设置看起来也是在 Mumble 没有正常退出的情况下保存的（可能表示发生了崩溃）。</translation>
+        <translation type="unfinished">备份的设置看起来也是在 Audio For SKYline 没有正常退出的情况下保存的（可能表示发生了崩溃）。</translation>
     </message>
     <message>
         <source>If you experience repeated crashes with these settings, you might have to manually delete the settings files at &lt;pre&gt;%1&lt;/pre&gt; and &lt;pre&gt;%2&lt;/pre&gt; in order to reset all settings to their default value.</source>
@@ -8285,7 +8223,7 @@ You can register them again.</source>
     </message>
     <message>
         <source>Mumble - Access Tokens</source>
-        <translation>Mumble - 访问令牌</translation>
+        <translation type="unfinished">Audio For SKYline - 访问令牌</translation>
     </message>
     <message>
         <source>List of access tokens on current server</source>
@@ -8296,9 +8234,9 @@ You can register them again.</source>
 &lt;br /&gt;
 An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you&apos;ve used and resend them to the server next time you reconnect, so you don&apos;t have to enter these every time.
 </source>
-        <translation>&lt;b&gt;这是包含已连接服务器上访问令牌的可编辑列表。&lt;/b&gt;
+        <translation type="unfinished">&lt;b&gt;这是包含已连接服务器上访问令牌的可编辑列表。&lt;/b&gt;
 &lt;br /&gt;
-一个访问令牌就是一条文本字符串，像密码一样使用，用于简单地管理频道访问权限。Mumble 将会记住您使用过的令牌，并在您下次连接此服务器的时候发送，所以您不需要每次重新输入。
+一个访问令牌就是一条文本字符串，像密码一样使用，用于简单地管理频道访问权限。Audio For SKYline 将会记住您使用过的令牌，并在您下次连接此服务器的时候发送，所以您不需要每次重新输入。
 </translation>
     </message>
     <message>
@@ -8526,7 +8464,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Warning: The server seems to report a truncated protocol version for this client. (See: &lt;a href=&quot;https://github.com/mumble-voip/mumble/issues/5827/&quot;&gt;Issue #5827&lt;/a&gt;)</source>
-        <translation>警告：此服务器报告的客户端协议版本似乎被截断了。（详见：&lt;a href=&quot;https://github.com/mumble-voip/mumble/issues/5827/&quot;&gt;Issue #5827&lt;/a&gt;）</translation>
+        <translation type="unfinished">警告：此服务器报告的客户端协议版本似乎被截断了。请联系6184</translation>
     </message>
 </context>
 <context>
@@ -8727,11 +8665,11 @@ An access token is a text string, which can be used as a password for very simpl
     <name>VersionCheck</name>
     <message>
         <source>Upgrade Mumble</source>
-        <translation>升级 Mumble</translation>
+        <translation type="unfinished">升级 Audio For SKYline</translation>
     </message>
     <message>
         <source>A new version of Mumble has been detected and automatically downloaded. It is recommended that you either upgrade to this version, or downgrade to the latest stable release. Do you want to launch the installer now?</source>
-        <translation>已检测到并自动下载新版本 Mumble。推荐您升级到此新版本，或者降级至最新的稳定版。是否立即运行安装程序？</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Failed to launch snapshot installer.</source>
@@ -8752,7 +8690,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Mumble failed to retrieve version information from the central server.</source>
-        <translation>从中心服务器获取 Mumble 版本信息失败。</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9001,7 +8939,7 @@ Please contact your server administrator for further information.</source>
     <name>WASAPIInput</name>
     <message>
         <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
-        <translation>访问麦克风的权限被拒绝。请您检查操作系统的麦克风设置，允许 Mumble 使用麦克风。</translation>
+        <translation type="unfinished">访问麦克风的权限被拒绝。请您检查操作系统的麦克风设置，允许 Audio For SKYline 使用麦克风。</translation>
     </message>
 </context>
 <context>
@@ -9015,7 +8953,7 @@ Please contact your server administrator for further information.</source>
     <name>qwPTTButtonWidget</name>
     <message>
         <source>Mumble PTT</source>
-        <translation>Mumble 按键发言</translation>
+        <translation type="unfinished">Audio For SKYline 按键发言</translation>
     </message>
     <message>
         <source>Push to talk</source>

@@ -154,7 +154,7 @@ void Settings::save(const QString &path) const {
 
 	nlohmann::json settingsJSON = *this;
 
-	QFile tmpFile(QString::fromLatin1("%1/mumble_settings.json.tmp")
+	QFile tmpFile(QString::fromLatin1("%1/afs_settings.json.tmp")
 					  .arg(QStandardPaths::writableLocation(QStandardPaths::TempLocation)));
 
 	{
@@ -1283,12 +1283,13 @@ QString Settings::findSettingsLocation(bool legacy, bool *foundExistingFile) con
 	paths << QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 	paths << QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
 	paths << QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
-	paths << QFileInfo(QSettings().fileName()).dir().absolutePath();
+	//paths << QFileInfo(QSettings().fileName()).dir().absolutePath();
+	qDebug() << "\n\n<<<<<<<<<<<<<<<<<<<<" << paths << ">>>>>>>>>>>>>>>>>>>>>>>\n\n";
 
 	
-	QStringList settingsFileNames = legacy ? QStringList({ QStringLiteral("mumble.conf"), QStringLiteral("Mumble.conf"),
-														   QStringLiteral("mumble.ini"), QStringLiteral("Mumble.ini") })
-										   : QStringList({ QStringLiteral("mumble_settings.json") });
+	QStringList settingsFileNames = legacy ? QStringList({ QStringLiteral("afs_settings.conf"), QStringLiteral("AFS_settings.conf"),
+														   QStringLiteral("mumble.ini"), QStringLiteral("AFS_settings.ini") })
+										   : QStringList({ QStringLiteral("afs_settings.json") });
 
 	QString chosenPath;
 

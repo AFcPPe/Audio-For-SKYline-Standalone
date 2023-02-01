@@ -31,7 +31,6 @@
     <file alias="layout_hybrid.svg">Default/layout_hybrid.svg</file>
     <file alias="layout_stacked.svg">Default/layout_stacked.svg</file>
     <file alias="Dark.qss">Default/Dark.qss</file>
-    <file alias="Lite.qss">Default/Lite.qss</file>
 	<file alias="lock_locked.svg">Default/lock_locked.svg</file>
 	<file alias="lock_unlocked.svg">Default/lock_unlocked.svg</file>
 	<file alias="magnifier.svg">Default/magnifier.svg</file>
@@ -97,7 +96,6 @@
     <file alias="mimetypes/image-x-generic.svg">Default/mimetypes/image-x-generic.svg</file>
     <file alias="mimetypes/text-html.svg">Default/mimetypes/text-html.svg</file>
     <file alias="OSX Dark.qss">Default/OSX Dark.qss</file>
-    <file alias="OSX Lite.qss">Default/OSX Lite.qss</file>
     <file alias="status/text-missing.svg">Default/status/text-missing.svg</file>
 </qresource>
 </RCC>
