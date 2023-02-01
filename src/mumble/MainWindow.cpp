@@ -3954,8 +3954,11 @@ void MainWindow::destroyUserInformation() {
 
 void MainWindow::on_qdialCom1Changed() {
 	QString orgNum;
-	if (qcbSimulator->isChecked())
+	if (qcbSimulator->isChecked()) {
+		if (sim->own->com1ActiveMHz - 118 < 0)
+			return;
 		orgNum = QString::number(sim->own->com1ActiveMHz);
+	}
 	else
 		orgNum = QString::number(118 + qdialCom1->value() * 0.025);
 	switch (orgNum.length()) {
@@ -4002,6 +4005,8 @@ void MainWindow::on_qdialCom2Changed() {
 void MainWindow::on_switchTimerElapsed() {
 	QString Freq;
 	if (qcbSimulator->isChecked()) {
+		if (sim->own->com1ActiveMHz - 118 < 0)
+			return;
 		Freq = QString::number(sim->own->com1ActiveMHz);
 	} else {
 		Freq = QString::number(118 + qdialCom1->value() * 0.025);
