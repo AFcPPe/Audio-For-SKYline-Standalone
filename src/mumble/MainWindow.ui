@@ -183,6 +183,12 @@
    <property name="windowTitle">
     <string>Icon Toolbar</string>
    </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -244,6 +250,12 @@
    </widget>
   </widget>
   <widget class="QDockWidget" name="qdwFreq">
+   <property name="minimumSize">
+    <size>
+     <width>40</width>
+     <height>70</height>
+    </size>
+   </property>
    <property name="features">
     <set>QDockWidget::NoDockWidgetFeatures</set>
    </property>
@@ -254,7 +266,7 @@
     <widget class="QLCDNumber" name="qlncom1">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>70</x>
        <y>5</y>
        <width>71</width>
        <height>23</height>
@@ -282,11 +294,14 @@
     <widget class="QLabel" name="qlbcom1">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>30</x>
        <y>10</y>
        <width>54</width>
        <height>12</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12px &quot;新宋体&quot;;</string>
      </property>
      <property name="text">
       <string>COM1:</string>
@@ -295,11 +310,14 @@
     <widget class="QLabel" name="qlbcom2">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>10</y>
+       <x>30</x>
+       <y>42</y>
        <width>54</width>
        <height>12</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12px &quot;新宋体&quot;;</string>
      </property>
      <property name="text">
       <string>COM2:</string>
@@ -308,8 +326,8 @@
     <widget class="QLCDNumber" name="qlncom2">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>5</y>
+       <x>70</x>
+       <y>37</y>
        <width>71</width>
        <height>23</height>
       </rect>
@@ -327,7 +345,7 @@
     <widget class="QDial" name="qdialCom1">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>210</x>
        <y>0</y>
        <width>31</width>
        <height>31</height>
@@ -361,8 +379,8 @@
     <widget class="QDial" name="qdialCom2">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>0</y>
+       <x>210</x>
+       <y>32</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -395,17 +413,136 @@
     <widget class="QCheckBox" name="qcbSimulator">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>10</y>
+       <x>260</x>
+       <y>15</y>
        <width>91</width>
-       <height>16</height>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12px &quot;新宋体&quot;;</string>
      </property>
      <property name="text">
       <string>连接模拟器</string>
      </property>
      <property name="tristate">
       <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbTX1">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>6</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: white;
+font: 12px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>TX</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbTX2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>38</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: white;
+font: 12px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>TX</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbRX1">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>6</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>-1</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: white;
+font: 12px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>RX</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qlbRX2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>38</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);
+color: white;
+font: 12px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>RX</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

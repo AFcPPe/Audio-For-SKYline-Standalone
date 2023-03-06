@@ -446,6 +446,7 @@ void MainWindow::setupGui() {
 	qaTransmitModeSeparator = qtIconToolbar->insertSeparator(qaConfigDialog);
 	qaTransmitMode          = qtIconToolbar->insertWidget(qaTransmitModeSeparator, qcbTransmitMode);
 	qdwFreq->setTitleBarWidget(dtbChatDockTitle);
+	//qdwFreq.sethe
 	qtIconToolbar->addWidget(qdwFreq);
 
 
@@ -753,6 +754,7 @@ void MainWindow::updateTrayIcon() {
 			case Settings::Talking:
 			case Settings::MutedTalking:
 				qstiIcon->setIcon(qiTalkingOn);
+				qlbTX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 				break;
 			case Settings::Whispering:
 				qstiIcon->setIcon(qiTalkingWhisper);
@@ -762,6 +764,7 @@ void MainWindow::updateTrayIcon() {
 				break;
 			case Settings::Passive:
 			default:
+				qlbTX1->setStyleSheet("background-color: rgb(0, 0, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 				qstiIcon->setIcon(qiTalkingOff);
 				break;
 		}
@@ -2768,6 +2771,7 @@ void MainWindow::userStateChanged() {
 
 			Global::get().prioritySpeakerActiveOverride =
 				Global::get().s.bAttenuateUsersOnPrioritySpeak && user->bPrioritySpeaker;
+			//qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 
 			break;
 		case Settings::Passive:
@@ -2775,6 +2779,7 @@ void MainWindow::userStateChanged() {
 		default:
 			Global::get().bAttenuateOthers              = false;
 			Global::get().prioritySpeakerActiveOverride = false;
+			//qlbRX1->setStyleSheet("background-color: rgb(0, 0, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 			break;
 	}
 }

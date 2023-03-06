@@ -27,6 +27,7 @@
 #include <QtWidgets/QMessageBox>
 #include <QtWidgets/QToolTip>
 #include <QtWidgets/QWhatsThis>
+#include "MainWindow.h"
 
 QHash< const Channel *, ModelItem * > ModelItem::c_qhChannels;
 QHash< const ClientUser *, ModelItem * > ModelItem::c_qhUsers;
@@ -1700,7 +1701,23 @@ void UserModel::userStateChanged() {
 
 	if (!user)
 		return;
+	ClientUser *Ouser = ClientUser::get(Global::get().uiSession);
+	if (Ouser != user) {
+		switch (user->tsState) {
+			case Settings::Talking:
+			case Settings::Whispering:
+			case Settings::Shouting:
+				Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 
+				break;
+			case Settings::Passive:
+			case Settings::MutedTalking:
+			default:
+				Global::get().mw->qlbRX1->setStyleSheet(
+					"background-color: rgb(0, 0, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
+				break;
+		}
+	}
 	const QModelIndex idx = index(user);
 	emit dataChanged(idx, idx);
 
