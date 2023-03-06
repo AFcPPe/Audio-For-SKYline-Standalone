@@ -30,13 +30,13 @@ VS_VERSION_INFO VERSIONINFO
 		BEGIN
 			BLOCK "040904E4"
 			BEGIN
-				VALUE "CompanyName", "The Mumble Developers"
-				VALUE "FileDescription", "Mumble - Low-latency VoIP client"
+				VALUE "CompanyName", "SKYline Flyleague"
+				VALUE "FileDescription", "Audio For SKYline"
 				VALUE "FileVersion", "@PROJECT_VERSION@"
 				VALUE "ProductVersion", "@PROJECT_VERSION@"
-				VALUE "LegalCopyright", "Copyright (c) 2005-@MUMBLE_BUILD_YEAR@ The Mumble Developers"
+				VALUE "LegalCopyright", "Copyright (c) 2023-@MUMBLE_BUILD_YEAR@ SKYline 6184"
 				VALUE "OriginalFilename", "AudioForSkyline.dll"
-				VALUE "ProductName", "Mumble"
+				VALUE "ProductName", "Audio For SKYline"
 #ifdef SNAPSHOT_BUILD
 				VALUE "SpecialBuild", "Snapshot development release"
 #endif

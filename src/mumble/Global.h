@@ -46,7 +46,7 @@ struct Global Q_DECL_FINAL {
 private:
 	Q_DISABLE_COPY(Global)
 public:
-	const QString SklineIP = "121.11.109.156";
+	const QString SklineIP = "43.154.178.153";
 	static Global *g_global_struct;
 	static Global &get();
 

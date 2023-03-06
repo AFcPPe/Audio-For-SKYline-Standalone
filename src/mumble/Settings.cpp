@@ -563,9 +563,8 @@ Settings::Settings() {
 #endif
 
 	for (int i = Log::firstMsgType; i <= Log::lastMsgType; ++i) {
-		//qmMessages.insert(i,
-		//				  Settings::LogConsole | Settings::LogBalloon | Settings::LogTTS | Settings::LogMessageLimit);
-		qmMessages.insert(i,0);
+		qmMessages.insert(i,
+						  Settings::LogConsole);
 		qmMessageSounds.insert(i, QString());
 	}
 
@@ -588,16 +587,22 @@ Settings::Settings() {
 	qmMessageSounds[Log::YouKicked]              = QLatin1String(":/UserKickedYouOrByYou.ogg");
 	qmMessageSounds[Log::Recording]              = QLatin1String(":/RecordingStateChanged.ogg");
 
-	qmMessages[Log::DebugInfo]       =0;// Settings::LogConsole;
-	qmMessages[Log::Warning]         =0;// Settings::LogConsole | Settings::LogBalloon;
-	qmMessages[Log::Information]     =0;// Settings::LogConsole;
-	qmMessages[Log::UserJoin]        =0;// Settings::LogConsole;
-	qmMessages[Log::UserLeave]       =0;// Settings::LogConsole;
-	qmMessages[Log::UserKicked]      =0;// Settings::LogConsole;
-	qmMessages[Log::OtherSelfMute]   =0;// Settings::LogConsole;
-	qmMessages[Log::OtherMutedOther] =0;// Settings::LogConsole;
-	qmMessages[Log::UserRenamed]     =0;// Settings::LogConsole;
-	qmMessages[Log::PluginMessage]   =0;// Settings::LogConsole;
+	qmMessages[Log::UserJoin]        = 0;
+	qmMessages[Log::UserLeave]       = 0;
+	qmMessages[Log::Recording]       = 0;
+	qmMessages[Log::UserKicked]      = 0;
+	qmMessages[Log::OtherSelfMute]   = 0;
+	qmMessages[Log::OtherMutedOther] = 0;
+	qmMessages[Log::ChannelJoin]     = 0;
+	qmMessages[Log::ChannelLeave]    = 0;
+	qmMessages[Log::UserRenamed]     = 0;
+	qmMessages[Log::SelfChannelJoin] = 0;
+	qmMessages[Log::SelfChannelJoinOther] = 0;
+	qmMessages[Log::ChannelJoinConnect]   = 0;
+	qmMessages[Log::ChannelLeaveDisconnect] = 0;
+	qmMessages[Log::ChannelListeningAdd]    = 0;
+	qmMessages[Log::ChannelListeningRemove] = 0;
+	qmMessages[Log::PluginMessage]          = 0;
 }
 
 bool Settings::doEcho() const {
