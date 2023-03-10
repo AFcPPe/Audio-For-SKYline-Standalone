@@ -1702,19 +1702,36 @@ void UserModel::userStateChanged() {
 	if (!user)
 		return;
 	ClientUser *Ouser = ClientUser::get(Global::get().uiSession);
+	QList< ClientUser * > list = ClientUser::getTalking();
+	int speakers         = 0;
+	for (int i = 0; i < list.size(); ++i) {
+		ClientUser *node = (ClientUser *) list.at(i);
+		if (Ouser == node)
+			continue;
+		if (node->cChannel == Ouser->cChannel) {
+			speakers++;
+		}
+	}
+	if (speakers == 0) {
+		 Global::get().mw->qlbRX1->setStyleSheet(
+			"background-color: rgb(0, 0, 0);color: white;font: 12px \"微软雅黑\";");
+	} else {
+		Global::get().mw->qlbRX1->setStyleSheet(
+			"background-color: rgb(131, 213, 0);color: white;font: 12px \"微软雅黑\";");
+	}
 	if (Ouser != user) {
 		switch (user->tsState) {
 			case Settings::Talking:
 			case Settings::Whispering:
 			case Settings::Shouting:
-				Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"微软雅黑\";");
+				//Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"微软雅黑\";");
 				Global::get().mw->qlbLastRecv->setText("最后收听：" + user->qsName);	
 				break;
 			case Settings::Passive:
 			case Settings::MutedTalking:
 			default:
-				Global::get().mw->qlbRX1->setStyleSheet(
-					"background-color: rgb(0, 0, 0);color: white;font: 12px \"微软雅黑\";");
+				//Global::get().mw->qlbRX1->setStyleSheet(
+				//	"background-color: rgb(0, 0, 0);color: white;font: 12px \"微软雅黑\";");
 				break;
 		}
 	}

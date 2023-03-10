@@ -94,7 +94,7 @@ void LoopUser::fetchFrames() {
 		if (it->first > cmp) {
 			break;
 		}
-
+		
 		ao->addFrameToBuffer(this, it->second.audioData);
 
 		it = m_packets.erase(it);
@@ -125,11 +125,13 @@ void Audio::startOutput(const QString &output) {
 	Global::get().ao = AudioOutputRegistrar::newFromChoice(output);
 	if (Global::get().ao)
 		Global::get().ao->start(QThread::HighPriority);
+	//Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 }
 
 void Audio::stopOutput() {
 	// Take a copy of the global AudioOutput shared pointer
 	// to keep a reference around.
+	//Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(0, 0, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 	AudioOutputPtr ao = Global::get().ao;
 
 	// Reset the global AudioOutput shared pointer to the null pointer.
