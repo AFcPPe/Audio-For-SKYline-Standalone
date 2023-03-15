@@ -730,6 +730,33 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 		}
 	}
 	//====================无线电效果区域结束========================
+	//====================冲麦效果====================
+	if (qlMix.size() >= 2) {
+		
+		float fFreq      = 50.0; // 嘟的频率
+		float fAmplitude = 1.0f;   // 嘟的幅度
+		float fPhase     = 0.0f;   // 正弦波的相位
+		for (unsigned int i = 0; i < frameCount * iChannels; i += 1) {
+			float fSample = output[i]; // 获取采样值
+
+			// 将正弦波混合到音频中
+			fSample += fAmplitude * sinf(fPhase);
+
+			// 更新正弦波的相位
+			fPhase += 2.0f * M_PI * fFreq / SAMPLE_RATE;
+
+			// 确保相位在[0, 2*PI]之间
+			if (fPhase >= 2.0f * M_PI) {
+				fPhase -= 2.0f * M_PI;
+			}
+
+			// 将处理后的采样值写回输出缓冲区
+			output[i] = fSample;
+		}
+	}
+	//====================冲麦效果====================
+
+
 	bool pluginModifiedAudio = false;
 	emit audioOutputAboutToPlay(output, frameCount, nchan, SAMPLE_RATE, &pluginModifiedAudio);
 
