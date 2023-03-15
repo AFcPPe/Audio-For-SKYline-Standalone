@@ -144,7 +144,7 @@ void AudioOutput::addFrameToBuffer(ClientUser *sender, const Mumble::Protocol::A
 	if (iChannels == 0) {
 		return;
 	}
-
+	
 	qrwlOutputs.lockForRead();
 	// qmOutputs is a map of users and their AudioOutputUser objects, which will be created when audio from that user
 	// is received. This map will be iterated in mix(). After one's audio is finished, his AudioOutputUser will be
@@ -387,7 +387,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 		} else {
 			qlMix.append(aop);
 
-			const ClientUser *user = it.key();
+			const ClientUser *user = it.key();	
 			if (user && user->bPrioritySpeaker) {
 				prioritySpeakerActive = true;
 			}
@@ -490,6 +490,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 			}
 			validListener = true;
 		}
+
 
 		foreach (AudioOutputUser *aop, qlMix) {
 			// Iterate through all audio sources and mix them together into the output (or the intermediate array)
@@ -682,7 +683,53 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 			recorder->addBuffer(nullptr, recbuff, frameCount);
 		}
 	}
-
+	//=============================无线电效果区域========================
+	
+	if (Global::get().mw->qcbRadioEffect->isChecked()) {
+		// 非线性变形
+		double distortion = 0.62;
+		if (eSampleFormat == SampleFloat) {
+			for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
+				float x = output[s];
+				x       = (x > 0) ? pow(x, distortion) : -pow(-x, distortion); // Nonlinear distortion
+				if (x > 1.0f) {
+					x = 1.0f;
+				} else if (x < -1.0f) {
+					x = -1.0f;
+				}
+				output[s] = x;
+			}
+		} else if (eSampleFormat == SampleShort) {
+			for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
+				float x   = output[s] / 32768.0f;                  // Convert to float and normalize to [-1, 1]
+				x         = (x > 0) ? pow(x, distortion) : -pow(-x, distortion); // Nonlinear distortion
+				output[s] = (short) (x * 32767.0f);                // Convert back to short
+			}
+		}
+		// 随机噪声
+		for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
+			output[s] += (rand() / (float) RAND_MAX) * 0.0080f-0.0040f;
+		}
+	}
+	// 声音截断
+	if (eSampleFormat == SampleFloat) {
+		for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
+			if (output[s] > 1.0f) {
+				output[s] = 1.0f;
+			} else if (output[s] < -1.0f) {
+				output[s] = -1.0f;
+			}
+		}
+	} else if (eSampleFormat == SampleShort) {
+		for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
+			if (output[s] > SHRT_MAX) {
+				output[s] = SHRT_MAX;
+			} else if (output[s] < SHRT_MIN) {
+				output[s] = SHRT_MIN;
+			}
+		}
+	}
+	//====================无线电效果区域结束========================
 	bool pluginModifiedAudio = false;
 	emit audioOutputAboutToPlay(output, frameCount, nchan, SAMPLE_RATE, &pluginModifiedAudio);
 

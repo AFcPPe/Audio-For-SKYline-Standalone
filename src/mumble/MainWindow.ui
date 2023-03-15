@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>735</width>
+    <width>800</width>
     <height>325</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>735</width>
+    <width>800</width>
     <height>325</height>
    </size>
   </property>
@@ -65,7 +65,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>735</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>
@@ -415,7 +415,7 @@
       <rect>
        <x>250</x>
        <y>30</y>
-       <width>141</width>
+       <width>151</width>
        <height>31</height>
       </rect>
      </property>
@@ -548,7 +548,7 @@ font: 12px &quot;微软雅黑&quot;;</string>
     <widget class="QLabel" name="qlbLastRecv">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>250</x>
        <y>0</y>
        <width>151</width>
        <height>31</height>
@@ -559,6 +559,19 @@ font: 12px &quot;微软雅黑&quot;;</string>
      </property>
      <property name="text">
       <string>最后收听：</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="qcbRadioEffect">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>0</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无线电音效</string>
      </property>
     </widget>
    </widget>
