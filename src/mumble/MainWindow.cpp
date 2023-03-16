@@ -1580,7 +1580,8 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 		//Global::get().l->log(
 		//	Log::Information,
 		//	tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
-		Global::get().sh->setConnectionInfo(Global::get().SklineIP, 64738, cd->qsUsername, cd->qsPassword);
+		Global::get().sh->setConnectionInfo(Global::get().SklineIP, Global::get().SKYlinePort, cd->qsUsername,
+											cd->qsPassword);
 		Global::get().l->log(
 			Log::Information, tr("Connecting to server %1.").arg(Log::msgColor("SKYline", Log::Server)));
 		Global::get().sh->start(QThread::TimeCriticalPriority);
