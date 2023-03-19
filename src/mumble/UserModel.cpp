@@ -1712,7 +1712,7 @@ void UserModel::userStateChanged() {
 			speakers++;
 		}
 	}
-	if (speakers == 0) {
+	if (Global::get().bTalking|| speakers == 0) {
 		 Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(0, 0, 0);color: white;font: 12px \"微软雅黑\";");
 	} else {

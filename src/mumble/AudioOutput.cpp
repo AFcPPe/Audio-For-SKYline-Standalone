@@ -684,9 +684,8 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 		}
 	}
 	//=============================无线电效果区域========================
-	
 	if (Global::get().mw->qcbRadioEffect->isChecked()) {
-		// 非线性变形
+		//=============================非线性变形=============================
 		double distortion = 0.62;
 		if (eSampleFormat == SampleFloat) {
 			for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
@@ -706,12 +705,14 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 				output[s] = (short) (x * 32767.0f);                // Convert back to short
 			}
 		}
-		// 随机噪声
+		//=============================非线性变形=============================
+		//=============================随机噪声=============================
 		for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
 			output[s] += (rand() / (float) RAND_MAX) * 0.0080f-0.0040f;
 		}
+		//=============================随机噪声=============================
 	}
-	// 声音截断
+	//=============================声音截断=============================
 	if (eSampleFormat == SampleFloat) {
 		for (unsigned int s = 0; s < frameCount * iChannels; ++s) {
 			if (output[s] > 1.0f) {
@@ -729,13 +730,12 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 			}
 		}
 	}
-	//====================无线电效果区域结束========================
+	//=============================声音截断=============================
 	//====================冲麦效果====================
 	if (qlMix.size() >= 2) {
-		
 		float fFreq      = 50.0; // 嘟的频率
-		float fAmplitude = 1.0f;   // 嘟的幅度
-		float fPhase     = 0.0f;   // 正弦波的相位
+		float fAmplitude = 1.5f; // 嘟的幅度
+		float fPhase     = 0.0f; // 正弦波的相位
 		for (unsigned int i = 0; i < frameCount * iChannels; i += 1) {
 			float fSample = output[i]; // 获取采样值
 
@@ -755,6 +755,15 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 		}
 	}
 	//====================冲麦效果====================
+	//====================TX自静音====================
+	if (Global::get().bTalking) {
+		for (unsigned int i = 0; i < frameCount * iChannels; i += 1) {
+			output[i] = 0;
+		}
+	}
+	//====================TX自静音====================
+	//====================无线电效果区域结束========================
+
 
 
 	bool pluginModifiedAudio = false;
