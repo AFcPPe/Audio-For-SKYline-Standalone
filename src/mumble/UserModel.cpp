@@ -1725,7 +1725,7 @@ void UserModel::userStateChanged() {
 			case Settings::Whispering:
 			case Settings::Shouting:
 				//Global::get().mw->qlbRX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"微软雅黑\";");
-				Global::get().mw->qlbLastRecv->setText("最后收听：" + user->qsName);	
+				//Global::get().mw->qlbLastRecv->setText("最后收听：" + user->qsName);	
 				break;
 			case Settings::Passive:
 			case Settings::MutedTalking:
