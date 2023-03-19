@@ -86,10 +86,10 @@ void MumbleDBus::focus() {
 void MumbleDBus::setTransmitMode(unsigned int mode, const QDBusMessage &msg) {
 	switch (mode) {
 		case 0:
-			Global::get().s.atTransmit = Settings::Continuous;
+			Global::get().s.atTransmit = Settings::PushToTalk;
 			break;
 		case 1:
-			Global::get().s.atTransmit = Settings::VAD;
+			Global::get().s.atTransmit = Settings::PushToTalk;
 			break;
 		case 2:
 			Global::get().s.atTransmit = Settings::PushToTalk;

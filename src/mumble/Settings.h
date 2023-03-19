@@ -186,7 +186,10 @@ struct OverlaySettings {
 };
 
 struct Settings {
-	enum AudioTransmit { Continuous, VAD, PushToTalk };
+	enum AudioTransmit {
+		PushToTalk, Continuous,
+		VAD
+	};
 	enum VADSource { Amplitude, SignalToNoise };
 	enum LoopMode { None, Local, Server };
 	enum ChannelExpand { NoChannels, ChannelsWithUsers, AllChannels };
@@ -216,7 +219,7 @@ struct Settings {
 	static const QString cqsDefaultMuteCue;
 	static const QPoint UNSPECIFIED_POSITION;
 
-	AudioTransmit atTransmit = VAD;
+	AudioTransmit atTransmit = PushToTalk;
 	quint64 uiDoublePush     = 0;
 	quint64 pttHold          = 0;
 

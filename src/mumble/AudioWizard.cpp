@@ -333,13 +333,13 @@ void AudioWizard::showPage(int pageid) {
 
 	if ((cp == qwpTrigger) || (cp == qwpSettings)) {
 		if (!bTransmitChanged)
-			Global::get().s.atTransmit = sOldSettings.atTransmit;
+			Global::get().s.atTransmit = Settings::PushToTalk; // sOldSettings.atTransmit;
 		else if (qrPTT->isChecked())
 			Global::get().s.atTransmit = Settings::PushToTalk;
 		else
-			Global::get().s.atTransmit = Settings::VAD;
+			Global::get().s.atTransmit = Settings::PushToTalk; // Settings::VAD;
 	} else {
-		Global::get().s.atTransmit = Settings::Continuous;
+		Global::get().s.atTransmit = Settings::PushToTalk; // Settings::Continuous;
 	}
 }
 
@@ -401,11 +401,11 @@ void AudioWizard::reject() {
 
 void AudioWizard::accept() {
 	if (!bTransmitChanged)
-		Global::get().s.atTransmit = sOldSettings.atTransmit;
+		Global::get().s.atTransmit = Settings::PushToTalk; // sOldSettings.atTransmit;
 	else if (qrPTT->isChecked())
 		Global::get().s.atTransmit = Settings::PushToTalk;
 	else
-		Global::get().s.atTransmit = Settings::VAD;
+		Global::get().s.atTransmit = Settings::PushToTalk; // Settings::VAD;
 
 	Global::get().s.bMute      = sOldSettings.bMute;
 	Global::get().s.bDeaf      = sOldSettings.bDeaf;
@@ -581,7 +581,7 @@ void AudioWizard::on_qsVAD_valueChanged(int v) {
 void AudioWizard::on_qrSNR_clicked(bool on) {
 	if (on) {
 		Global::get().s.vsVAD      = Settings::SignalToNoise;
-		Global::get().s.atTransmit = Settings::VAD;
+		Global::get().s.atTransmit = Settings::PushToTalk; // Settings::VAD;
 		updateTriggerWidgets(false);
 		bTransmitChanged = true;
 	}
@@ -590,7 +590,7 @@ void AudioWizard::on_qrSNR_clicked(bool on) {
 void AudioWizard::on_qrAmplitude_clicked(bool on) {
 	if (on) {
 		Global::get().s.vsVAD      = Settings::Amplitude;
-		Global::get().s.atTransmit = Settings::VAD;
+		Global::get().s.atTransmit = Settings::PushToTalk; // Settings::VAD;
 		updateTriggerWidgets(false);
 		bTransmitChanged = true;
 	}
