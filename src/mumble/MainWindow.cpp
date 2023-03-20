@@ -4016,37 +4016,18 @@ void MainWindow::on_qdialCom2Changed() {
 	qlncom2->display(orgNum);
 }
 
-void MainWindow::on_switchTimerElapsed() {
-	QString Freq;
-	if (qcbSimulator->isChecked()) {
-		if (sim->own->com1ActiveMHz - 118 < 0)
-			return;
-		Freq = QString::number(sim->own->com1ActiveMHz);
-	} else {
-		Freq = QString::number(118 + qdialCom1->value() * 0.025);
-	}
-	// Channel
-	if (getContextMenuChannel() == NULL)
-		return;
-	if (getContextMenuChannel()->qsDesc == Freq) {
-		return;
-	}
+void sendAfvEsBridgeMessage(std::string strMsg) {
+	HWND hWndReceiver = FindWindowEx(NULL, NULL, L"AfvBridgeHiddenWindowClass", NULL);
+	// 填充 COPYDATASTRUCT 结构体
+	COPYDATASTRUCT cds;
+	cds.dwData = 666;                    // 用于标识消息类型的自定义数据
+	cds.cbData = strMsg.size();          // 数据大小
+	cds.lpData = (PVOID) strMsg.c_str(); // 数据指针
+	// 发送 WM_COPYDATA 消息
+	SendMessage(hWndReceiver, WM_COPYDATA, reinterpret_cast< WPARAM >(hWndReceiver), reinterpret_cast< LPARAM >(&cds));
+}
 
-	Channel *root = Channel::get(0);
-	if (root == NULL) {
-		qDebug() << "\n=====================\nNULL\n=====================\n";
-		return;
-	}
-	QSet< Channel * > children = root->allChildren();
-	QSetIterator< Channel * > iter(children);
-	while (iter.hasNext()) {
-		Channel *c = iter.next();
-		if (Freq == c->qsDesc) {
-			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
-			return;
-		}
-	}
-	QString numFreq = Freq;
+QString getFullChannelString(QString Freq) {
 	switch (Freq.length()) {
 		case 3:
 			Freq += ".000";
@@ -4061,7 +4042,47 @@ void MainWindow::on_switchTimerElapsed() {
 			Freq += "0";
 			break;
 	}
+	return Freq;
+}
 
+void MainWindow::on_switchTimerElapsed() {
+	
+	QString Freq;
+	if (qcbSimulator->isChecked()) {
+		if (sim->own->com1ActiveMHz - 118 < 0)
+			return;
+		Freq = QString::number(sim->own->com1ActiveMHz);
+	} else {
+		Freq = QString::number(118 + qdialCom1->value() * 0.025);
+	}
+	// Channel
+	if (getContextMenuChannel() == NULL)
+		return;
+	if (getContextMenuChannel()->qsDesc == Freq) {
+		return;
+	} else {
+		sendAfvEsBridgeMessage(
+			QString(getFullChannelString(getContextMenuChannel()->qsDesc) + ":False:False").toStdString());
+		sendAfvEsBridgeMessage(QString(getFullChannelString(Freq) + ":True:True").toStdString());
+	}
+
+	Channel *root = Channel::get(0);
+	if (root == NULL) {
+		qDebug() << "\n=====================\nNULL\n=====================\n";
+		return;
+	}
+	QSet< Channel * > children = root->allChildren();
+	QSetIterator< Channel * > iter(children);
+	while (iter.hasNext()) {
+		Channel *c = iter.next();
+		if (Freq == c->qsDesc) {
+			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
+			
+			return;
+		}
+	}
+	QString numFreq = Freq;
+	Freq            = getFullChannelString(Freq);
 	Global::get().sh->createChannel(0, Freq, numFreq, 0, true, 50);
 	while (iter.hasNext()) {
 		Channel *c = iter.next();
