@@ -191,6 +191,8 @@ AudioWizard::AudioWizard(QWidget *p) : QWizard(p) {
 
 	ticker->setSingleShot(false);
 	ticker->start(20);
+	qrAmplitude->setDisabled(true);
+	qrSNR->setDisabled(true);
 }
 
 bool AudioWizard::eventFilter(QObject *obj, QEvent *evt) {
