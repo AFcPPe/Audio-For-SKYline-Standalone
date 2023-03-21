@@ -226,8 +226,8 @@ set(MUMBLE_SOURCES
 	"SettingsKeys.h"
 	"Settings.cpp"
 	"Settings.h"
-	"Simulator.cpp"
-	"Simulator.h"
+	
+	
 	"SharedMemory.cpp"
 	"SharedMemory.h"
 	"SocketRPC.cpp"

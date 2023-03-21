@@ -19,8 +19,8 @@
 #include "QtUtils.h"
 #include "Usage.h"
 #include "UserLocalNicknameDialog.h"
-#include "Simulator.h"
 #include "ui_MainWindow.h"
+#include <QTimer>
 
 #define MB_QEVENT (QEvent::User + 939)
 #define OU_QEVENT (QEvent::User + 940)
@@ -73,7 +73,6 @@ private:
 	Q_OBJECT
 	Q_DISABLE_COPY(MainWindow)
 public:
-	SimulatorSimConnect *sim;
 	UserModel *pmModel;
 	QSystemTrayIcon *qstiIcon;
 	QMenu *qmUser;
@@ -361,7 +360,6 @@ public slots:
 	void toggleSearchDialogVisibility();
 	/// Enables or disables the recording feature
 	void enableRecording(bool recordingAllowed);
-	void on_Simconnect_Updated();
 signals:
 	/// Signal emitted when the server and the client have finished
 	/// synchronizing (after a new connection).

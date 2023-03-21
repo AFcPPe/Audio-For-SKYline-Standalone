@@ -198,8 +198,6 @@ MainWindow::MainWindow(QWidget *p)
 
 	QObject::connect(this, &MainWindow::serverSynchronized, Global::get().pluginManager,
 					 &PluginManager::on_serverSynchronized);
-	sim = new SimulatorSimConnect();
-	connect(sim, &SimulatorSimConnect::RaiseSimdataUpdated, this, &MainWindow::on_Simconnect_Updated);
 	qtvUsers->setVisible(false);
 	//menubar->setVisible(false);
 
@@ -1105,102 +1103,6 @@ void MainWindow::enableRecording(bool recordingAllowed) {
 	if (!recordingAllowed && voiceRecorderDialog) {
 		voiceRecorderDialog->reject();
 	}
-}
-
-void MainWindow::on_Simconnect_Updated() {
-	if (sim->own->com1ActiveMHz - 118 < 0)
-		return;
-	if (sim->own->com2ActiveMHz - 118 < 0)
-		return;
-	QString orgNum1 = QString::number(sim->own->com1ActiveMHz);
-	QString orgNum2  = QString::number(sim->own->com2ActiveMHz);
-	if (qcbSimulator->isChecked()) {
-		switch (orgNum1.length()) {
-			case 3:
-				orgNum1 += ".000";
-				break;
-			case 4:
-				orgNum1 += "000";
-				break;
-			case 5:
-				orgNum1 += "00";
-				break;
-			case 6:
-				orgNum1 += "0";
-				break;
-		}
-		switch (orgNum2.length()) {
-			case 3:
-				orgNum2 += ".000";
-				break;
-			case 4:
-				orgNum2 += "000";
-				break;
-			case 5:
-				orgNum2 += "00";
-				break;
-			case 6:
-				orgNum2 += "0";
-				break;
-		}
-		qlncom1->display(orgNum1);
-		qlncom2->display(orgNum2);
-	}
-	/*if (getContextMenuChannel() == NULL)
-		return;
-	 Global::get().l->log(Log::DebugInfo, QString::number(own->com1ActiveMHz) + QString::number(own->com2ActiveMHz));
-	QString Freq = QString::number(sim->own->com1ActiveMHz);
-	if (getContextMenuChannel()->qsDesc == Freq) {
-		return;
-	}
-	
-	Channel *root              = Channel::get(0);
-	if (root == NULL) {
-		qDebug() << "\n=====================\nNULL\n=====================\n";
-		return;
-	}
-	QSet< Channel * > children = root->allChildren();
-	QSetIterator< Channel * > iter(children);
-	while (iter.hasNext()) {
-		Channel *c = iter.next();
-		if (Freq == c->qsDesc) {
-			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
-			return;
-		}
-	}
-	QString numFreq = Freq;
-	switch (Freq.length()) {
-		case 3:
-			Freq += ".000";
-			break;
-		case 4:
-			Freq += "000";
-			break;
-		case 5:
-			Freq += "00";
-			break;
-		case 6:
-			Freq += "0";
-			break;
-	}
-
-	Global::get().sh->createChannel(0, Freq, numFreq, 0, true, 50);
-	while (iter.hasNext()) {
-		Channel *c = iter.next();
-		if (numFreq == c->qsDesc) {
-			Global::get().sh->joinChannel(Global::get().uiSession, c->iId);
-			break;
-		}
-	}*/
-
-
-
-	// for (int i = 0; Channel::get(i) != NULL; i++) {
-	//	//Global::get().l->log(Log::DebugInfo, Freq + "   " + mapChannel(i)->getPath());
-	//	//if (Freq == Channel::get(i)->getPath()) {
-	//	//	Global::get().sh->joinChannel(Global::get().uiSession, i);
-	//	//}
-	// }
 }
 
 static void recreateServerHandler() {
@@ -3970,13 +3872,7 @@ void MainWindow::destroyUserInformation() {
 
 void MainWindow::on_qdialCom1Changed() {
 	QString orgNum;
-	if (qcbSimulator->isChecked()) {
-		if (sim->own->com1ActiveMHz - 118 < 0)
-			return;
-		orgNum = QString::number(sim->own->com1ActiveMHz);
-	}
-	else
-		orgNum = QString::number(118 + qdialCom1->value() * 0.025);
+	orgNum = QString::number(118 + qdialCom1->value() * 0.025);
 	switch (orgNum.length()) {
 		case 3:
 			orgNum += ".000";
@@ -3997,10 +3893,7 @@ void MainWindow::on_qdialCom1Changed() {
 
 void MainWindow::on_qdialCom2Changed() {
 	QString orgNum;
-	if (qcbSimulator->isChecked())
-		orgNum = QString::number(sim->own->com2ActiveMHz);
-	else 
-		orgNum = QString::number(118 + qdialCom2->value() * 0.025);
+	orgNum = QString::number(118 + qdialCom2->value() * 0.025);
 	switch (orgNum.length()) {
 		case 3:
 			orgNum += ".000";
@@ -4050,13 +3943,7 @@ QString getFullChannelString(QString Freq) {
 void MainWindow::on_switchTimerElapsed() {
 	
 	QString Freq;
-	if (qcbSimulator->isChecked()) {
-		if (sim->own->com1ActiveMHz - 118 < 0)
-			return;
-		Freq = QString::number(sim->own->com1ActiveMHz);
-	} else {
 		Freq = QString::number(118 + qdialCom1->value() * 0.025);
-	}
 	// Channel
 	if (getContextMenuChannel() == NULL)
 		return;
