@@ -753,17 +753,19 @@ void MainWindow::updateTrayIcon() {
 		switch (p->tsState) {
 			case Settings::Talking:
 			case Settings::MutedTalking:
+				Global::get().bTalking = true;
 				qstiIcon->setIcon(qiTalkingOn);
 				qlbTX1->setStyleSheet("background-color: rgb(131, 213, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
 				Global::get().mw->qlbRX1->setStyleSheet(
 					"background-color: rgb(0, 0, 0);color: white;font: 12px \"Î¢ÈíÑÅºÚ\";");
-				Global::get().bTalking = true;
 				break;
 			case Settings::Whispering:
 				qstiIcon->setIcon(qiTalkingWhisper);
+				Global::get().bTalking = false;
 				break;
 			case Settings::Shouting:
 				qstiIcon->setIcon(qiTalkingShout);
+				Global::get().bTalking = false;
 				break;
 			case Settings::Passive:
 			default:

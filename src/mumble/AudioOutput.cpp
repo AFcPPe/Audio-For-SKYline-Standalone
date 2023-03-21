@@ -351,6 +351,17 @@ void AudioOutput::initializeMixer(const unsigned int *chanmasks, bool forceheadp
 	}
 }
 
+void sendRDFMessage(std::string strMsg) {
+	HWND hWndReceiver = FindWindowEx(NULL, NULL, L"RDFHiddenWindowClass", NULL);
+	// 填充 COPYDATASTRUCT 结构体
+	COPYDATASTRUCT cds;
+	cds.dwData = 666;                    // 用于标识消息类型的自定义数据
+	cds.cbData = strMsg.size();          // 数据大小
+	cds.lpData = (PVOID) strMsg.c_str(); // 数据指针
+	// 发送 WM_COPYDATA 消息
+	SendMessage(hWndReceiver, WM_COPYDATA, reinterpret_cast< WPARAM >(hWndReceiver), reinterpret_cast< LPARAM >(&cds));
+}
+
 bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 #ifdef USE_MANUAL_PLUGIN
 	positions.clear();
@@ -760,16 +771,31 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 		for (unsigned int i = 0; i < frameCount * iChannels; i += 1) {
 			output[i] = 0;
 		}
+		sendRDFMessage("");
 	}
 	else {
 		if (!qlMix.isEmpty()) {
-			
+			QList< QString > oldList = QList< QString >(Global::get().qsUserTalking);
+			Global::get().qsUserTalking.clear();
 			QString str = "最后收听：";
 			foreach (AudioOutputUser *aop, qlMix) {
+				Global::get().qsUserTalking.append(aop->qsName);
 				str += aop->qsName + ",";
+			}
+			if (oldList != Global::get().qsUserTalking) {
+				QString qsSend = Global::get().qsUserTalking.at(0);
+				for (int i = 1; i < Global::get().qsUserTalking.size(); ++i) {
+					qsSend += ":" + Global::get().qsUserTalking.at(i);
+					// do something with value
+				}
+				sendRDFMessage(qsSend.toStdString().c_str());
 			}
 			str = str.left(str.size() - 1);
 			Global::get().mw->qlbLastRecv->setText(str);
+
+		} else {
+			sendRDFMessage("");
+			Global::get().qsUserTalking.clear();
 		}
 	}
 	//====================TX自静音====================

@@ -86,6 +86,7 @@ public:
 	bool bPosTest;
 	bool bInAudioWizard;
 	bool bTalking = false;
+	QList< QString > qsUserTalking;
 #ifdef USE_OVERLAY
 	OverlayClient *ocIntercept;
 #endif
