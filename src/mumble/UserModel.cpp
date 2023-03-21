@@ -1714,10 +1714,10 @@ void UserModel::userStateChanged() {
 	}
 	if (Global::get().bTalking|| speakers == 0) {
 		 Global::get().mw->qlbRX1->setStyleSheet(
-			"background-color: rgb(0, 0, 0);color: white;font: 12px \"微软雅黑\";");
+			"background-color: rgb(0, 0, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	} else {
 		Global::get().mw->qlbRX1->setStyleSheet(
-			"background-color: rgb(131, 213, 0);color: white;font: 12px \"微软雅黑\";");
+			"background-color: rgb(131, 213, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	}
 	if (Ouser != user) {
 		switch (user->tsState) {
