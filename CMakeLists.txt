@@ -15,7 +15,7 @@ endif()
 
 set(BUILD_NUMBER CACHE STRING "The build number of the current build. Will be used in Mumble's version to make sure newer builds upgrade older installations properly.")
 set(BUILD_RELEASE_DATE CACHE STRING "The release date to be used in the generated appstream metadata.")
-
+set(BUILD_NUMBER "02")
 if ("${BUILD_NUMBER}" STREQUAL "")
 	if(packaging)
 		message(FATAL_ERROR "Tried to create a Mumble package, without specifying BUILD_NUMBER!")
