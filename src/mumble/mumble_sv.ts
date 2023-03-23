@@ -3016,6 +3016,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">Användarnamn</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Lösenord</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

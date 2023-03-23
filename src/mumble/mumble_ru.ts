@@ -3017,6 +3017,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">Логин</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Пароль</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

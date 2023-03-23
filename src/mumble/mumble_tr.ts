@@ -3015,6 +3015,10 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
         <source>Username</source>
         <translation type="unfinished">Kullanıcı ismi</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Parola</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

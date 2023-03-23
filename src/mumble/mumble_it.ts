@@ -3016,6 +3016,10 @@ Sei sicuro di voler sostituire il tuo certificato?
         <source>Username</source>
         <translation type="unfinished">Nome utente</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Password</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

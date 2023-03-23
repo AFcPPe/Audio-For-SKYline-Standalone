@@ -3016,6 +3016,10 @@ Haluatko varmasti korvata varmenteen?
         <source>Username</source>
         <translation type="unfinished">Käyttäjänimi</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Salasana</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

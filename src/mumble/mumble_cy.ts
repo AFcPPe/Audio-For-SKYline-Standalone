@@ -2979,6 +2979,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">Enw Defnyddiwr</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Cyfrinair</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

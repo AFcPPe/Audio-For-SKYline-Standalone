@@ -3017,6 +3017,10 @@ Jste si jisti, že chcete certifikát nahradit?
         <source>Username</source>
         <translation type="unfinished">Uživatelské jméno</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Heslo</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
