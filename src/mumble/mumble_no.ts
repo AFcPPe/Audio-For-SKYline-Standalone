@@ -1044,14 +1044,6 @@ Denne verdien gjør at du setter maksimalt antall brukere tillatt i kanalen. Hvi
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Sammenhengende</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Stemmeaktivitet</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Trykk for å snakke</translation>
     </message>
@@ -3035,16 +3027,8 @@ Er du sikker på at du vil erstatte ditt sertifikat?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Brukernavn</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Passord</translation>
     </message>
 </context>
 <context>
@@ -5098,14 +5082,6 @@ Ellers avbryt alt og sjekk ditt sertifikat og brukernavn.</translation>
         <translation>Kobler deg fra tjeneren</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>VIs info om tjenerforbindelse</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Viser utvidet info om din tilkobling til tjeneren.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Gjør stum</translation>
     </message>
@@ -5884,14 +5860,6 @@ Ellers avbryt alt og sjekk ditt sertifikat og brukernavn.</translation>
         <translation>Ikonverktøyslinje</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Endre din egen kommentar</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Opptak</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Prioritert taler</translation>
     </message>
@@ -5922,19 +5890,6 @@ Ellers avbryt alt og sjekk ditt sertifikat og brukernavn.</translation>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Dette lar deg endre den tjenerbaserte bannlysningslisten over IP-adresser.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Skru på eller av filtrering av valgte kanaler.
-Som forvalg vil alle tomme kanaler bli filtrert.
-Du kan markere ytterligere kanaler fra filtrering fra kanalens bindeleddsmeny.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6063,10 +6018,6 @@ Du kan markere ytterligere kanaler fra filtrering fra kanalens bindeleddsmeny.</
     <message>
         <source>View Comment...</source>
         <translation>Vis kommentar…</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Endre kommentar…</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6276,22 +6227,6 @@ Mulige handlinger:
         <translation type="unfinished">Skrur av eller på snakkingsgrensesnittet.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Veksle kanalfiltrering (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished">Søk</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Søk etter en bruker eller kanal (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Veksle søkedialog</translation>
@@ -6433,11 +6368,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

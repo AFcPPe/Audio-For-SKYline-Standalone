@@ -1044,14 +1044,6 @@ Deze waarde laat je toe om een maximum aantal gebruikers in te stellen voor het 
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Continu</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Spraakactiviteit</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Druk-om-te-Praten</translation>
     </message>
@@ -3021,16 +3013,8 @@ Weet je zeker dat je je certificaat wil vervangen?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Gebruikersnaam</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Wachtwoord</translation>
     </message>
 </context>
 <context>
@@ -5083,14 +5067,6 @@ Indien niet, gelieve te annuleren en beide opnieuw te controleren.</translation>
         <translation>Verbreekt je verbinding met de server.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Serververbindingsinformatie tonen</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Dit toont uitgebreide informatie omtrent de verbinding met de server.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Maak stom</translation>
     </message>
@@ -5868,14 +5844,6 @@ Indien niet, gelieve te annuleren en beide opnieuw te controleren.</translation>
         <translation>Pictogrammen-werkbalk</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Wijzig je eigen opmerking</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Geluidsopname</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Prioriteitsspreker</translation>
     </message>
@@ -5906,20 +5874,6 @@ Indien niet, gelieve te annuleren en beide opnieuw te controleren.</translation>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Laat toe om de lijst met verbanningen op IP op de server te bewerken.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Zet het filteren van geselecteerde kanalen aan of uit.
-Standaard worden alle lege kanalen weggefilterd.
-Je kan bijkomende kanalen laten filteren via het
-context-menu van het kanaal.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6048,10 +6002,6 @@ context-menu van het kanaal.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Toon opmerking...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Wijzig opmerking...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6267,22 +6217,6 @@ Valide acties zijn:
         <translation>Maakt de Sprekersweergave zichtbaar of onzichtbaar.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Zet de kanaalfilter aan of uit (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Zoek</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Zoek naar een gebruiker of kanaal (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Toon of verberg zoekvenster</translation>
@@ -6418,12 +6352,40 @@ Valid options are:
         <translation>Deze instelling onthouden</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
-        <translation>Kanaal&amp;filter</translation>
-    </message>
-    <message>
         <source>&amp;Pin Channel when Filtering</source>
         <translation>Kanaal &amp;vastzetten tijdens filteren</translation>
+    </message>
+    <message>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

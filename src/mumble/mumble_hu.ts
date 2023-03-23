@@ -1040,14 +1040,6 @@ This value allows you to set the maximum number of users allowed in the channel.
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Folyamatos</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Beszéd érzékelése</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Beszédhez-nyomd</translation>
     </message>
@@ -3010,16 +3002,8 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Felhasználónév</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Jelszó</translation>
     </message>
 </context>
 <context>
@@ -5069,14 +5053,6 @@ Ha nem ön az, ellenőrizze a felhasználónevét és a tanúsítványt!</transl
         <translation>Bontja az ön kapcsolatát a szerverrel.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Információ a kiszolgálóról</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Megmutatja a szerverrel való kapcsolat részletes információit.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Némítás</translation>
     </message>
@@ -5854,14 +5830,6 @@ Ha nem ön az, ellenőrizze a felhasználónevét és a tanúsítványt!</transl
         <translation>Eszköztár</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Megjegyzés módosítása</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Beszélgetés rögzítése</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Kiemelés</translation>
     </message>
@@ -5892,17 +5860,6 @@ Ha nem ön az, ellenőrizze a felhasználónevét és a tanúsítványt!</transl
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Lehetővé teszi a szerveroldali IP-tiltólista szerkesztését.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6031,10 +5988,6 @@ the channel&apos;s context menu.</source>
     <message>
         <source>View Comment...</source>
         <translation>Megjegyzés megtekintése...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Megjegyzés módosítása...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6225,22 +6178,6 @@ Valid actions are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Keresés</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation type="unfinished"></translation>
@@ -6376,11 +6313,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

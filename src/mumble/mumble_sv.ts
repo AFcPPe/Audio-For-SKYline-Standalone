@@ -1044,14 +1044,6 @@ Det värdet tillåter dig att ställa in ett maximalt antal av användare som ä
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Kontinuerligt</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Ljudaktivitet</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Tryck för att Tala</translation>
     </message>
@@ -3021,16 +3013,8 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Användarnamn</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Lösenord</translation>
     </message>
 </context>
 <context>
@@ -5083,14 +5067,6 @@ Om inte, avbryt och kontrollera ditt certifikat eller användarnamn.</translatio
         <translation>Kopplar ifrån dig från servern.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Visa information om serveranslutningen</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Detta kommer visa utökad information om anslutningen till servern.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>Avaktivera &amp;mikrofon</translation>
     </message>
@@ -5868,14 +5844,6 @@ Om inte, avbryt och kontrollera ditt certifikat eller användarnamn.</translatio
         <translation>Verktygsfältet</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Ändra din kommentar</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Spela in</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Prioriterad talare</translation>
     </message>
@@ -5906,20 +5874,6 @@ Om inte, avbryt och kontrollera ditt certifikat eller användarnamn.</translatio
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Detta låter dig redigera listan över bannlysta IP-adresser på servern.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Aktivera eller inaktivera filtreringen för valda kanaler.
-Som standard är alla tomma kanaler filtrerade.
-Du kan markera ytterligare kanaler för filtrering från
-kanalens innehållsmeny.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6048,10 +6002,6 @@ kanalens innehållsmeny.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Visa kommentar...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Ändra kommentar...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6267,22 +6217,6 @@ Giltiga åtgärder är:
         <translation>Växlar synligheten för Talargränssnittet.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Växla kanalfiltret (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Sök</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Sök efter en användare eller kanal (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Växla sökruta</translation>
@@ -6418,11 +6352,39 @@ Valid options are:
         <translation>Kom ihåg den här inställningen</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

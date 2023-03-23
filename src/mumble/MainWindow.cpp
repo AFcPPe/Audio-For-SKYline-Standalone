@@ -79,6 +79,7 @@
 #include <QtWidgets/QScrollBar>
 #include <QtWidgets/QToolTip>
 #include <QtWidgets/QWhatsThis>
+#include <QHttpMultiPart>
 
 #ifdef Q_OS_WIN
 #	include <dbt.h>
@@ -1480,6 +1481,30 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 	//if (cd->qsServer.isEmpty() || (cd->usPort == 0) || cd->qsUsername.isEmpty())
 	//	res = QDialog::Rejected;
 	if (res == QDialog::Accepted) {
+		QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+		QNetworkRequest request;
+		request.setUrl(QUrl("https://beta.flightsim.top/goApi/Center/Login"));
+		//request.setRawHeader("referer", "https://atc.skylineflyleague.cn");
+		QHttpMultiPart *multiPart =
+			new QHttpMultiPart(QHttpMultiPart::FormDataType);
+		QHttpPart qhpUsername;
+		qhpUsername.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("text/plain"));
+		qhpUsername.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"username\";"));
+		qhpUsername.setBody("");
+		QHttpPart qhpPassword;
+		qhpPassword.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("text/plain"));
+		qhpPassword.setHeader(QNetworkRequest::ContentDispositionHeader, QVariant("form-data; name=\"password\";"));
+		qhpPassword.setBody("");
+		multiPart->append(qhpPassword);
+		multiPart->append(qhpUsername);
+		// manager具有异步API，当http请求完成后，会通过finished信号进行通知
+		QNetworkReply *reply = manager->post(request, multiPart);
+		Global::get().l->log(Log::Information, tr("Logging you in. Please wait."));
+		QEventLoop eventLoop;
+		connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
+		eventLoop.exec();
+		QByteArray reply_data = reply->readAll();
+		qDebug() << "\n\n\n\n\n\n" << reply_data << "\n\n\n\n\n\n";
 		recreateServerHandler();
 		qsDesiredChannel = QString();
 		rtLast           = MumbleProto::Reject_RejectType_None;

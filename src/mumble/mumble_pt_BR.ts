@@ -1044,14 +1044,6 @@ Este valor permite que você especifique o número máximo de usuárias permitid
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Contínuo</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Atividade de voz</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Pressionar Para Falar</translation>
     </message>
@@ -3021,16 +3013,8 @@ Você tem certeza de que quer substituir o seu certificado?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Senha</translation>
     </message>
 </context>
 <context>
@@ -5084,14 +5068,6 @@ seu certificado e nome de usuário.</translation>
         <translation>Desconecta você do servidor.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Mostra informação sobre a conexão do servidor</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Mostra informação estendida sobre a conexão com o servidor.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>E&amp;mudecer</translation>
     </message>
@@ -5869,14 +5845,6 @@ seu certificado e nome de usuário.</translation>
         <translation>Barra de ícones</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Alterar seu próprio comentário</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Gravar</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Falante prioritária</translation>
     </message>
@@ -5907,20 +5875,6 @@ seu certificado e nome de usuário.</translation>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Permite que você edite a lista de banimentos de IP usada pelo servidor.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Ativar ou desativar o filtro dos canais selecionados.
-Por padrão todos os canais vazios serão filtrados.
-Você pode marcar canais adicionais para filtrar
-no menu contextual do canal.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6049,10 +6003,6 @@ no menu contextual do canal.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Ver Comentário...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>Alterar &amp;Comentário...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6267,22 +6217,6 @@ Ações válidas são:
         <translation type="unfinished">Alterna a visibilidade da UI de Falantes.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Alternar o filtro do canal (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Pesquisar</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Pesquise por um usuário ou canal (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation type="unfinished"></translation>
@@ -6418,11 +6352,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
