@@ -1044,14 +1044,6 @@ This value allows you to set the maximum number of users allowed in the channel.
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Συνεχές</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Φωνητική Δραστηριότητα</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Πίεση Πλήκτρου για Ομιλία</translation>
     </message>
@@ -1228,7 +1220,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;This enables one of the loopback test modes.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;None&lt;/i&gt; - Loopback disabled&lt;br /&gt;&lt;i&gt;Local&lt;/i&gt; - Emulate a local server.&lt;br /&gt;&lt;i&gt;Server&lt;/i&gt; - Request loopback from server.&lt;br /&gt;Please note than when loopback is enabled, no other users will hear your voice. This setting is not saved on application exit.</source>
-        <translation>&lt;b&gt;Αυτό δίνει τη δυνατότητα μιας από τις λειτουργίες δοκιμής επανάληψης.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Καμία&lt;/i&gt; - Απενεργοποίηση επανάληψης &lt;br /&gt;&lt;i&gt;Τοπικά&lt;/i&gt; - Μίμηση ενός τοπικού διακομιστή.&lt;br /&gt;&lt;i&gt;Διακομιστής&lt;/i&gt; - Αίτημα επανάληψης από το διακομιστή&lt;br /&gt;Όταν η λειτουργία επανάληψης είναι ενεργοποιημένη, οι άλλοι χρήστες δεν θα ακούσουν την φωνή σας. Αυτή η ρύθμιση δεν αποθηκεύεται μετά την έξοδο της εφαρμογής.</translation>
+        <translation>&lt;b&gt;Αυτό δίνει τη δυνατότητα μιας από τις λειτουργίες δοκιμής επανάληψης.&lt;/b&gt;&lt;br /&gt;&lt;i&gt;Καμία&lt;/i&gt; - Απενεργοποίηση επανάληψης&#xa0;&lt;br /&gt;&lt;i&gt;Τοπικά&lt;/i&gt; - Μίμηση ενός τοπικού διακομιστή.&lt;br /&gt;&lt;i&gt;Διακομιστής&lt;/i&gt; - Αίτημα επανάληψης από το διακομιστή&lt;br /&gt;Όταν η λειτουργία επανάληψης είναι ενεργοποιημένη, οι άλλοι χρήστες δεν θα ακούσουν την φωνή σας. Αυτή η ρύθμιση δεν αποθηκεύεται μετά την έξοδο της εφαρμογής.</translation>
     </message>
     <message>
         <source>Volume</source>
@@ -3021,16 +3013,8 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Όνομα χρήστη</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Κωδικός πρόσβασης</translation>
     </message>
 </context>
 <context>
@@ -5083,14 +5067,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>Σας αποσυνδέει από τον διακομιστή.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Εμφάνιση πληροφοριών σχετικά με τη σύνδεση διακομιστή</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Αυτό θα δείξει λεπτομερείς πληροφορίες σχετικά με τη σύνδεση με το διακομιστή.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Φιμώστε</translation>
     </message>
@@ -5868,14 +5844,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>Εργαλειοθήκη εικονιδίων</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Αλλάξτε το δικό σας σχόλιο</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Εγγραφή</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Ομιλητής Προτεραιότητας</translation>
     </message>
@@ -5906,20 +5874,6 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Αυτό σας επιτρέπει να επεξεργαστείτε τη λίστα απαγορεύσεων IP του διακομιστή.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Ενεργοποιήστε ή απενεργοποιήστε το φιλτράρισμα των επιλεγμένων καναλιών.
-Από προεπιλογή, όλα τα κενά κανάλια θα φιλτραρίζονται.
-Μπορείτε να επισημάνετε και άλλα κανάλια για φιλτράρισμα από
-το μενού περιβάλλοντος του καναλιού.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6048,10 +6002,6 @@ the channel&apos;s context menu.</source>
     <message>
         <source>View Comment...</source>
         <translation>Προβολή σχολίου...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Αλλαγή σχολίου...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6267,22 +6217,6 @@ Valid actions are:
         <translation>Εναλλάζει την ορατότητα UI ομιλίας.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Εναλλάζει το φίλτρο καναλιού (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Αναζήτηση</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Αναζήτησ χρήστη ή καναλιού (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Εναλλαγή παραθύρου διαλόγου αναζήτησης</translation>
@@ -6418,11 +6352,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Failed: Invalid channel</source>
-        <translation>Error : canal invalid</translation>
+        <translation>Error&#x202f;: canal invalid</translation>
     </message>
     <message>
         <source>Mumble - Edit %1</source>
@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>ID: %1</source>
-        <translation>ID : %1</translation>
+        <translation>ID&#x202f;: %1</translation>
     </message>
     <message>
         <source>This grants the %1 privilege. If a privilege is both allowed and denied, it is denied.&lt;br /&gt;%2</source>
@@ -1036,14 +1036,6 @@ This value allows you to set the maximum number of users allowed in the channel.
 </context>
 <context>
     <name>AudioInputDialog</name>
-    <message>
-        <source>Continuous</source>
-        <translation>Continú</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Activitat vocala</translation>
-    </message>
     <message>
         <source>Push To Talk</source>
         <translation>Quichar per parlar</translation>
@@ -2981,16 +2973,8 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Nom d&apos;_utilizaire</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Senhal</translation>
     </message>
 </context>
 <context>
@@ -3165,7 +3149,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>HTTP error %1: &quot;%2&quot;</source>
-        <translation>Error HTTP %1 : « %2 »</translation>
+        <translation>Error HTTP %1&#xa0;: «&#x202f;%2&#x202f;»</translation>
     </message>
     <message>
         <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
@@ -5020,14 +5004,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Mostrar las informacions tocant la connexion al servidor</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>Co&amp;par lo son</translation>
     </message>
@@ -5419,11 +5395,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Welcome message: %1</source>
-        <translation>Messatge de benvenguda : %1</translation>
+        <translation>Messatge de benvenguda&#x202f;: %1</translation>
     </message>
     <message>
         <source>Mumble: %1</source>
-        <translation>Mumble : %1</translation>
+        <translation>Mumble&#x202f;: %1</translation>
     </message>
     <message>
         <source>You were denied %1 privileges in %2.</source>
@@ -5803,14 +5779,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Enregistrament</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5841,17 +5809,6 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -5982,10 +5939,6 @@ the channel&apos;s context menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Change Comment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>R&amp;egister...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6103,7 +6056,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>%1: %2</source>
-        <translation>%1 : %2</translation>
+        <translation>%1&#x202f;: %2</translation>
     </message>
     <message>
         <source>(%1) %2</source>
@@ -6171,22 +6124,6 @@ Valid actions are:
     <message>
         <source>Toggles the visibility of the TalkingUI.</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Recercar</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6325,11 +6262,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7888,7 +7853,7 @@ You can register them again.</source>
     </message>
     <message>
         <source>&lt;b&gt;Encryption:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Chiframent :&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Chiframent&#xa0;:&lt;/b&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Avg. latency:&lt;/b&gt;</source>
@@ -8346,7 +8311,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>%1 kbit/s</source>
-        <translation>%1 kbit/s</translation>
+        <translation>%1&#x202f;kbit/s</translation>
     </message>
     <message>
         <source>Bandwidth</source>
@@ -8669,7 +8634,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>DNS: %1</source>
-        <translation>DNS : %1</translation>
+        <translation>DNS&#x202f;: %1</translation>
     </message>
     <message>
         <source>Issued by:</source>

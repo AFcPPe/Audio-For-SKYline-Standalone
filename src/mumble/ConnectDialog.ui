@@ -14,6 +14,19 @@
    <string>Mumble Server Connect</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="0" colspan="4" alignment="Qt::AlignHCenter">
+    <widget class="QDialogButtonBox" name="qdbbButtonBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="1">
     <widget class="QLineEdit" name="qleUsername"/>
    </item>
@@ -27,18 +40,18 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="4" alignment="Qt::AlignHCenter">
-    <widget class="QDialogButtonBox" name="qdbbButtonBox">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
+   <item row="1" column="0">
+    <widget class="QLabel" name="qlbPassword">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
      </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     <property name="text">
+      <string>Password</string>
      </property>
     </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="qlePassword"/>
    </item>
   </layout>
   <action name="qaFavoriteRemove">

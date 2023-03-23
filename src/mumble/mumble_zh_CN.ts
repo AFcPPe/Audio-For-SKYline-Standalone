@@ -1044,14 +1044,6 @@ This value allows you to set the maximum number of users allowed in the channel.
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>连续发言</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>语音激活</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>按键发言</translation>
     </message>
@@ -3020,16 +3012,8 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished">连飞呼号：</translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation>密码：</translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation>用户名</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation>密码</translation>
     </message>
 </context>
 <context>
@@ -5082,14 +5066,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>从服务器断开您的连接。</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>显示服务器连接的信息</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>显示关于服务器连接的扩展信息。</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>禁言(&amp;M)</translation>
     </message>
@@ -5865,14 +5841,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>图标工具栏</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>修改您自己的简介</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>录音</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>优先发言人</translation>
     </message>
@@ -5903,20 +5871,6 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>使您可以编辑服务端的 IP 封禁列表。</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>对所选频道启用或禁用筛选。
-默认情况下，所有空频道会被隐藏。
-您可以通过频道的右键菜单将频道标记为
-筛选时隐藏。</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6045,10 +5999,6 @@ the channel&apos;s context menu.</source>
     <message>
         <source>View Comment...</source>
         <translation>查看简介...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>修改简介(&amp;C)...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6264,22 +6214,6 @@ Valid actions are:
         <translation>切换对话界面的可见性。</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>开关频道筛选器 (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>搜索</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>搜索用户或频道 (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>开关搜索对话框</translation>
@@ -6416,12 +6350,40 @@ Valid options are:
         <translation>记住此设置</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
-        <translation>频道筛选器(&amp;F)</translation>
-    </message>
-    <message>
         <source>&amp;Pin Channel when Filtering</source>
         <translation>筛选时固定频道(&amp;P)</translation>
+    </message>
+    <message>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
+        <translation type="unfinished">正在验证登录，请稍等。</translation>
     </message>
 </context>
 <context>

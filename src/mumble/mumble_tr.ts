@@ -1044,14 +1044,6 @@ Bu değer kanalda izin verilen azami kullanıcı sayısını ayarlamanıza izin 
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Devamlı</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Ses Etkinliği</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Bas ve Konuş</translation>
     </message>
@@ -3020,16 +3012,8 @@ Sertifikanızı değiştirmek istediğinize emin misiniz?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Kullanıcı ismi</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Parola</translation>
     </message>
 </context>
 <context>
@@ -5082,14 +5066,6 @@ deneyiniz. Yoksa iptal edip parolanızı kontrol ediniz.</translation>
         <translation>Sunucuyla bağlantıyı keser.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Sunucu bağlantısı hakkında veri göster</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Sunucuyla bağlantı hakkında ayrıntılı bilgi gösterir.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Sustur</translation>
     </message>
@@ -5867,14 +5843,6 @@ deneyiniz. Yoksa iptal edip parolanızı kontrol ediniz.</translation>
         <translation>İkon Araç Çubuğu</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Kendi yorumunuzu değiştirin</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Ses Kaydı</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Öncelikli Konuşmacı</translation>
     </message>
@@ -5905,20 +5873,6 @@ deneyiniz. Yoksa iptal edip parolanızı kontrol ediniz.</translation>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Bu, sunucuda IP yasaklama listesini düzenlemenize izin verir.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Seçtiğiniz kanalların filtrelenmesini etkinleştirin
-yada devre dışı bırakın. Varsayılan olarak tüm boş
-kanallar filtrelenir. Kanalın içerik menüsünden
-filtrelenmesi için ilave kanallar ekleyebilirsiniz.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6047,10 +6001,6 @@ filtrelenmesi için ilave kanallar ekleyebilirsiniz.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Yorumu Görüntüle...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>Yorumu &amp;Değiştir...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6266,22 +6216,6 @@ Geçerli eylemler şunlardır:
         <translation>Konuşma Arayüzü&apos;nün görünürlüğünü değiştirir.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Kanal filtresini aç/kapat (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Ara</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Bir kullanıcı veya kanal ara (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Arama iletişim kutusunu aç/kapat</translation>
@@ -6477,12 +6411,40 @@ Geçerli seçenekler şunlardır:
         <translation>Bu ayarı hatırla</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
-        <translation>Kanal &amp;Filtresi</translation>
-    </message>
-    <message>
         <source>&amp;Pin Channel when Filtering</source>
         <translation>Filtreleme Sırasında Kanalı &amp;Sabitle</translation>
+    </message>
+    <message>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

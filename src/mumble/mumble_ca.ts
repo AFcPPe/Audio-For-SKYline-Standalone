@@ -1044,14 +1044,6 @@ Aquest valor us permet establir el nombre màxim d&apos;usuaris permesos al cana
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Continuu</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Activitat de veu</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Prémer Per Parlar</translation>
     </message>
@@ -3006,15 +2998,7 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5045,14 +5029,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5828,14 +5804,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5865,17 +5833,6 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6004,10 +5961,6 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>View Comment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6199,22 +6152,6 @@ Valid actions are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation type="unfinished"></translation>
@@ -6350,11 +6287,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

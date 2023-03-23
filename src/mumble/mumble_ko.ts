@@ -1044,14 +1044,6 @@ This value allows you to set the maximum number of users allowed in the channel.
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>오픈 마이크</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>음성 감지</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>눌러서 말하기</translation>
     </message>
@@ -3020,16 +3012,8 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">유저 이름</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">비밀번호</translation>
     </message>
 </context>
 <context>
@@ -5082,14 +5066,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>서버와의 연결을 끊습니다.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>서버 연결에 대한 정보 표시</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>서버 연결에 대한 확장된 정보가 표시됩니다.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>마이크 음소거(&amp;M)</translation>
     </message>
@@ -5867,14 +5843,6 @@ Otherwise abort and check your certificate and username.</source>
         <translation>아이콘 툴바</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>자신의 댓글 변경</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>녹음</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>우선 마이크</translation>
     </message>
@@ -5905,20 +5873,6 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>서버 측 IP 차단 목록을 편집할 수 있습니다.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>선택한 채널의 필터링을 활성화하거나 비활성화합니다.
-기본적으로 모든 빈 채널이 필터링됩니다.
-채널의 콘텍스트 메뉴에서 필터링에
-추가 채널을 표시 할 수 있습니다.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6047,10 +6001,6 @@ the channel&apos;s context menu.</source>
     <message>
         <source>View Comment...</source>
         <translation>댓글 보기...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>댓글 변경(&amp;C)...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6266,22 +6216,6 @@ Mumble 인스턴스를 원격 제어할 수 있습니다.
         <translation>대화 UI의 가시성을 전환합니다.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>채널 필터 전환 (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>검색</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>유저 또는 채널 검색 (Ctrl+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>검색 대화 상자 전환</translation>
@@ -6417,11 +6351,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

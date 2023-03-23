@@ -1044,14 +1044,6 @@ Tato hodnota Vám umožňuje nastavit maximální počet povolených uživatelů
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Průběžný</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Při aktivitě hlasu</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Mluvení při stisku tlačítka</translation>
     </message>
@@ -3022,16 +3014,8 @@ Jste si jisti, že chcete certifikát nahradit?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Uživatelské jméno</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Heslo</translation>
     </message>
 </context>
 <context>
@@ -5076,14 +5060,6 @@ Jinak přerušte a zkontrolujte Váš certifikát a uživatelské jméno.</trans
         <translation>Odpojí Vás od serveru.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Zobrazit informace o připojení k serveru</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Toto zobrazí podrobné informace o připojení k serveru.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>Ztlu&amp;mit</translation>
     </message>
@@ -5859,14 +5835,6 @@ Jinak přerušte a zkontrolujte Váš certifikát a uživatelské jméno.</trans
         <translation>Panel nástrojů s Ikonami</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Změnit Váš vlastní komentář</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Nahrávání</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Přednostní Řečník</translation>
     </message>
@@ -5897,20 +5865,6 @@ Jinak přerušte a zkontrolujte Váš certifikát a uživatelské jméno.</trans
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Toto vám umožňuje upravit seznam zákazů IP serveru.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Povolit nebo zakázat filtrování zvolených kanálů.
-Standardně jsou filtrovány všechny prázdné kanály.
-Další kanály můžete vyfiltrovat označením v
-kontextové nabídce kanálů.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6038,10 +5992,6 @@ kontextové nabídce kanálů.</translation>
     </message>
     <message>
         <source>View Comment...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6233,22 +6183,6 @@ Valid actions are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation type="unfinished"></translation>
@@ -6384,11 +6318,39 @@ Valid options are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
+        <source>&amp;Pin Channel when Filtering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Pin Channel when Filtering</source>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

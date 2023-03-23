@@ -806,7 +806,7 @@ Dieser Wert erlaubt das Einstellen der maximal im Kanal erlaubten Benutzeranzahl
     </message>
     <message>
         <source>&lt;b&gt;This shows peak outgoing bandwidth used.&lt;/b&gt;&lt;br /&gt;This shows the peak amount of bandwidth sent out from your machine. Audio bitrate is the maximum bitrate (as we use VBR) for the audio data alone. Position is the bitrate used for positional information. Overhead is our framing and the IP packet headers (IP and UDP is 75% of this overhead).</source>
-        <translation>&lt;b&gt;Dies zeigt die Spitze der ausgehenden Bandbreite an.&lt;/b&gt;&lt;br /&gt;Dies zeigt die maximale Bandbreite an, die zum Senden verwendet wurde. Die Audio-Bitrate ist die maximale Bitrate, die für Audiodaten genutzt wird (maximal, da VBR verwendet wird). Position ist die Bitrate für Positionsinformationen. Overhead wird durch das Verpacken der Audiodaten in Netzwerkpakete verursacht (75 % dieses Overheads entstehen durch die IP- und UDP-Paketheader).</translation>
+        <translation>&lt;b&gt;Dies zeigt die Spitze der ausgehenden Bandbreite an.&lt;/b&gt;&lt;br /&gt;Dies zeigt die maximale Bandbreite an, die zum Senden verwendet wurde. Die Audio-Bitrate ist die maximale Bitrate, die für Audiodaten genutzt wird (maximal, da VBR verwendet wird). Position ist die Bitrate für Positionsinformationen. Overhead wird durch das Verpacken der Audiodaten in Netzwerkpakete verursacht (75&#xa0;% dieses Overheads entstehen durch die IP- und UDP-Paketheader).</translation>
     </message>
     <message>
         <source>Audio Processing</source>
@@ -826,7 +826,7 @@ Dieser Wert erlaubt das Einstellen der maximal im Kanal erlaubten Benutzeranzahl
     </message>
     <message>
         <source>&lt;b&gt;Maximum amplification of input.&lt;/b&gt;&lt;br /&gt;Mumble normalizes the input volume before compressing, and this sets how much it&apos;s allowed to amplify.&lt;br /&gt;The actual level is continually updated based on your current speech pattern, but it will never go above the level specified here.&lt;br /&gt;If the &lt;i&gt;Microphone loudness&lt;/i&gt; level of the audio statistics hover around 100%, you probably want to set this to 2.0 or so, but if, like most people, you are unable to reach 100%, set this to something much higher.&lt;br /&gt;Ideally, set it so &lt;i&gt;Microphone Loudness * Amplification Factor &gt;= 100&lt;/i&gt;, even when you&apos;re speaking really soft.&lt;br /&gt;&lt;br /&gt;Note that there is no harm in setting this to maximum, but Mumble will start picking up other conversations if you leave it to auto-tune to that level.</source>
-        <translation>&lt;b&gt;Maximale Verstärkung des Eingangssignals.&lt;/b&gt;&lt;br /&gt;Mumble normalisiert die Eingangslautstärke vor der Kompression, wobei diese Option festlegt, wie sehr verstärkt werden darf.&lt;br /&gt;Der tatsächliche Level wird kontinuierlich, abhängig vom Sprachmuster, aktualisiert; allerdings nie höher als hier festgelegt.&lt;br /&gt;Wenn die &lt;i&gt;Mikrofonlautstärke&lt;/i&gt; in den Audiostatistiken im Bereich von 100 % liegt, sollte dies auf 2.0 gesetzt werden. Für Leute, die dies kaum erreichen, muss es deutlich höher angesetzt werden.&lt;br /&gt;Idealerweise sollte es folgendermaßen gesetzt werden: &lt;i&gt;Mikrofon Lautstärke × Verstärkungsfaktor ≥ 100&lt;/i&gt;, selbst wenn man wirklich leise spricht.&lt;br /&gt;&lt;br /&gt;Es ist nicht schädlich dies auf das Maximum zu setzen, aber Mumble wird dadurch auch Umgebungsgeräusche aufnehmen.</translation>
+        <translation>&lt;b&gt;Maximale Verstärkung des Eingangssignals.&lt;/b&gt;&lt;br /&gt;Mumble normalisiert die Eingangslautstärke vor der Kompression, wobei diese Option festlegt, wie sehr verstärkt werden darf.&lt;br /&gt;Der tatsächliche Level wird kontinuierlich, abhängig vom Sprachmuster, aktualisiert; allerdings nie höher als hier festgelegt.&lt;br /&gt;Wenn die &lt;i&gt;Mikrofonlautstärke&lt;/i&gt; in den Audiostatistiken im Bereich von 100&#xa0;% liegt, sollte dies auf 2.0 gesetzt werden. Für Leute, die dies kaum erreichen, muss es deutlich höher angesetzt werden.&lt;br /&gt;Idealerweise sollte es folgendermaßen gesetzt werden: &lt;i&gt;Mikrofon Lautstärke × Verstärkungsfaktor ≥ 100&lt;/i&gt;, selbst wenn man wirklich leise spricht.&lt;br /&gt;&lt;br /&gt;Es ist nicht schädlich dies auf das Maximum zu setzen, aber Mumble wird dadurch auch Umgebungsgeräusche aufnehmen.</translation>
     </message>
     <message>
         <source>Current speech detection chance</source>
@@ -1043,14 +1043,6 @@ Dieser Wert erlaubt das Einstellen der maximal im Kanal erlaubten Benutzeranzahl
 </context>
 <context>
     <name>AudioInputDialog</name>
-    <message>
-        <source>Continuous</source>
-        <translation>Kontinuierlich</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Sprachaktivierung</translation>
-    </message>
     <message>
         <source>Push To Talk</source>
         <translation>Push-To-Talk</translation>
@@ -1693,7 +1685,7 @@ Dieser Wert erlaubt das Einstellen der maximal im Kanal erlaubten Benutzeranzahl
     </message>
     <message>
         <source>This shows the weights of the echo canceller, with time increasing downwards and frequency increasing to the right.&lt;br /&gt;Ideally, this should be black, indicating no echo exists at all. More commonly, you&apos;ll have one or more horizontal stripes of bluish color representing time delayed echo. You should be able to see the weights updated in real time.&lt;br /&gt;Please note that as long as you have nothing to echo off, you won&apos;t see much useful data here. Play some music and things should stabilize. &lt;br /&gt;You can choose to view the real or imaginary parts of the frequency-domain weights, or alternately the computed modulus and phase. The most useful of these will likely be modulus, which is the amplitude of the echo, and shows you how much of the outgoing signal is being removed at that time step. The other viewing modes are mostly useful to people who want to tune the echo cancellation algorithms.&lt;br /&gt;Please note: If the entire image fluctuates massively while in modulus mode, the echo canceller fails to find any correlation whatsoever between the two input sources (speakers and microphone). Either you have a very long delay on the echo, or one of the input sources is configured wrong.</source>
-        <translation>Dieses Diagramm zeigt die Gewichte des Echounterdrückers mit der Zeit nach unten und der Frequenz nach rechts wachsend.&lt;br /&gt;Idealerweise sollte das Diagramm schwarz sein, also kein Echo existieren. Normalerweise hat man einen oder mehrere horizontale Streifen von blauer Farbe, die das zeitverzögerte Echo darstellen. Sie sollten sehen können, wie die Gewichte in Echtzeit aktualisiert werden.&lt;br /&gt;Solange keine Echoquelle vorhanden ist werden Sie hier keine nützlichen Daten sehen. Spielen Sie deshalb z. B. Musik ab, um das Diagramm zu stabilisieren.&lt;br /&gt;Sie können zwischen Real- und Imaginäranteilen der Frequenzdomänengewichte, oder alternativ dem berechneten Modulus und der Phase auswählen. Am nützlichsten ist hierbei Modulus, dieser ist die Amplitude des Echos und zeigt an, wie viel vom ausgehenden Signal bei diesem Zeitschritt entfernt wird. Die anderen Ansichten sind nützlich für diejenigen, die den Algorithmus zur Echounterdrückung feinjustieren wollen.&lt;br /&gt;Achtung: Wenn das Gesamtbild im Modulusmodus massiv fluktuiert, kann die Echounterdrückung keine Korrelation zwischen den beiden Eingangsquellen (Lautsprecher und Mikrofon) herstellen. Entweder Sie haben eine sehr lange Verzögerung des Echos oder eine der Eingangsquellen ist falsch konfiguriert.</translation>
+        <translation>Dieses Diagramm zeigt die Gewichte des Echounterdrückers mit der Zeit nach unten und der Frequenz nach rechts wachsend.&lt;br /&gt;Idealerweise sollte das Diagramm schwarz sein, also kein Echo existieren. Normalerweise hat man einen oder mehrere horizontale Streifen von blauer Farbe, die das zeitverzögerte Echo darstellen. Sie sollten sehen können, wie die Gewichte in Echtzeit aktualisiert werden.&lt;br /&gt;Solange keine Echoquelle vorhanden ist werden Sie hier keine nützlichen Daten sehen. Spielen Sie deshalb z.&#xa0;B. Musik ab, um das Diagramm zu stabilisieren.&lt;br /&gt;Sie können zwischen Real- und Imaginäranteilen der Frequenzdomänengewichte, oder alternativ dem berechneten Modulus und der Phase auswählen. Am nützlichsten ist hierbei Modulus, dieser ist die Amplitude des Echos und zeigt an, wie viel vom ausgehenden Signal bei diesem Zeitschritt entfernt wird. Die anderen Ansichten sind nützlich für diejenigen, die den Algorithmus zur Echounterdrückung feinjustieren wollen.&lt;br /&gt;Achtung: Wenn das Gesamtbild im Modulusmodus massiv fluktuiert, kann die Echounterdrückung keine Korrelation zwischen den beiden Eingangsquellen (Lautsprecher und Mikrofon) herstellen. Entweder Sie haben eine sehr lange Verzögerung des Echos oder eine der Eingangsquellen ist falsch konfiguriert.</translation>
     </message>
     <message>
         <source>This is the audio bitrate of the last compressed frame (20 ms), and as such will jump up and down as the VBR adjusts the quality. The peak bitrate can be adjusted in the Settings dialog.</source>
@@ -3021,16 +3013,8 @@ Sind Sie sicher, dass Sie Ihr Zertifikat ersetzen möchten?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Benutzername</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Passwort</translation>
     </message>
 </context>
 <context>
@@ -5083,14 +5067,6 @@ Falls nicht, brechen Sie ab und überprüfen Sie Ihr Zertifikat und Ihren Benutz
         <translation>Trennt Ihre Verbindung zum Server.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Informationen zur Serververbindung anzeigen</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Dies zeigt erweitertete Informationen über die Verbindung zum Server an.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Stumm stellen</translation>
     </message>
@@ -5868,14 +5844,6 @@ Falls nicht, brechen Sie ab und überprüfen Sie Ihr Zertifikat und Ihren Benutz
         <translation>Symbol-Werkzeugleiste</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Eigenen Kommentar ändern</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Aufnahme</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Bevorzugter Sprecher</translation>
     </message>
@@ -5906,20 +5874,6 @@ Falls nicht, brechen Sie ab und überprüfen Sie Ihr Zertifikat und Ihren Benutz
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Dies lässt Sie die Server-seitige IP-Bannliste bearbeiten.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Aktiviere oder deaktiviere die Filterung von ausgewählten Kanälen.
-Per Voreinstellung werden alle leeren Kanäle herausgefiltert.
-Sie können zusätzliche Kanäle zum Filtern über das Kontextmenü
-des Kanals auswählen.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Strg+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6048,10 +6002,6 @@ des Kanals auswählen.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Kommentar ansehen …</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>K&amp;ommentar ändern …</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6267,22 +6217,6 @@ Mögliche Aktionen sind:
         <translation>Schaltet die Sichtbarkeit der Gesprächsansicht um.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Schaltet den Kanalfilter um (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Suche</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Suche nach einem Benutzer oder Kanal (Strg+F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Schalte die Sichtbarkeit des Suchdialogs um</translation>
@@ -6403,7 +6337,7 @@ Gültige Optionen sind:
                 Geben Sie einen alternativen Standard-Zertifikatspfad an.
                 Dieser Pfad wird nur verwendet, wenn kein Zertifikat aus den Einstellungen geladen wird.
   -n, --noidentity
-                Unterdrückt das Laden von Identitätsdateien (d. h. Zertifikaten).
+                Unterdrückt das Laden von Identitätsdateien (d.&#xa0;h. Zertifikaten).
   -jn, --jackname &lt;arg&gt;
                 Benutzerdefinierten Jack-Client-Namen festlegen.
   --license
@@ -6471,12 +6405,40 @@ Gültige Optionen sind:
         <translation>Diese Einstellung merken</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
-        <translation>Kanal&amp;filter</translation>
-    </message>
-    <message>
         <source>&amp;Pin Channel when Filtering</source>
         <translation>Kanal beim Filtern an&amp;pinnen</translation>
+    </message>
+    <message>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6835,7 +6797,7 @@ Verhindert, dass potenziell identifizierende Informationen über das Betriebssys
     </message>
     <message>
         <source>Configure recently active time (%1 seconds)...</source>
-        <translation>Zeitspanne bearbeiten, in der Benutzer als aktiv gelten (%1 Sekunden) …</translation>
+        <translation>Zeitspanne bearbeiten, in der Benutzer als aktiv gelten (%1 Sekunden)&#xa0;…</translation>
     </message>
     <message>
         <source>Columns</source>
@@ -6855,7 +6817,7 @@ Verhindert, dass potenziell identifizierende Informationen über das Betriebssys
     </message>
     <message>
         <source>Edit...</source>
-        <translation>Bearbeiten …</translation>
+        <translation>Bearbeiten&#xa0;…</translation>
     </message>
     <message>
         <source>Reset Zoom</source>
@@ -7219,11 +7181,11 @@ Um diese Dateien zu aktualisieren, klicken Sie unten den Button.</translation>
     </message>
     <message>
         <source>Color...</source>
-        <translation>Farbe …</translation>
+        <translation>Farbe&#xa0;…</translation>
     </message>
     <message>
         <source>Font...</source>
-        <translation>Schrift …</translation>
+        <translation>Schrift&#xa0;…</translation>
     </message>
     <message>
         <source>Bounding box</source>
@@ -7350,7 +7312,7 @@ Um diese Dateien zu aktualisieren, klicken Sie unten den Button.</translation>
     </message>
     <message>
         <source>Install plugin...</source>
-        <translation>Installiere Plugin …</translation>
+        <translation>Installiere Plugin&#xa0;…</translation>
     </message>
     <message>
         <source>Unload the currently selected plugin. This will remove it from the plugin list for the current session.</source>
@@ -7656,7 +7618,7 @@ Informationen hierzu finden Sie im &lt;a href=&quot;https://wiki.mumble.info/wik
     </message>
     <message>
         <source>Local Volume Adjustment...</source>
-        <translation>Lokale Lautstärkeanpassung …</translation>
+        <translation>Lokale Lautstärkeanpassung&#xa0;…</translation>
     </message>
     <message>
         <source>&lt;p&gt;You&apos;re using a Mumble version that &lt;b&gt;explicitly disabled&lt;/b&gt; update-checks.&lt;/p&gt;&lt;p&gt;This means that the update notification you might receive by using this option will &lt;b&gt;most likely be meaningless&lt;/b&gt; for you.&lt;/p&gt;</source>
@@ -7704,7 +7666,7 @@ Informationen hierzu finden Sie im &lt;a href=&quot;https://wiki.mumble.info/wik
     </message>
     <message>
         <source>Local Nickname Adjustment...</source>
-        <translation>Lokale Spitznameneinstellung …</translation>
+        <translation>Lokale Spitznameneinstellung&#xa0;…</translation>
     </message>
     <message>
         <source>Default Device</source>
@@ -7904,7 +7866,7 @@ Sie können sie jedoch erneut registrieren.</translation>
     </message>
     <message>
         <source>Enter search String...</source>
-        <translation>Suchtext …</translation>
+        <translation>Suchtext&#xa0;…</translation>
     </message>
     <message>
         <source>Options</source>
@@ -8398,7 +8360,7 @@ Ein Zugriffscode ist eine Zeichenfolge, die als Passwort für ein sehr einfaches
     </message>
     <message>
         <source>Details...</source>
-        <translation>Details …</translation>
+        <translation>Details&#xa0;…</translation>
     </message>
     <message>
         <source>Ping Statistics</source>
@@ -8916,7 +8878,7 @@ Ein Zugriffscode ist eine Zeichenfolge, die als Passwort für ein sehr einfaches
     </message>
     <message>
         <source>&amp;Browse...</source>
-        <translation>&amp;Durchsuchen …</translation>
+        <translation>&amp;Durchsuchen&#xa0;…</translation>
     </message>
     <message>
         <source>Valid variables are:</source>

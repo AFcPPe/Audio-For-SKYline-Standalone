@@ -1044,14 +1044,6 @@ Tämän numeron ollessa suurempi kuin nolla kanava sallii enintään numeron suu
 <context>
     <name>AudioInputDialog</name>
     <message>
-        <source>Continuous</source>
-        <translation>Jatkuva</translation>
-    </message>
-    <message>
-        <source>Voice Activity</source>
-        <translation>Puheaktivointi</translation>
-    </message>
-    <message>
         <source>Push To Talk</source>
         <translation>Puhepikanäppäin</translation>
     </message>
@@ -3021,16 +3013,8 @@ Haluatko varmasti korvata varmenteen?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Password:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Username</source>
         <translation type="unfinished">Käyttäjänimi</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation type="unfinished">Salasana</translation>
     </message>
 </context>
 <context>
@@ -5083,14 +5067,6 @@ Muutoin keskeytä ja tarkista varmenteesi sekä käyttäjänimesi.</translation>
         <translation>Katkaisee yhteytesi palvelimeen.</translation>
     </message>
     <message>
-        <source>Show information about the server connection</source>
-        <translation>Näytä tietoa palvelinyhteydestä</translation>
-    </message>
-    <message>
-        <source>This will show extended information about the connection to the server.</source>
-        <translation>Näyttää lisätietoja palvelin yhteydestä.</translation>
-    </message>
-    <message>
         <source>&amp;Mute</source>
         <translation>&amp;Mykistä</translation>
     </message>
@@ -5868,14 +5844,6 @@ Muutoin keskeytä ja tarkista varmenteesi sekä käyttäjänimesi.</translation>
         <translation>Työkalukuvakkeet</translation>
     </message>
     <message>
-        <source>Change your own comment</source>
-        <translation>Vaihda oma kommenttisi</translation>
-    </message>
-    <message>
-        <source>Recording</source>
-        <translation>Nauhoitus</translation>
-    </message>
-    <message>
         <source>Priority Speaker</source>
         <translation>Etuoikeutettu puhuja</translation>
     </message>
@@ -5906,20 +5874,6 @@ Muutoin keskeytä ja tarkista varmenteesi sekä käyttäjänimesi.</translation>
     <message>
         <source>This lets you edit the server-side IP ban list.</source>
         <translation>Muokkaa palvelimen estettyjen IP-osoitteiden listaa.</translation>
-    </message>
-    <message>
-        <source>Enable or disable the filtering of select channels.
-By default all empty channels will be filtered.
-You can mark additional channels for filtering from
-the channel&apos;s context menu.</source>
-        <translation>Vaihtaa kanavasuodattimen tilaa.
-Oletusasetuksena kaikki tyhjät kanavat suodatetaan.
-Voit lisätä suodatukseen lisää kanavia 
-kanavien alivalikosta.</translation>
-    </message>
-    <message>
-        <source>Ctrl+F</source>
-        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
@@ -6048,10 +6002,6 @@ kanavien alivalikosta.</translation>
     <message>
         <source>View Comment...</source>
         <translation>Katso kommentti...</translation>
-    </message>
-    <message>
-        <source>&amp;Change Comment...</source>
-        <translation>&amp;Muokkaa kommenttia...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
@@ -6261,22 +6211,6 @@ Sallitut toiminnot ovat:
         <translation>Vaihtaa puhujalistan näkyvyyttä.</translation>
     </message>
     <message>
-        <source>Toggle the channel filter (Alt+F)</source>
-        <translation>Vaihda kanavasuodatinta (Alt+F)</translation>
-    </message>
-    <message>
-        <source>Alt+F</source>
-        <translation>Alt+F</translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation>Haku</translation>
-    </message>
-    <message>
-        <source>Search for a user or channel (Ctrl+F)</source>
-        <translation>Etsi käyttäjää tai kanavaa (Ctrl-F)</translation>
-    </message>
-    <message>
         <source>Toggle search dialog</source>
         <comment>Global Shortcut</comment>
         <translation>Vaihda hakuikkuna</translation>
@@ -6418,12 +6352,40 @@ Valid options are:
         <translation>Muista tämä asetus</translation>
     </message>
     <message>
-        <source>Channel &amp;Filter</source>
-        <translation>Kanava&amp;suodatin</translation>
-    </message>
-    <message>
         <source>&amp;Pin Channel when Filtering</source>
         <translation>&amp;Kiinnitä kanava suodattaessa</translation>
+    </message>
+    <message>
+        <source>COM1:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>COM2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>连接模拟器(MSFS2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>最后收听：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>无线电音效</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Logging you in. Please wait.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
