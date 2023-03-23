@@ -1698,24 +1698,30 @@ Channel *UserModel::getSubChannel(Channel *p, int idx) const {
 
 void UserModel::userStateChanged() {
 	ClientUser *user = qobject_cast< ClientUser * >(sender());
-
 	if (!user)
 		return;
 	ClientUser *Ouser = ClientUser::get(Global::get().uiSession);
 	QList< ClientUser * > list = ClientUser::getTalking();
 	int speakers         = 0;
+	QString str                = "最后收听：";
 	for (int i = 0; i < list.size(); ++i) {
 		ClientUser *node = (ClientUser *) list.at(i);
 		if (Ouser == node)
 			continue;
 		if (node->cChannel == Ouser->cChannel) {
 			speakers++;
+			str += node->qsComment + ",";
 		}
+		
 	}
+	str = str.left(str.size() - 1);
 	if (Global::get().bTalking|| speakers == 0) {
+		
 		 Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(0, 0, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	} else {
+		 Global::get().mw->qlbLastRecv->setText(str);
+			
 		Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(131, 213, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	}

@@ -761,17 +761,6 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 			output[i] = 0;
 		}
 	}
-	else {
-		if (!qlMix.isEmpty()) {
-			
-			QString str = "最后收听：";
-			foreach (AudioOutputUser *aop, qlMix) {
-				str += aop->qsName + ",";
-			}
-			str = str.left(str.size() - 1);
-			Global::get().mw->qlbLastRecv->setText(str);
-		}
-	}
 	//====================TX自静音====================
 	//====================无线电效果区域结束========================
 
