@@ -3016,6 +3016,10 @@ Weet je zeker dat je je certificaat wil vervangen?
         <source>Username</source>
         <translation type="unfinished">Gebruikersnaam</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Wachtwoord</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

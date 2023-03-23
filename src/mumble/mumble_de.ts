@@ -3016,6 +3016,10 @@ Sind Sie sicher, dass Sie Ihr Zertifikat ersetzen möchten?
         <source>Username</source>
         <translation type="unfinished">Benutzername</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Passwort</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

@@ -2909,7 +2909,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Mumble Server Connect</source>
-        <translation type="unfinished">Audio For SKYline 服务器连接</translation>
+        <translation>Audio For SKYline 服务器连接</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
@@ -3009,11 +3009,15 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Username:</source>
-        <translation type="unfinished">连飞呼号：</translation>
+        <translation>连飞呼号：</translation>
     </message>
     <message>
         <source>Username</source>
         <translation>用户名</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>密码：</translation>
     </message>
 </context>
 <context>

@@ -2986,6 +2986,10 @@ adierazten du.</translation>
         <source>Username</source>
         <translation type="unfinished">Erabiltzaile izena</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Pasahitza</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

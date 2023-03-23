@@ -3015,6 +3015,10 @@ Er du sikker på du vil erstatte dit certifikat?
         <source>Username</source>
         <translation type="unfinished">Brugernavn</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Adgangskode</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

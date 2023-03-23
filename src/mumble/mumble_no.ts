@@ -3030,6 +3030,10 @@ Er du sikker på at du vil erstatte ditt sertifikat?
         <source>Username</source>
         <translation type="unfinished">Brukernavn</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Passord</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

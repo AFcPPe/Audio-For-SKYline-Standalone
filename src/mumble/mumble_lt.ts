@@ -3007,6 +3007,10 @@ Ar tikrai norite pakeisti savo liudijimą?
         <source>Username</source>
         <translation type="unfinished">Naudotojo vardas</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Slaptažodis</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

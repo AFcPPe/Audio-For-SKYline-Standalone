@@ -3005,6 +3005,10 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
         <source>Username</source>
         <translation type="unfinished">Felhasználónév</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Jelszó</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

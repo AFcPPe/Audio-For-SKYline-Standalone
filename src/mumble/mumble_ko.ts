@@ -3015,6 +3015,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">유저 이름</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">비밀번호</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

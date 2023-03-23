@@ -2974,6 +2974,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">رمزعبور</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

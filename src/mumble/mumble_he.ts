@@ -3013,6 +3013,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">שם משתמש</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>

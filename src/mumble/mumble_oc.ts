@@ -2976,6 +2976,10 @@ Are you sure you wish to replace your certificate?
         <source>Username</source>
         <translation type="unfinished">Nom d&apos;_utilizaire</translation>
     </message>
+    <message>
+        <source>Password</source>
+        <translation type="unfinished">Senhal</translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
