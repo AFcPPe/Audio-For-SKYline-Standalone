@@ -1491,7 +1491,30 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 	//if (cd->qsServer.isEmpty() || (cd->usPort == 0) || cd->qsUsername.isEmpty())
 	//	res = QDialog::Rejected;
 	if (res == QDialog::Accepted) {
-		
+		QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+		// manager具有异步API，当http请求完成后，会通过finished信号进行通知
+		QNetworkRequest req(QUrl("https://api.skylineflyleague.cn/map-api-v2/online"));
+		req.setRawHeader("referer", "https://efb.skylineflyleague.cn/");
+		QNetworkReply *reply = manager->get(req);
+		QEventLoop eventLoop;
+		connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
+		eventLoop.exec();
+		QByteArray reply_data = reply->readAll();
+		QJsonObject data      = QJsonDocument::fromJson(reply_data).object();
+		QJsonArray arr        = data["atcList"].toArray();
+		bool found            = false;
+		for (int i = 0; i <= arr.size(); i++) {
+			QString cid(arr.at(i).toObject()["cid"].toString());
+
+			if (cid == cd->qsUsername) {
+				found = true;
+			}
+			qDebug() << arr.at(i).toObject() << "\n";
+		}
+		if(!found){
+			Global::get().l->log(Log::YouKicked, tr("Login Failed! You should log to FSD first.")); // 登录失败，你需要先登录连飞服务器再连接语音。
+			return;
+		}
 		recreateServerHandler();
 		qsDesiredChannel = QString();
 		rtLast           = MumbleProto::Reject_RejectType_None;
