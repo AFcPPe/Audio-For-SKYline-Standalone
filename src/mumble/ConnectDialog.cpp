@@ -968,9 +968,10 @@ ConnectDialog::~ConnectDialog() {
 
 void ConnectDialog::accept() {
 	
-	if (this->qleUsername->text() == "")
+	if (this->qleUsername->text() == "" || this->qlePassword->text() == "")
 		return;
 	this->qsUsername = this->qleUsername->text();
+	this->qsPassword = this->qlePassword->text();
 	QDialog::accept();
 }
 

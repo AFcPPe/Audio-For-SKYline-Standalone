@@ -1696,26 +1696,57 @@ Channel *UserModel::getSubChannel(Channel *p, int idx) const {
 	return nullptr;
 }
 
+void sendRDFMessage(std::string strMsg) {
+	HWND hWndReceiver = FindWindowEx(NULL, NULL, L"RDFHiddenWindowClass", NULL);
+	// 填充 COPYDATASTRUCT 结构体
+	COPYDATASTRUCT cds;
+	cds.dwData = 666;                    // 用于标识消息类型的自定义数据
+	cds.cbData = strMsg.size();          // 数据大小
+	cds.lpData = (PVOID) strMsg.c_str(); // 数据指针
+	// 发送 WM_COPYDATA 消息
+	SendMessage(hWndReceiver, WM_COPYDATA, reinterpret_cast< WPARAM >(hWndReceiver), reinterpret_cast< LPARAM >(&cds));
+}
+
 void UserModel::userStateChanged() {
 	ClientUser *user = qobject_cast< ClientUser * >(sender());
-
 	if (!user)
 		return;
 	ClientUser *Ouser = ClientUser::get(Global::get().uiSession);
 	QList< ClientUser * > list = ClientUser::getTalking();
 	int speakers         = 0;
+	QString str                = "最后收听：";
+	QList< QString > oldList   = QList< QString >(Global::get().qsUserTalking);
+	Global::get().qsUserTalking.clear();
 	for (int i = 0; i < list.size(); ++i) {
 		ClientUser *node = (ClientUser *) list.at(i);
 		if (Ouser == node)
 			continue;
 		if (node->cChannel == Ouser->cChannel) {
 			speakers++;
+			str += node->qsComment + ",";
+			Global::get().qsUserTalking.append(node->qsComment);
+		}
+		
+	}
+	QString qsSend;
+	if (oldList != Global::get().qsUserTalking) {
+		qsSend = "";
+		for (int i = 0; i < Global::get().qsUserTalking.size(); ++i) {
+			qsSend += Global::get().qsUserTalking.at(i) + ":";
+			// do something with value
 		}
 	}
+	if (!qsSend.isEmpty()) {
+		qsSend = qsSend.left(qsSend.size() - 1);
+	}
 	if (Global::get().bTalking|| speakers == 0) {
+		sendRDFMessage("");
 		 Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(0, 0, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	} else {
+		 str = str.left(str.size() - 1);
+		 Global::get().mw->qlbLastRecv->setText(str);
+		 sendRDFMessage(qsSend.toStdString().c_str());
 		Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(131, 213, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	}

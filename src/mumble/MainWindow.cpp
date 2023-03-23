@@ -80,7 +80,12 @@
 #include <QtWidgets/QToolTip>
 #include <QtWidgets/QWhatsThis>
 #include <QHttpMultiPart>
-
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonValue>
 #ifdef Q_OS_WIN
 #	include <dbt.h>
 #endif
@@ -211,6 +216,11 @@ MainWindow::MainWindow(QWidget *p)
 	connect(&switchTimer, &QTimer::timeout, this, &MainWindow::on_switchTimerElapsed);
 	switchTimer.setInterval(1000);
 	switchTimer.start();
+	connect(&commentSyncTimer, &QTimer::timeout, [=]() { 
+		updateCallsign();
+	});
+	commentSyncTimer.setInterval(5000);
+	commentSyncTimer.start();
 	
 }
 
@@ -1481,14 +1491,17 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 	//if (cd->qsServer.isEmpty() || (cd->usPort == 0) || cd->qsUsername.isEmpty())
 	//	res = QDialog::Rejected;
 	if (res == QDialog::Accepted) {
+		
 		recreateServerHandler();
 		qsDesiredChannel = QString();
 		rtLast           = MumbleProto::Reject_RejectType_None;
 		bRetryServer     = true;
 		qaServerDisconnect->setEnabled(true);
-		//Global::get().l->log(
-		//	Log::Information,
-		//	tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
+		Global::get().l->log(
+			Log::Information,
+			tr("Connecting to server %1.").arg(Log::msgColor(cd->qsServer.toHtmlEscaped(), Log::Server)));
+		//Global::get().sh->setConnectionInfo(QString("127.0.0.1"), 64738, cd->qsUsername,
+		//									cd->qsPassword);
 		Global::get().sh->setConnectionInfo(Global::get().SklineIP, Global::get().SKYlinePort, cd->qsUsername,
 											cd->qsPassword);
 		Global::get().l->log(
@@ -2658,6 +2671,30 @@ void MainWindow::updateMenuPermissions() {
 		}
 	}
 	qteChat->setEnabled(chatBarEnabled);
+}
+
+void MainWindow::updateCallsign() {
+	ClientUser *p = ClientUser::get(Global::get().uiSession);
+	if (ClientUser::isValid(Global::get().uiSession)) {
+		QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+		// manager具有异步API，当http请求完成后，会通过finished信号进行通知
+		QNetworkRequest req(QUrl("https://api.skylineflyleague.cn/map-api-v2/online"));
+		req.setRawHeader("referer", "https://efb.skylineflyleague.cn/");
+		QNetworkReply *reply = manager->get(req);
+		QEventLoop eventLoop;
+		connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
+		eventLoop.exec();
+		QByteArray reply_data = reply->readAll();
+		QJsonObject data      = QJsonDocument::fromJson(reply_data).object();
+		QJsonArray arr        = data["atcList"].toArray();
+		for (int i = 0; i <= arr.size(); i++) {
+			QString cid(arr.at(i).toObject()["cid"].toString());
+			
+			if (cid == p->qsName) {
+				Global::get().sh->setUserComment(Global::get().uiSession, arr.at(i).toObject()["callsign"].toString());
+			}
+		}
+	}
 }
 
 void MainWindow::userStateChanged() {

@@ -143,6 +143,7 @@ public:
 	double Com1 = 118.0;
 	double Com2 = 118.0;
 	QTimer switchTimer;
+	QTimer commentSyncTimer;
 
 #ifdef Q_OS_WIN
 	bool nativeEvent(const QByteArray &eventType, void *message, long *result) Q_DECL_OVERRIDE;
@@ -323,6 +324,7 @@ public slots:
 	void context_triggered();
 	void updateTarget();
 	void updateMenuPermissions();
+	void updateCallsign();
 	/// Handles state changes like talking mode changes and mute/unmute
 	/// or priority speaker flag changes for the gui user
 	void userStateChanged();
