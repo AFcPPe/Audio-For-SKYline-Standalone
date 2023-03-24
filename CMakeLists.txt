@@ -29,8 +29,8 @@ string(TIMESTAMP MUMBLE_BUILD_YEAR "%Y")
 
 project(Mumble
 	VERSION "1.7.${BUILD_NUMBER}"
-	DESCRIPTION "Open source, low-latency, high quality voice chat."
-	HOMEPAGE_URL "https://www.mumble.info"
+	DESCRIPTION "Audio Client For SKYline Flyleague"
+	HOMEPAGE_URL "https://skylineflyleague.cn"
 	LANGUAGES "C" "CXX"
 )
 
