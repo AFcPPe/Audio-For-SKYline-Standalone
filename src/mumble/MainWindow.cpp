@@ -221,7 +221,7 @@ MainWindow::MainWindow(QWidget *p)
 	connect(&commentSyncTimer, &QTimer::timeout, [=]() { 
 		updateCallsign();
 	});
-	commentSyncTimer.setInterval(5000);
+	commentSyncTimer.setInterval(30000);
 	commentSyncTimer.start();
 	
 }
@@ -3477,6 +3477,7 @@ void MainWindow::viewCertificate(bool) {
  * connection to the server is established but before the server Sync is complete.
  */
 void MainWindow::serverConnected() {
+	
 	Global::get().uiSession    = 0;
 	Global::get().pPermissions = ChanACL::None;
 
@@ -3529,6 +3530,7 @@ void MainWindow::serverConnected() {
 #endif
 
 	qdwMinimalViewNote->hide();
+	updateCallsign();
 }
 
 void MainWindow::serverDisconnected(QAbstractSocket::SocketError err, QString reason) {
