@@ -2811,8 +2811,8 @@ void MainWindow::updateCallsign() {
 			
 			if (cid == p->qsName) {
 				Global::get().sh->setUserComment(Global::get().uiSession, arr.at(i).toObject()["callsign"].toString());
+				this->setWindowTitle(tr("Audio For SKYline - %1").arg(arr.at(i).toObject()["callsign"].toString()));
 			}
-			qDebug() << arr.at(i).toObject() << "\n";
 		}
 	}
 }
