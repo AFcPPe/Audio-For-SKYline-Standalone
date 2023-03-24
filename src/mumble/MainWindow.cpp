@@ -221,6 +221,7 @@ MainWindow::MainWindow(QWidget *p)
 	});
 	commentSyncTimer.setInterval(5000);
 	commentSyncTimer.start();
+	connect(qcbOnTop, &QCheckBox::stateChanged, [=]() { this->setOnTop(qcbOnTop->isChecked()); });
 	
 }
 

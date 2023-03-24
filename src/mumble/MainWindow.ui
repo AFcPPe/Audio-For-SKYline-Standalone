@@ -66,7 +66,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="qmConfig">
@@ -553,6 +553,19 @@ font: 12px &quot;Microsoft YaHei&quot;;</string>
      </property>
      <property name="text">
       <string>无线电音效</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="qcbOnTop">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>40</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>置顶窗口</string>
      </property>
     </widget>
    </widget>
