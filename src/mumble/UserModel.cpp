@@ -1701,8 +1701,8 @@ void sendRDFMessage(std::string strMsg) {
 	// 填充 COPYDATASTRUCT 结构体
 	COPYDATASTRUCT cds;
 	cds.dwData = 666;                    // 用于标识消息类型的自定义数据
-	cds.cbData = strMsg.size();          // 数据大小
-	cds.lpData = (PVOID) strMsg.c_str(); // 数据指针
+	cds.cbData = strMsg.size()+1;          // 数据大小
+	cds.lpData = (PVOID) (strMsg.c_str() +'\0'); // 数据指针
 	// 发送 WM_COPYDATA 消息
 	SendMessage(hWndReceiver, WM_COPYDATA, reinterpret_cast< WPARAM >(hWndReceiver), reinterpret_cast< LPARAM >(&cds));
 }
@@ -1715,8 +1715,6 @@ void UserModel::userStateChanged() {
 	QList< ClientUser * > list = ClientUser::getTalking();
 	int speakers         = 0;
 	QString str                = "最后收听：";
-	QList< QString > oldList   = QList< QString >(Global::get().qsUserTalking);
-	Global::get().qsUserTalking.clear();
 	for (int i = 0; i < list.size(); ++i) {
 		ClientUser *node = (ClientUser *) list.at(i);
 		if (Ouser == node)
@@ -1724,20 +1722,8 @@ void UserModel::userStateChanged() {
 		if (node->cChannel == Ouser->cChannel) {
 			speakers++;
 			str += node->qsComment + ",";
-			Global::get().qsUserTalking.append(node->qsComment);
 		}
 		
-	}
-	QString qsSend;
-	if (oldList != Global::get().qsUserTalking) {
-		qsSend = "";
-		for (int i = 0; i < Global::get().qsUserTalking.size(); ++i) {
-			qsSend += Global::get().qsUserTalking.at(i) + ":";
-			// do something with value
-		}
-	}
-	if (!qsSend.isEmpty()) {
-		qsSend = qsSend.left(qsSend.size() - 1);
 	}
 	if (Global::get().bTalking|| speakers == 0) {
 		sendRDFMessage("");
@@ -1746,7 +1732,9 @@ void UserModel::userStateChanged() {
 	} else {
 		 str = str.left(str.size() - 1);
 		 Global::get().mw->qlbLastRecv->setText(str);
-		 sendRDFMessage(qsSend.toStdString().c_str());
+		 str = str.right(str.size()-5);
+		 str = str.replace(",", ":");
+		 sendRDFMessage(str.toStdString());
 		Global::get().mw->qlbRX1->setStyleSheet(
 			"background-color: rgb(131, 213, 0);color: white;font: 12px \"Microsoft YaHei\";");
 	}
