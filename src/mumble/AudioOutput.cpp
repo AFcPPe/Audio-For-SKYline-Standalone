@@ -752,6 +752,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 
 			// 将处理后的采样值写回输出缓冲区
 			output[i] = fSample;
+			output[i] *= 0.8f;
 		}
 	}
 	//====================冲麦效果====================
