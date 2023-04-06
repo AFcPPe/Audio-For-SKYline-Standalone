@@ -558,7 +558,7 @@ font: 12px &quot;Microsoft YaHei&quot;;</string>
     <widget class="QCheckBox" name="qcbOnTop">
      <property name="geometry">
       <rect>
-       <x>420</x>
+       <x>250</x>
        <y>40</y>
        <width>81</width>
        <height>20</height>

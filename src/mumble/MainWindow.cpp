@@ -221,7 +221,20 @@ MainWindow::MainWindow(QWidget *p)
 	});
 	commentSyncTimer.setInterval(5000);
 	commentSyncTimer.start();
-	connect(qcbOnTop, &QCheckBox::stateChanged, [=]() { this->setOnTop(qcbOnTop->isChecked()); });
+	connect(qcbOnTop, &QCheckBox::stateChanged, [=]() {
+		qaServerConnect->setVisible(!qcbOnTop->isChecked());
+		qaAudioMute->setVisible(!qcbOnTop->isChecked());
+		qaAudioDeaf->setVisible(!qcbOnTop->isChecked());
+		qaConfigDialog->setVisible(!qcbOnTop->isChecked());
+		this->setMinimumSize(qcbOnTop->isChecked() ? 400 : 800, qcbOnTop->isChecked() ? 120 : 325);
+		this->setMaximumSize(qcbOnTop->isChecked() ? 400 : 800, qcbOnTop->isChecked() ? 120 : 325);
+		this->qdwChat->setVisible(!qcbOnTop->isChecked());
+		this->qdwLog->setVisible(!qcbOnTop->isChecked());
+		this->resize(qcbOnTop->isChecked() ? 400 : 800, qcbOnTop->isChecked() ? 120 : 325);
+		this->setOnTop(qcbOnTop->isChecked());
+		this->setWindowOpacity(qcbOnTop->isChecked() ?0.7:1.0);
+		});
+	qtIconToolbar->setVisible(true);
 	
 }
 
