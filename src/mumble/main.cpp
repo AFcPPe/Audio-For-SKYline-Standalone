@@ -172,7 +172,7 @@ int main(int argc, char **argv) {
 #ifdef Q_OS_WIN
 	a.installNativeEventFilter(&a);
 #endif
-
+	
 	MumbleSSL::initialize();
 
 	// This argument has to be parsed first, since it's value is needed to create the global struct,
@@ -209,7 +209,7 @@ int main(int argc, char **argv) {
 
 	os_init();
 
-	bool bAllowMultiple       = false;
+	bool bAllowMultiple       = true;
 	bool suppressIdentity     = false;
 	bool customJackClientName = false;
 	bool bRpcMode             = false;
@@ -219,7 +219,7 @@ int main(int argc, char **argv) {
 	QDir qdCert(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation));
 	QStringList extraTranslationDirs;
 	QString localeOverwrite;
-
+	
 	QStringList pluginsToBeInstalled;
 	if (a.arguments().count() > 1) {
 		for (int i = 1; i < args.count(); ++i) {
@@ -441,7 +441,7 @@ int main(int argc, char **argv) {
 			}
 		}
 	}
-
+	
 	if (printTranslationDirs) {
 		QString infoString = QObject::tr("The directories in which Mumble searches for extra translation files are:\n");
 

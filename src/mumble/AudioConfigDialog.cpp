@@ -73,11 +73,11 @@ AudioInputDialog::AudioInputDialog(Settings &st) : ConfigWidget(st) {
 	}
 	qcbSystem->setEnabled(qcbSystem->count() > 1);
 
-	//qcbTransmit->addItem(tr("Continuous"), Settings::Continuous);
-	//qcbTransmit->addItem(tr("Voice Activity"), Settings::VAD);
+	qcbTransmit->addItem(tr("Continuous"), Settings::Continuous);
+	qcbTransmit->addItem(tr("Voice Activity"), Settings::VAD);
 	qcbTransmit->addItem(tr("Push To Talk"), Settings::PushToTalk);
 
-	qcbTransmit->setDisabled(true);
+	//qcbTransmit->setDisabled(true);
 
 	abSpeech->qcBelow  = Qt::red;
 	abSpeech->qcInside = Qt::yellow;
@@ -266,7 +266,7 @@ void AudioInputDialog::save() const {
 	s.iFramesPerPacket = (s.iFramesPerPacket == 1) ? 1 : ((s.iFramesPerPacket - 1) * 2);
 	s.uiDoublePush     = qsDoublePush->value() * 1000;
 	s.pttHold          = qsPTTHold->value();
-	s.atTransmit       = Settings::PushToTalk; // static_cast< Settings::AudioTransmit >(qcbTransmit->currentIndex());
+	static_cast< Settings::AudioTransmit >(qcbTransmit->currentIndex());
 
 	// Idle auto actions
 	s.iIdleTime                   = qsbIdle->value() * 60;

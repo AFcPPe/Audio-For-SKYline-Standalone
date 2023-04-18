@@ -219,7 +219,7 @@ struct Settings {
 	static const QString cqsDefaultMuteCue;
 	static const QPoint UNSPECIFIED_POSITION;
 
-	AudioTransmit atTransmit = PushToTalk;
+	AudioTransmit atTransmit = VAD;
 	quint64 uiDoublePush     = 0;
 	quint64 pttHold          = 0;
 
