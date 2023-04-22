@@ -235,6 +235,7 @@ MainWindow::MainWindow(QWidget *p)
 		this->setWindowOpacity(qcbOnTop->isChecked() ?0.7:1.0);
 		});
 	qtIconToolbar->setVisible(true);
+	qdialCom1->setEnabled(false);
 	
 }
 
@@ -2730,6 +2731,9 @@ void MainWindow::updateCallsign() {
 			if (cid == p->qsName) {
 				Global::get().sh->setUserComment(Global::get().uiSession, arr.at(i).toObject()["callsign"].toString());
 				this->setWindowTitle(tr("Audio For SKYline - %1").arg(arr.at(i).toObject()["callsign"].toString()));
+				
+				qdialCom1->setValue(
+					QString::number((arr.at(i).toObject()["frequency"].toString().toFloat() - 118) / 0.025).toInt());
 			}
 		}
 	}
@@ -3987,17 +3991,6 @@ void MainWindow::on_qdialCom2Changed() {
 	qlncom2->display(orgNum);
 }
 
-void sendAfvEsBridgeMessage(std::string strMsg) {
-	HWND hWndReceiver = FindWindowEx(NULL, NULL, L"AfvBridgeHiddenWindowClass", NULL);
-	// 填充 COPYDATASTRUCT 结构体
-	COPYDATASTRUCT cds;
-	cds.dwData = 666;                    // 用于标识消息类型的自定义数据
-	cds.cbData = strMsg.size();          // 数据大小
-	cds.lpData = (PVOID) strMsg.c_str(); // 数据指针
-	// 发送 WM_COPYDATA 消息
-	SendMessage(hWndReceiver, WM_COPYDATA, reinterpret_cast< WPARAM >(hWndReceiver), reinterpret_cast< LPARAM >(&cds));
-}
-
 QString getFullChannelString(QString Freq) {
 	switch (Freq.length()) {
 		case 3:
@@ -4025,10 +4018,6 @@ void MainWindow::on_switchTimerElapsed() {
 		return;
 	if (getContextMenuChannel()->qsDesc == Freq) {
 		return;
-	} else {
-		sendAfvEsBridgeMessage(
-			QString(getFullChannelString(getContextMenuChannel()->qsDesc) + ":False:False").toStdString());
-		sendAfvEsBridgeMessage(QString(getFullChannelString(Freq) + ":True:True").toStdString());
 	}
 
 	Channel *root = Channel::get(0);
