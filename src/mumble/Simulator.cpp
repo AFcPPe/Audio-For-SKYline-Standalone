@@ -37,12 +37,31 @@ SimulatorSimConnect::SimulatorSimConnect() {
 	connectTimer->setInterval(5000);
 	connectTimer->start();
 	connect(connectTimer, &QTimer::timeout, this, &SimulatorSimConnect::onConnectTimerElipsed);
+	timer = new QTimer();
+	timer->setInterval(1000);
+	timer->start();
+	connect(timer, &QTimer::timeout, this, &SimulatorSimConnect::onPosTimerElipsed);
 }
 
 void SimulatorSimConnect::onConnectTimerElipsed() {
+	if (mode != 0)
+	{
+		return;
+	}
+	qDebug() << "========================\nTrying XPlane\n=============================";
+	XPCsock = openUDP(XPCIP);
+	float tVal[1];
+	int tSize = 1;
+	if (!(getDREF(XPCsock, "sim/test/test_float", tVal, &tSize) < 0)) {
+		qDebug() << "========================\nGOOD FOR XPLANE!!!!!!!!!!!!!\n=============================";
+		mode = 1;
+		return;
+	}
+	qDebug() << "========================\nTrying MSFS2020\n=============================";
 	if (this->initSimEvents()) {
-		qDebug() << "\n========================\nGOOD!!!!!!!!!!!!!\n=============================\n";
-		connectTimer->stop();
+		qDebug() << "========================\nGOOD FOR MSFS20220!!!!!!!!!!!!!\n=============================";
+		mode = 2;
+		return;
 	}
 }
 
@@ -55,10 +74,6 @@ bool SimulatorSimConnect::initSimEvents() {
 		// EVERY SECOND REQUEST DATA FOR DEFINITION 1 ON THE CURRENT USER AIRCRAFT (SIMCONNECT_OBJECT_ID_USER)
 		hr += SimConnect_RequestDataOnSimObject(hSimConnect, REQUEST_OWN_AIRCRAFT, DEFINITION_OWN_AIRCRAFT,
 			SIMCONNECT_OBJECT_ID_USER, SIMCONNECT_PERIOD_SIM_FRAME);
-		timer = new QTimer();
-		timer->setInterval(1000);
-		timer->start();
-		connect(timer, &QTimer::timeout, this, &SimulatorSimConnect::onPosTimerElipsed);
 		return true;
 	} else {
 		qDebug() << "\nFailed to Connect!!!!\n";
@@ -67,10 +82,60 @@ bool SimulatorSimConnect::initSimEvents() {
 	return false;
 }
 
+void SimulatorSimConnect::getFromXplane() {
+	const char *drefs[4] = { "sim/cockpit/radios/com1_freq_hz", // indicated airspeed
+							 "sim/cockpit/radios/com2_freq_hz", // fuel quantity in each tank, a float array of size 10
+							 "sim/cockpit/radios/com1_stdby_freq_hz", // pitch reading displayed on attitude indicator
+							 "sim/cockpit/radios/com2_stdby_freq_hz" };
+	float *values[4];
+	unsigned char count = 4;
+	values[0] = (float *) malloc(1 * sizeof(float));
+	values[1] = (float *) malloc(
+		1 * sizeof(float));
+	values[2] = (float *) malloc(1 * sizeof(float));
+	values[3] = (float *) malloc(1 * sizeof(float));
+
+	int sizes[4] = { 1, 1, 1, 1 };
+	if (getDREFs(XPCsock, drefs, values, count, sizes) < 0) {
+		qDebug() << " XPC::An error occured.\n";
+	} else {
+		qDebug() << "XPC: Successfully got freqData\n";
+		int com1a = (int) *values[0]*10;
+		int com2a = (int) *values[1]*10;
+		int com1s = (int) *values[2]*10;
+		int com2s = (int) *values[3] * 10;
+		com1a     = (com1a / 25 * 25 + ((com1a % 25 == 0) ? 0 : 25));
+		com2a     = (com2a / 25 * 25 + ((com2a % 25 == 0) ? 0 : 25));
+		com1s     = (com1s / 25 * 25 + ((com1s % 25 == 0) ? 0 : 25));
+		com2s     = (com2s / 25 * 25 + ((com2s % 25 == 0) ? 0 : 25));
+		own->com1ActiveMHz = com1a/1000.0;
+		own->com2ActiveMHz  = com2a / 1000.0;
+		own->com1StandbyMHz = com1s / 1000.0;
+		own->com2StandbyMHz = com2s / 1000.0;
+		packetCount = 0;
+		emit RaiseSimdataUpdated();
+	}
+
+
+	delete values[0], values[1], values[2], values[3];
+
+
+}
+
 void SimulatorSimConnect::onPosTimerElipsed() {
-	callProc();
+	if (mode == 0) {
+		return;
+	}
+	if (mode == 1)
+	{
+		getFromXplane();
+	}else if (mode == 2){
+		callProc();
+	}
+	
 	packetCount++;
 	if (packetCount >= 10) {
+		mode = 0;
 		qDebug() << "\n========================\nLost\n=============================\n";
 		closeSimconnect();
 		connectTimer->start();
@@ -78,7 +143,6 @@ void SimulatorSimConnect::onPosTimerElipsed() {
 }
 
 void SimulatorSimConnect::closeSimconnect() {
-	timer->stop();
 	SimConnect_Close(hSimConnect);
 }
 

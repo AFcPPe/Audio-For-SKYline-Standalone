@@ -302,7 +302,8 @@ set(MUMBLE_SOURCES
 	"widgets/SearchDialogItemDelegate.h"
 	"widgets/SearchDialogTree.cpp"
 	"widgets/SearchDialogTree.h"
-
+	"XPC/xplaneConnect.cpp"
+	"XPC/xplaneConnect.h"
 
 	"${SHARED_SOURCE_DIR}/ACL.cpp"
 	"${SHARED_SOURCE_DIR}/ACL.h"

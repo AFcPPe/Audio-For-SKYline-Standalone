@@ -15,7 +15,7 @@ endif()
 
 set(BUILD_NUMBER CACHE STRING "The build number of the current build. Will be used in Mumble's version to make sure newer builds upgrade older installations properly.")
 set(BUILD_RELEASE_DATE CACHE STRING "The release date to be used in the generated appstream metadata.")
-set(BUILD_NUMBER "1")
+set(BUILD_NUMBER "0")
 if ("${BUILD_NUMBER}" STREQUAL "")
 	if(packaging)
 		message(FATAL_ERROR "Tried to create a Mumble package, without specifying BUILD_NUMBER!")
@@ -28,7 +28,7 @@ endif()
 string(TIMESTAMP MUMBLE_BUILD_YEAR "%Y")
 
 project(Mumble
-	VERSION "1.7.${BUILD_NUMBER}"
+	VERSION "1.8.${BUILD_NUMBER}"
 	DESCRIPTION "Audio Client For SKYline Flyleague"
 	HOMEPAGE_URL "https://skylineflyleague.cn"
 	LANGUAGES "C" "CXX"

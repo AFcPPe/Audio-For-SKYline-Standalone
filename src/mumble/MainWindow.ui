@@ -66,7 +66,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="qmConfig">
@@ -423,7 +423,7 @@
       <string notr="true">font: 12px &quot;新宋体&quot;;</string>
      </property>
      <property name="text">
-      <string>连接模拟器(MSFS2020)</string>
+      <string>连接模拟器(XP/2020)</string>
      </property>
      <property name="tristate">
       <bool>false</bool>

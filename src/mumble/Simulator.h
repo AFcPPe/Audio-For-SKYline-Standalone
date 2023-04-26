@@ -5,7 +5,7 @@
 #include <QtCore/qtimer.h>
 #include <QtCore/qdebug.h>
 #include "Global.h"
-
+#include "XPC/xplaneConnect.h"
 static enum DATA_DEFINE_ID {
 	DEFINITION_OWN_AIRCRAFT,
 };
@@ -45,10 +45,14 @@ public:
 	bool initSimEvents();
 	void closeSimconnect();
 	void callProc();
+	void getFromXplane();
 	DataOwnAircraft *own;
 	QTimer *timer;
 	QTimer *connectTimer;
 	int packetCount = 0;
+	const char *XPCIP  = "127.0.0.1"; // IP Address of computer running X-Plane
+	XPCSocket XPCsock;
+	int mode = 0;
 
 signals:
 	void RaiseSimconnectConnected();
