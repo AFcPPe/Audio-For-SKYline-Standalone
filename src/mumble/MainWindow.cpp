@@ -4094,6 +4094,27 @@ void MainWindow::on_qdialCom2Changed() {
 }
 
 void MainWindow::on_switchTimerElapsed() {
+	if (sim->mode == 0)
+	{
+		if (qcbSimulator->isEnabled())
+		{
+			qcbSimulator->setChecked(false);
+			qcbSimulator->setEnabled(false);
+			Global::get().l->log(Log::Information, tr("Simulator not found, disabling simulator connection."));
+		}
+	}else{
+		if (!qcbSimulator->isEnabled()){
+			qcbSimulator->setEnabled(true);
+			if (sim->mode == 1) {
+				Global::get().l->log(Log::Information,
+									 tr("XPlane found running, you can now enable simulator connection."));
+			} else if (sim->mode == 2) {
+				Global::get().l->log(Log::Information,
+									 tr("MSFS2020 found running, you can now enable simulator connection."));
+			}
+		}
+		
+	}
 	QString Freq;
 	if (qcbSimulator->isChecked()) {
 		if (sim->own->com1ActiveMHz - 118 < 0)

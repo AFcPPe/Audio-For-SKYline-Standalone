@@ -5758,7 +5758,7 @@ Otherwise abort and check your certificate and username.</source>
         <source>Remote controlling Mumble:
 
 </source>
-        <translation type="unfinished">远程控制 Audio For SKYline：</translation>
+        <translation>远程控制 Audio For SKYline：</translation>
     </message>
     <message>
         <source>Invocation</source>
@@ -5774,7 +5774,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Welcome to Mumble.</source>
-        <translation type="unfinished">欢迎使用 Audio For SKYline，祝你在SKYline飞行愉快</translation>
+        <translation>欢迎使用 Audio For SKYline，祝你在SKYline飞行愉快</translation>
     </message>
     <message>
         <source>Skipping version check in debug mode.</source>
@@ -6391,7 +6391,7 @@ Valid options are:
     </message>
     <message>
         <source>Login Failed! You should log to FSD first.</source>
-        <translation type="unfinished"></translation>
+        <translation>登录失败，请先连接连飞服务器并提交飞行计划</translation>
     </message>
     <message>
         <source>Audio For SKYline - %1</source>
@@ -6399,15 +6399,15 @@ Valid options are:
     </message>
     <message>
         <source>Simulator not found, disabling simulator connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>未发现模拟器运行，正在禁用模拟器连接</translation>
     </message>
     <message>
         <source>XPlane found running, you can now enable simulator connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>检测到XPlane，现在你可以开启模拟器连接功能</translation>
     </message>
     <message>
         <source>MSFS2020 found running, you can now enable simulator connection.</source>
-        <translation type="unfinished"></translation>
+        <translation>检测到MSFS2020，现在你可以开启模拟器连接功能</translation>
     </message>
 </context>
 <context>
