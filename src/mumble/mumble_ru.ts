@@ -6429,10 +6429,6 @@ mumble://[&lt;имя пользователя&gt;[:&lt;пароль&gt;]@]&lt;х
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>连接模拟器(MSFS2020)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>TX</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6449,7 +6445,31 @@ mumble://[&lt;имя пользователя&gt;[:&lt;пароль&gt;]@]&lt;х
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Logging you in. Please wait.</source>
+        <source>连接模拟器(XP/2020)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>置顶窗口</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Login Failed! You should log to FSD first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio For SKYline - %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Simulator not found, disabling simulator connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XPlane found running, you can now enable simulator connection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MSFS2020 found running, you can now enable simulator connection.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
