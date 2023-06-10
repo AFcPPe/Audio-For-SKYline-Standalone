@@ -734,7 +734,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 	//====================冲麦效果====================
 	if (qlMix.size() >= 0) {
 		float fFreq      = 100.0; // 嘟的频率
-		float fAmplitude = 0.8f; // 嘟的幅度
+		float fAmplitude = 0.7f; // 嘟的幅度
 		float fPhase     = 0.0f; // 正弦波的相位
 		for (unsigned int i = 0; i < frameCount * iChannels; i += 1) {
 			float fSample = output[i]; // 获取采样值
