@@ -2730,10 +2730,13 @@ void MainWindow::updateCallsign() {
 			
 			if (cid == p->qsName) {
 				Global::get().sh->setUserComment(Global::get().uiSession, arr.at(i).toObject()["callsign"].toString());
-				this->setWindowTitle(tr("Audio For SKYline - %1").arg(arr.at(i).toObject()["callsign"].toString()));
+				this->setWindowTitle(tr("Audio For SKYline - %1 %2")
+										 .arg(arr.at(i).toObject()["callsign"].toString(),
+											  arr.at(i).toObject()["frequency"].toString()));
 				
 				qdialCom1->setValue(
 					QString::number((arr.at(i).toObject()["frequency"].toString().toFloat() - 118) / 0.025).toInt());
+				Com1 = arr.at(i).toObject()["frequency"].toString().toDouble();
 			}
 		}
 	}
@@ -3967,7 +3970,7 @@ void MainWindow::on_qdialCom1Changed() {
 			orgNum += "0";
 			break;
 	}
-	qlncom1->display(orgNum);
+	qlncom1->display(orgNum  );
 	
 }
 
@@ -4012,7 +4015,7 @@ QString getFullChannelString(QString Freq) {
 void MainWindow::on_switchTimerElapsed() {
 	
 	QString Freq;
-		Freq = QString::number(118 + qdialCom1->value() * 0.025);
+		Freq = QString::number(Com1);
 	// Channel
 	if (getContextMenuChannel() == NULL)
 		return;

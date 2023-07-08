@@ -732,7 +732,7 @@ bool AudioOutput::mix(void *outbuff, unsigned int frameCount) {
 	}
 	//=============================声音截断=============================
 	//====================冲麦效果====================
-	if (qlMix.size() >= 0) {
+	if (qlMix.size() >= 2) {
 		float fFreq      = 100.0; // 嘟的频率
 		float fAmplitude = 0.7f; // 嘟的幅度
 		float fPhase     = 0.0f; // 正弦波的相位
