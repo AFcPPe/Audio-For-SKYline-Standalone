@@ -216,7 +216,7 @@ MainWindow::MainWindow(QWidget *p)
 	qlncom1->display("118.000");
 	qlncom2->display("118.000");
 	connect(&switchTimer, &QTimer::timeout, this, &MainWindow::on_switchTimerElapsed);
-	switchTimer.setInterval(1000);
+	switchTimer.setInterval(750);
 	switchTimer.start();
 	connect(&commentSyncTimer, &QTimer::timeout, [=]() { 
 		updateCallsign();
