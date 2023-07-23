@@ -4594,11 +4594,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Mumble</source>
-        <translation type="unfinished">Audio For SKYline</translation>
+        <translation>Audio For SKYline</translation>
     </message>
     <message>
         <source>Mumble -- %1</source>
-        <translation type="unfinished">Audio For SKYline %1 - Standalone</translation>
+        <translation>Audio For SKYline %1 - Standalone</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -5039,7 +5039,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Quit Mumble</source>
-        <translation type="unfinished">退出 Audio For SKYline (&amp;Q)</translation>
+        <translation>退出 Audio For SKYline (&amp;Q)</translation>
     </message>
     <message>
         <source>Closes the program</source>
@@ -5465,7 +5465,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Mumble: %1</source>
-        <translation type="unfinished">Audio For SKYline：%1</translation>
+        <translation>Audio For SKYline：%1</translation>
     </message>
     <message>
         <source>You were denied %1 privileges in %2.</source>
@@ -6248,7 +6248,7 @@ Valid actions are:
     </message>
     <message>
         <source>Mumble - Minimal View</source>
-        <translation type="unfinished">Audio For SKYline - 最小化视图</translation>
+        <translation>Audio For SKYline - 最小化视图</translation>
     </message>
     <message>
         <source>Invalid settings file encountered.</source>
@@ -6391,7 +6391,7 @@ Valid options are:
     </message>
     <message>
         <source>Login Failed! You should log to FSD first.</source>
-        <translation>登录失败，请先连接连飞服务器并提交飞行计划</translation>
+        <translation>登录失败，请先连接连飞服务器并提交飞行计划。</translation>
     </message>
     <message>
         <source>Audio For SKYline - %1</source>
@@ -6407,7 +6407,7 @@ Valid options are:
     </message>
     <message>
         <source>MSFS2020 found running, you can now enable simulator connection.</source>
-        <translation>检测到MSFS2020，现在你可以开启模拟器连接功能</translation>
+        <translation>检测到MSFS2020，现在你可以开启模拟器连接功能。</translation>
     </message>
 </context>
 <context>
