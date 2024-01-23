@@ -6,11 +6,11 @@
 #include <QtCore/qdebug.h>
 #include "Global.h"
 #include "XPC/xplaneConnect.h"
-static enum DATA_DEFINE_ID {
+enum DATA_DEFINE_ID {
 	DEFINITION_OWN_AIRCRAFT,
 };
 
-static enum DATA_REQUEST_ID {
+enum DATA_REQUEST_ID {
 	REQUEST_OWN_AIRCRAFT,
 };
 

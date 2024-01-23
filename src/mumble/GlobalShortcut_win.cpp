@@ -514,7 +514,7 @@ void GlobalShortcutWin::processMsgHid(MsgHid &msg) {
 
 void GlobalShortcutWin::processMsgKeyboard(MsgKeyboard &msg) {
 	if (msg.virtualKey == VK_NUMLOCK) {
-		// Keys like ‚ÄúPause / Break‚Äù and ‚ÄúNumlock‚Äù act strangely,
+		// Keys like °∞Pause / Break°± and °∞Numlock°± act strangely,
 		// sometimes like they are not even the same physical key.
 		// They use the so called escaped sequences, which we have to decipher.
 		msg.scanCode = MapVirtualKey(msg.virtualKey, MAPVK_VK_TO_VSC) | 0x100;

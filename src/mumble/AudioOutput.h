@@ -11,6 +11,7 @@
 #include <boost/shared_ptr.hpp>
 
 #include "MumbleProtocol.h"
+#include "MainWindow.h"
 
 #ifdef USE_MANUAL_PLUGIN
 #	include "ManualPlugin.h"
