@@ -18,6 +18,7 @@
 #include "Utils.h"
 #include "VoiceRecorder.h"
 #include "Global.h"
+#include "MainWindow.h"
 
 #include <cmath>
 
