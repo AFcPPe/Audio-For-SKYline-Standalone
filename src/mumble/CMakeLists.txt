@@ -75,6 +75,8 @@ if(MSVC)
 	option(elevation "Set \"uiAccess=true\", required for global shortcuts to work with privileged applications. Requires the client's executable to be signed with a trusted code signing certificate." OFF)
 endif()
 
+include(FindEXPAT)
+
 find_pkg(Qt5
 	COMPONENTS
 		Concurrent
@@ -448,6 +450,12 @@ find_pkg(Poco
 		XML
 		Zip
 )
+
+target_link_libraries(mumble_client_object_lib
+		PUBLIC
+		EXPAT::EXPAT
+	)
+
 
 if(TARGET Poco::Zip)
 	target_link_libraries(mumble_client_object_lib
