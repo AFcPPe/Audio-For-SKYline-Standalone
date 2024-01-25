@@ -46,7 +46,7 @@ struct Global Q_DECL_FINAL {
 private:
 	Q_DISABLE_COPY(Global)
 public:
-	const QString SklineIP           = "43.154.178.153";
+	const QString SklineIP           = "online.skylineflyleague.cn";
 	const unsigned short SKYlinePort = 14514;
 	//const QString SklineIP           = "127.0.0.1";
 	//const unsigned short SKYlinePort = 64738;
