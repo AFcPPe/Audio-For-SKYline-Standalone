@@ -1508,14 +1508,15 @@ void MainWindow::on_qaServerConnect_triggered(bool autoconnect) {
 	if (res == QDialog::Accepted) {
 		QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 		// manager具有异步API，当http请求完成后，会通过finished信号进行通知
-		QNetworkRequest req(QUrl("https://api.flightsim.top/data/skylineData.json"));
+		QNetworkRequest req(QUrl("https://api.skylineflyleague.cn/map-api-v2/online"));
+		req.setRawHeader("referer", "https://efb.skylineflyleague.cn/");
 		QNetworkReply *reply = manager->get(req);
 		QEventLoop eventLoop;
 		connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
 		eventLoop.exec();
 		QByteArray reply_data = reply->readAll();
 		QJsonObject data      = QJsonDocument::fromJson(reply_data).object();
-		QJsonArray arr        = data["controllers"].toArray();
+		QJsonArray arr        = data["atcList"].toArray();
 		bool found            = false;
 		for (int i = 0; i <= arr.size(); i++) {
 			QString cid(arr.at(i).toObject()["cid"].toString());
@@ -2715,14 +2716,15 @@ void MainWindow::updateCallsign() {
 	if (ClientUser::isValid(Global::get().uiSession)) {
 		QNetworkAccessManager *manager = new QNetworkAccessManager(this);
 		// manager具有异步API，当http请求完成后，会通过finished信号进行通知
-		QNetworkRequest req(QUrl("https://api.flightsim.top/data/skylineData.json"));
+		QNetworkRequest req(QUrl("https://api.skylineflyleague.cn/map-api-v2/online"));
+		req.setRawHeader("referer", "https://efb.skylineflyleague.cn/");
 		QNetworkReply *reply = manager->get(req);
 		QEventLoop eventLoop;
 		connect(reply, &QNetworkReply ::finished, &eventLoop, &QEventLoop::quit);
 		eventLoop.exec();
 		QByteArray reply_data = reply->readAll();
 		QJsonObject data      = QJsonDocument::fromJson(reply_data).object();
-		QJsonArray arr        = data["controllers"].toArray();
+		QJsonArray arr        = data["atcList"].toArray();
 		for (int i = 0; i <= arr.size(); i++) {
 			QString cid(arr.at(i).toObject()["cid"].toString());
 			
